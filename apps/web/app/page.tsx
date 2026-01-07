@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
+      <Hero/>
     </div>
   );
 };

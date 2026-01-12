@@ -1,213 +1,55 @@
 import { ComponentEntry } from "./types";
 
-/**
- * Buttons Component Preview
- */
-const ButtonsPreview = () => (
-  <div className="flex flex-wrap items-center justify-center gap-2">
-    <button className="rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background">
-      Primary
-    </button>
-    <button className="rounded-full border border-border/20 px-4 py-2 text-xs font-medium text-foreground">
-      Secondary
-    </button>
-  </div>
-);
+// Import previews from modular files
+import {
+  ButtonsPreview,
+  InputsPreview,
+  TogglePreview,
+  CheckboxPreview,
+  CardsPreview,
+  AccordionPreview,
+  SliderPreview,
+  BadgesPreview,
+  ModalPreview,
+  AvatarPreview,
+  TabsPreview,
+  DropdownPreview,
+} from "./previews";
 
-/**
- * Inputs Component Preview
- */
-const InputsPreview = () => (
-  <div className="flex w-full flex-col gap-2">
-    <input
-      type="text"
-      placeholder="Enter email..."
-      className="w-full rounded-lg border border-border/10 bg-muted px-3 py-2 text-xs text-foreground placeholder:text-foreground/50 focus:outline-none"
-    />
-    <input
-      type="text"
-      defaultValue="john@email.com"
-      className="w-full rounded-lg border border-border/20 px-3 py-2 text-xs text-foreground focus:outline-none"
-    />
-  </div>
-);
-
-/**
- * Toggle Component Preview
- */
-const TogglePreview = () => (
-  <div className="flex items-center gap-3">
-    <div className="relative h-6 w-10 rounded-full bg-foreground">
-      <span className="absolute right-1 top-1 h-4 w-4 rounded-full bg-card" />
-    </div>
-    <span className="text-xs text-foreground/60">Enabled</span>
-  </div>
-);
-
-/**
- * Checkbox Component Preview
- */
-const CheckboxPreview = () => (
-  <div className="flex flex-col gap-2">
-    <label className="flex items-center gap-2">
-      <div className="flex h-4 w-4 items-center justify-center rounded border-2 border-border bg-foreground">
-        <svg
-          className="h-2.5 w-2.5 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-      <span className="text-xs text-foreground/70">Selected</span>
-    </label>
-    <label className="flex items-center gap-2">
-      <div className="h-4 w-4 rounded border-2 border-border/20" />
-      <span className="text-xs text-foreground/60">Unselected</span>
-    </label>
-  </div>
-);
-
-/**
- * Cards Component Preview
- */
-const CardsPreview = () => (
-  <div className="w-full rounded-lg border border-border/10 bg-muted p-3">
-    <div className="mb-2 h-2 w-16 rounded bg-foreground/20" />
-    <div className="h-2 w-full rounded bg-foreground/10" />
-    <div className="mt-1 h-2 w-3/4 rounded bg-foreground/10" />
-  </div>
-);
-
-/**
- * Accordion Component Preview
- */
-const AccordionPreview = () => (
-  <div className="w-full">
-    <div className="flex items-center justify-between border-b border-border/10 py-2">
-      <span className="text-xs font-medium text-foreground">Section 1</span>
-      <span className="text-foreground/60">−</span>
-    </div>
-    <div className="py-2 text-[10px] text-foreground/70">
-      Content goes here...
-    </div>
-    <div className="flex items-center justify-between border-b border-border/10 py-2">
-      <span className="text-xs font-medium text-foreground">Section 2</span>
-      <span className="text-foreground/60">+</span>
-    </div>
-  </div>
-);
-
-/**
- * Slider Component Preview
- */
-const SliderPreview = () => (
-  <div className="flex w-full flex-col items-center gap-2">
-    <span className="text-lg font-light text-foreground">75%</span>
-    <div className="h-1 w-full rounded-full bg-foreground/10">
-      <div className="h-1 w-3/4 rounded-full bg-foreground" />
-    </div>
-  </div>
-);
-
-/**
- * Badges Component Preview
- */
-const BadgesPreview = () => (
-  <div className="flex flex-wrap items-center justify-center gap-2">
-    <span className="rounded-full bg-foreground px-3 py-1 text-[10px] font-medium text-white">
-      New
-    </span>
-    <span className="rounded-full border border-border/20 px-3 py-1 text-[10px] font-medium text-foreground">
-      Beta
-    </span>
-    <span className="rounded-full bg-foreground/10 px-3 py-1 text-[10px] font-medium text-foreground/70">
-      Soon
-    </span>
-  </div>
-);
-
-/**
- * Modal Component Preview
- */
-const ModalPreview = () => (
-  <div className="w-full rounded-lg border border-border/10 bg-card p-3 shadow-lg">
-    <div className="mb-2 flex items-center justify-between">
-      <div className="h-2 w-12 rounded bg-foreground/20" />
-      <span className="text-foreground/60">×</span>
-    </div>
-    <div className="h-2 w-full rounded bg-foreground/10" />
-    <div className="mt-3 flex justify-end gap-2">
-      <div className="h-4 w-12 rounded bg-foreground/10" />
-      <div className="h-4 w-12 rounded bg-foreground" />
-    </div>
-  </div>
-);
-
-/**
- * Avatar Component Preview
- */
-const AvatarPreview = () => (
-  <div className="flex items-center gap-2">
-    <div className="h-10 w-10 rounded-full bg-foreground" />
-    <div className="h-10 w-10 rounded-full bg-foreground/60" />
-    <div className="h-10 w-10 rounded-full bg-foreground/30" />
-    <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-dashed border-border/20">
-      <span className="text-xs text-foreground/60">+</span>
-    </div>
-  </div>
-);
-
-/**
- * Tabs Component Preview
- */
-const TabsPreview = () => (
-  <div className="w-full">
-    <div className="flex border-b border-border/10">
-      <div className="border-b-2 border-border px-3 py-2 text-xs font-medium text-foreground">
-        Tab 1
-      </div>
-      <div className="px-3 py-2 text-xs text-foreground/60">Tab 2</div>
-      <div className="px-3 py-2 text-xs text-foreground/60">Tab 3</div>
-    </div>
-    <div className="py-3 text-[10px] text-foreground/70">Tab content...</div>
-  </div>
-);
-
-/**
- * Dropdown Component Preview
- */
-const DropdownPreview = () => (
-  <div className="w-full">
-    <div className="flex items-center justify-between rounded-lg border border-border/10 px-3 py-2">
-      <span className="text-xs text-foreground/60">Select option</span>
-      <span className="text-foreground/60">▾</span>
-    </div>
-  </div>
-);
+// Import variants from modular files
+import { buttonVariants } from "./variants";
 
 /**
  * Component Registry
  *
  * This is the single source of truth for all components.
+ * Previews and variants are imported from their respective folders.
+ *
+ * Folder Structure:
+ * - /lib/components/previews/ → Card preview components
+ * - /lib/components/variants/ → Variant grids for detail pages
+ * - /lib/components/registry.tsx → This file (component metadata)
+ * - /lib/components/types.ts → TypeScript interfaces
+ *
  * To add a new component:
- * 1. Create the preview component above
- * 2. Add a new entry to this array with all required metadata
- * 3. The component will automatically appear in the grid and have its own page
+ * 1. Create a preview in /previews/[name].tsx
+ * 2. Create variants in /variants/[name].tsx (optional)
+ * 3. Export them in the respective index.ts files
+ * 4. Add entry below with all metadata
  */
 export const componentRegistry: ComponentEntry[] = [
   {
     slug: "buttons",
-    title: "Buttons",
+    title: "Button",
     description: "Primary, secondary, ghost, and icon buttons",
     longDescription:
-      "A collection of button components with various styles including primary, secondary, ghost, outline, and icon variants. All buttons are fully accessible and support different sizes and states.",
+      "A growing collection of 14 button components built with React and Tailwind CSS.",
     category: "Interactive",
     isAvailable: true,
     tags: ["button", "cta", "action", "click", "interactive"],
     version: "1.0.0",
     preview: <ButtonsPreview />,
+    variants: buttonVariants,
   },
   {
     slug: "inputs",
@@ -342,6 +184,10 @@ export const componentRegistry: ComponentEntry[] = [
     preview: <DropdownPreview />,
   },
 ];
+
+// ============================================================================
+// HELPER FUNCTIONS
+// ============================================================================
 
 /**
  * Get all components from the registry

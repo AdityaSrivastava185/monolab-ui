@@ -13,6 +13,20 @@ export type ComponentCategory =
   | "Feedback";
 
 /**
+ * Component variant for grid display
+ */
+export interface ComponentVariant {
+  /** Unique ID for the variant */
+  id: string;
+  /** Variant name (optional, for accessibility) */
+  name?: string;
+  /** The rendered preview */
+  preview: ReactNode;
+  /** Source code for copying */
+  code: string;
+}
+
+/**
  * Component metadata interface
  * This is the core interface for defining components in the registry
  */
@@ -41,6 +55,8 @@ export interface ComponentMeta {
 export interface ComponentEntry extends ComponentMeta {
   /** Preview component to render in cards */
   preview: ReactNode;
+  /** Component variants for the detail page grid */
+  variants?: ComponentVariant[];
   /** Full component examples for the detail page */
   examples?: ComponentExample[];
 }

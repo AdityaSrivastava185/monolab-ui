@@ -23,7 +23,7 @@ export function ComponentCard({
   return (
     <Link
       href={`/components/${slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-border/10 bg-muted transition-all hover:border-border/20 hover:shadow-lg"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-border/10 bg-card transition-all hover:border-border/20 hover:shadow-lg"
     >
       {/* Preview Area */}
       <div className="flex min-h-35 items-center justify-center p-6">

@@ -17,7 +17,7 @@ import {
 } from "./previews";
 
 // Import variants from modular files
-import { buttonVariants } from "./variants";
+import { buttonVariants, inputVariants } from "./variants";
 
 /**
  * Component Registry
@@ -62,6 +62,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["input", "form", "text", "field", "textarea"],
     version: "1.0.0",
     preview: <InputsPreview />,
+    variants: inputVariants,
   },
   {
     slug: "toggle",

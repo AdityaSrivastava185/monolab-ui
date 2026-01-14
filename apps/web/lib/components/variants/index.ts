@@ -10,9 +10,9 @@
  * 3. Add the export here
  */
 export { buttonVariants } from "./buttons";
+export { inputVariants } from "./inputs";
 
 // TODO: Add more variant exports as they are created
-// export { inputVariants } from "./inputs";
 // export { toggleVariants } from "./toggle";
 // export { checkboxVariants } from "./checkbox";
 // export { cardVariants } from "./cards";

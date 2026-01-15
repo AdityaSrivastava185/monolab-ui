@@ -17,7 +17,13 @@ import {
 } from "./previews";
 
 // Import variants from modular files
-import { buttonVariants, inputVariants } from "./variants";
+import {
+  buttonVariants,
+  inputVariants,
+  toggleVariants,
+  checkboxVariants,
+  badgeVariants,
+} from "./variants";
 
 /**
  * Component Registry
@@ -75,6 +81,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["toggle", "switch", "settings", "boolean", "on-off"],
     version: "1.0.0",
     preview: <TogglePreview />,
+    variants: toggleVariants,
   },
   {
     slug: "checkbox",
@@ -87,6 +94,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["checkbox", "radio", "form", "select", "choice"],
     version: "1.0.0",
     preview: <CheckboxPreview />,
+    variants: checkboxVariants,
   },
   {
     slug: "cards",
@@ -135,6 +143,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["badge", "tag", "label", "status", "indicator"],
     version: "1.0.0",
     preview: <BadgesPreview />,
+    variants: badgeVariants,
   },
   {
     slug: "modal",

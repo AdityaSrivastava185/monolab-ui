@@ -11,14 +11,14 @@
  */
 export { buttonVariants } from "./buttons";
 export { inputVariants } from "./inputs";
+export { toggleVariants } from "./toggle";
+export { checkboxVariants } from "./checkbox";
+export { badgeVariants } from "./badges";
 
 // TODO: Add more variant exports as they are created
-// export { toggleVariants } from "./toggle";
-// export { checkboxVariants } from "./checkbox";
 // export { cardVariants } from "./cards";
 // export { accordionVariants } from "./accordion";
 // export { sliderVariants } from "./slider";
-// export { badgeVariants } from "./badges";
 // export { modalVariants } from "./modal";
 // export { avatarVariants } from "./avatar";
 // export { tabsVariants } from "./tabs";

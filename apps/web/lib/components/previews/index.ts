@@ -1,6 +1,5 @@
 import { InputsPreview } from "./inputs";
 
-
 /**
  * Component Previews Index
  *
@@ -8,7 +7,7 @@ import { InputsPreview } from "./inputs";
  * Each component has its own preview file for better maintainability.
  */
 export { ButtonsPreview } from "./buttons";
-export {InputsPreview} from './inputs'
+export { InputsPreview } from "./inputs";
 export { TogglePreview } from "./toggle";
 export { CheckboxPreview } from "./checkbox";
 export { CardsPreview } from "./cards";
@@ -19,3 +18,4 @@ export { ModalPreview } from "./modal";
 export { AvatarPreview } from "./avatar";
 export { TabsPreview } from "./tabs";
 export { DropdownPreview } from "./dropdown";
+export { SelectPreview } from "./select";

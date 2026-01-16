@@ -14,12 +14,13 @@ export { inputVariants } from "./inputs";
 export { toggleVariants } from "./toggle";
 export { checkboxVariants } from "./checkbox";
 export { badgeVariants } from "./badges";
+export { dropdownVariants } from "./dropdown";
+export { selectVariants } from "./select";
+export { accordionVariants } from "./accordion";
+export { avatarVariants } from "./avatar";
 
 // TODO: Add more variant exports as they are created
 // export { cardVariants } from "./cards";
-// export { accordionVariants } from "./accordion";
 // export { sliderVariants } from "./slider";
 // export { modalVariants } from "./modal";
-// export { avatarVariants } from "./avatar";
 // export { tabsVariants } from "./tabs";
-// export { dropdownVariants } from "./dropdown";

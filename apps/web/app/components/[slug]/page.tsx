@@ -6,7 +6,7 @@ import {
   getAllComponentSlugs,
 } from "@/lib/components/registry";
 import { Navbar } from "@/components/Navbar/Navbar";
-import { CopyButton } from "@/components/CopyButton";
+import { VariantsGrid } from "@/components/VariantsGrid";
 
 /**
  * Generate static params for all component pages
@@ -68,24 +68,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
         </header>
 
         {/* Variants Grid */}
-        {component.variants && component.variants.length > 0 ? (
-          <div className="grid grid-cols-1 border-t border-border/10 md:grid-cols-2 lg:grid-cols-3">
-            {component.variants.map((variant, index) => (
-              <VariantCell
-                key={variant.id}
-                index={index}
-                totalCount={component.variants?.length ?? 0}
-                code={variant.code}
-              >
-                {variant.preview}
-              </VariantCell>
-            ))}
-          </div>
-        ) : (
-          <div className="flex min-h-64 items-center justify-center rounded-2xl border border-border/10 bg-card">
-            <p> The variants are under development </p>
-          </div>
-        )}
+        <VariantsGrid variants={component.variants || []} />
 
         {/* CTA Section */}
         <section className="mt-24 text-center">
@@ -114,46 +97,6 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
           </div>
         </section>
       </main>
-    </div>
-  );
-}
-
-/**
- * Individual variant cell with borders
- */
-function VariantCell({
-  children,
-  index,
-  totalCount,
-  code,
-}: {
-  children: React.ReactNode;
-  index: number;
-  totalCount: number;
-  code: string;
-}) {
-  const cols = 3;
-  const isRightEdgeLg = (index + 1) % cols === 0;
-  const isRightEdgeMd = (index + 1) % 2 === 0;
-
-  return (
-    <div
-      className={`
-        group relative flex min-h-32 items-center justify-center p-8
-        border-b border-border/10
-        md:border-r md:border-border/10
-        ${isRightEdgeMd ? "md:border-r-0" : ""}
-        lg:border-r lg:border-border/10
-        ${isRightEdgeLg ? "lg:border-r-0" : ""}
-        transition-colors hover:bg-card/50
-      `}
-    >
-      {children}
-      {/* Copy button */}
-      <CopyButton
-        code={code}
-        className="absolute right-3 top-3 opacity-0 transition-opacity group-hover:opacity-100"
-      />
     </div>
   );
 }

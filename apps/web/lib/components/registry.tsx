@@ -14,6 +14,7 @@ import {
   AvatarPreview,
   TabsPreview,
   DropdownPreview,
+  SelectPreview,
 } from "./previews";
 
 // Import variants from modular files
@@ -23,6 +24,10 @@ import {
   toggleVariants,
   checkboxVariants,
   badgeVariants,
+  dropdownVariants,
+  selectVariants,
+  accordionVariants,
+  avatarVariants,
 } from "./variants";
 
 /**
@@ -119,6 +124,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["accordion", "collapse", "expand", "faq", "disclosure"],
     version: "1.0.0",
     preview: <AccordionPreview />,
+    variants: accordionVariants,
   },
   {
     slug: "slider",
@@ -168,6 +174,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["avatar", "profile", "user", "image", "picture"],
     version: "1.0.0",
     preview: <AvatarPreview />,
+    variants: avatarVariants,
   },
   {
     slug: "tabs",
@@ -192,6 +199,20 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["dropdown", "select", "menu", "options", "choice"],
     version: "1.0.0",
     preview: <DropdownPreview />,
+    variants: dropdownVariants,
+  },
+  {
+    slug: "select",
+    title: "Select",
+    description: "Custom select inputs and pickers",
+    longDescription:
+      "Custom select components for form inputs. Includes single select, multi-select, searchable, and grouped options. Perfect for forms and filters.",
+    category: "Forms",
+    isAvailable: true,
+    tags: ["select", "picker", "form", "input", "choice"],
+    version: "1.0.0",
+    preview: <SelectPreview />,
+    variants: selectVariants,
   },
 ];
 

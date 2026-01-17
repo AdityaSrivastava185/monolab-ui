@@ -66,7 +66,7 @@ function VariantCell({
         transition-colors hover:bg-card/50
       `}
     >
-      {children}
+      <div className="flex items-center justify-center">{children}</div>
       <CopyButton
         code={code}
         className="absolute right-3 top-3 opacity-0 transition-opacity group-hover:opacity-100"

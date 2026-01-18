@@ -13,6 +13,7 @@ export {
   AccordionPreview,
   ComponentStackPreview,
 } from "./FloatingPreviews";
+export { FloatingTag } from "./FloatingTag";
 export { Badge } from "./Badge";
 export { HeroContent } from "./HeroContent";
 export { ComponentCard } from "./ComponentCard";

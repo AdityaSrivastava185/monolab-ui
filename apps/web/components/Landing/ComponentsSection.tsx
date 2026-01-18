@@ -1,54 +1,110 @@
 import { ComponentCard } from "./ComponentCard";
 import { getAvailableComponents } from "@/lib/components/registry";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+// Define bento grid layout pattern
+// Each item specifies: colSpan (1 or 2), rowSpan (1 or 2) for lg screens
+type BentoSize = {
+  colSpan: 1 | 2;
+  rowSpan: 1 | 2;
+};
+
+const bentoLayout: BentoSize[] = [
+  { colSpan: 1, rowSpan: 1 }, // 0
+  { colSpan: 2, rowSpan: 1 }, // 1
+  { colSpan: 1, rowSpan: 2 }, // 2
+  { colSpan: 2, rowSpan: 1 }, // 3
+  { colSpan: 1, rowSpan: 1 }, // 4
+  { colSpan: 2, rowSpan: 1 }, // 5
+  { colSpan: 2, rowSpan: 2 }, // 6
+  { colSpan: 2, rowSpan: 1 }, // 7
+  { colSpan: 1, rowSpan: 1 }, // 8
+  { colSpan: 1, rowSpan: 1 }, // 9
+  { colSpan: 2, rowSpan: 1 }, // 10
+  { colSpan: 1, rowSpan: 1 }, // 11
+  { colSpan: 1, rowSpan: 1 }, // 12
+  { colSpan: 2, rowSpan: 1 }, // 13
+];
 
 export function ComponentsSection() {
-  const components = getAvailableComponents();
+  const allComponents = getAvailableComponents();
+  // Show only first 7 components on landing page
+  const components = allComponents.slice(0, 7);
+
+  const getBentoSize = (index: number): BentoSize => {
+    return (
+      bentoLayout[index % bentoLayout.length] ?? { colSpan: 1, rowSpan: 1 }
+    );
+  };
 
   return (
-    <section id="components" className="relative px-6 py-24">
-      <div className="mx-auto max-w-6xl">
+    <section
+      id="components"
+      className="relative w-full overflow-hidden px-5 py-24"
+    >
+      <div className="mx-auto max-w-[1400px]">
         {/* Section Header */}
-        <SectionHeader />
+        <SectionHeader count={allComponents.length} />
 
-        {/* Components Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {components.map((component) => (
-            <ComponentCard
-              key={component.slug}
-              slug={component.slug}
-              title={component.title}
-              description={component.description}
-              category={component.category}
-            >
-              {component.preview}
-            </ComponentCard>
-          ))}
+        {/* Bento Grid - 4 columns on lg */}
+        <div className="relative mt-8 grid w-full grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
+          {components.map((component, index) => {
+            const size = getBentoSize(index);
+            return (
+              <ComponentCard
+                key={component.slug}
+                slug={component.slug}
+                title={component.title}
+                description={component.description}
+                category={component.category}
+                hasVariants={
+                  component.variants && component.variants.length > 0
+                }
+                colSpan={size.colSpan}
+                rowSpan={size.rowSpan}
+              >
+                {component.preview}
+              </ComponentCard>
+            );
+          })}
         </div>
 
-        {/* View All Button */}
-        <div className="mt-16 text-center">
-          <button className="rounded-full border border-border/20 px-8 py-3 text-sm font-medium text-foreground transition-colors hover:bg-foreground hover:text-background">
-            View All Components
-          </button>
-        </div>
+        {/* Explore All Link */}
+        <Link
+          href="/components"
+          className="group mt-5 flex items-center justify-center gap-1 text-sm font-semibold transition-all ease-in-out hover:opacity-60"
+        >
+          Explore all components
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </Link>
       </div>
     </section>
   );
 }
 
-function SectionHeader() {
+function SectionHeader({ count }: { count: number }) {
   return (
-    <div className="mb-16 text-center">
-      <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.3em] text-foreground/60">
-        Components
-      </p>
-      <h2 className="mb-4 text-4xl font-bold tracking-tight text-foreground">
-        Everything you need
-      </h2>
-      <p className="mx-auto max-w-md text-sm text-foreground/70">
-        Copy and paste these components into your project. No dependencies, just
-        clean Tailwind CSS code.
-      </p>
+    <div className="flex flex-col items-center gap-4">
+      {/* Count Badge */}
+      <div className="rounded-lg bg-muted px-3 py-1">
+        <p className="text-[10px] font-medium uppercase tracking-wider text-foreground/60">
+          {count}+ AND COUNTING
+        </p>
+      </div>
+
+      {/* Title & Description */}
+      <div className="flex flex-col items-center gap-2 text-center">
+        <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
+          Outstanding components
+        </h2>
+        <p className="text-sm tracking-tight text-foreground/60 md:text-base">
+          <span className="block">
+            No extra packages — just one file for each component,
+          </span>
+          <span className="block">Use directly with your fav ShadCN CLI.</span>
+        </p>
+      </div>
     </div>
   );
 }

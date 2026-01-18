@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { CopyButton } from "@/components/CopyButton";
+import { ComingSoonBadge } from "@/components/ComingSoonBadge";
 
 interface VariantItem {
   id: string;
@@ -17,8 +18,8 @@ interface VariantsGridProps {
 export function VariantsGrid({ variants }: VariantsGridProps) {
   if (!variants || variants.length === 0) {
     return (
-      <div className="flex min-h-64 items-center justify-center rounded-2xl border border-border/10 bg-card">
-        <p>The variants are under development</p>
+      <div className="flex min-h-64 items-center justify-center rounded-2xl border border-border/10 bg-card/50">
+        <ComingSoonBadge />
       </div>
     );
   }

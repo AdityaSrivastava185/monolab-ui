@@ -233,13 +233,6 @@ export default function MyPage() {
         <h2 className="text-2xl font-semibold text-foreground">Next Steps</h2>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/docs/theming"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105"
-          >
-            Learn Theming
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
             href="/#components"
             className="inline-flex items-center gap-2 rounded-full border border-border/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
           >

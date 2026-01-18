@@ -9,9 +9,8 @@ export default function DocsPage() {
         <h1 className="text-4xl font-bold tracking-tight text-foreground">
           Introduction
         </h1>
-        <p className="text-lg text-foreground/60">
-          A minimal, copy-paste component library for React. No dependencies, no
-          complexity—just beautiful components you own.
+        <p className="text-foreground/60 text-md">
+          MonoLab UI gives you a focused set of clean, accessible components that live in your codebase, not in a bundle. Copy the pieces you need, shape them to your product, and keep every line under your control.
         </p>
       </header>
 

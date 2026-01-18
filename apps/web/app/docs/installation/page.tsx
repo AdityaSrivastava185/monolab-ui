@@ -70,10 +70,6 @@ export default function InstallationPage() {
             Add CSS Variables
           </h2>
         </div>
-        <p className="text-foreground/70">
-          Copy these CSS variables to your global stylesheet. These power the
-          theming system:
-        </p>
         <CodeBlock
           code={`@import "tailwindcss";
 

@@ -3,9 +3,7 @@ import { FloatingCard } from "./FloatingCard";
 export function IconsPreview() {
   return (
     <FloatingCard
-      position="left-4 top-20 lg:left-8"
-      title="Icons"
-      subtitle="Library"
+      position="left-4 top-24 lg:left-12 lg:top-28"
       hoverRotate="left"
     >
       <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-card shadow-lg">
@@ -28,9 +26,7 @@ export function IconsPreview() {
 export function VideoPreview() {
   return (
     <FloatingCard
-      position="left-32 top-44 lg:left-48 lg:top-40"
-      title="Getting Started"
-      subtitle="Tutorial"
+      position="left-8 top-56 lg:left-44 lg:top-48"
       hoverRotate="right"
     >
       <div className="relative h-36 w-44 overflow-hidden rounded-2xl bg-linear-to-br from-muted to-muted-foreground/30 shadow-lg">
@@ -59,8 +55,7 @@ export function VideoPreview() {
 export function CardsPreview() {
   return (
     <FloatingCard
-      position="left-4 top-80 lg:left-16 lg:top-88"
-      title="Cards"
+      position="left-4 top-[340px] lg:left-8 lg:top-[380px]"
       hoverRotate="right"
     >
       <div className="relative h-32 w-32 overflow-hidden rounded-2xl bg-card shadow-lg">
@@ -83,8 +78,6 @@ export function TogglePreview({ isOn, onToggle }: TogglePreviewProps) {
   return (
     <FloatingCard
       position="bottom-56 left-4 lg:bottom-52 lg:left-12"
-      title="Toggle"
-      subtitle="Interactive"
       hoverRotate="left"
     >
       <div className="flex h-28 w-48 flex-col items-center justify-center rounded-2xl bg-card p-4 shadow-lg">
@@ -116,8 +109,7 @@ interface SliderPreviewProps {
 export function SliderPreview({ value, onChange }: SliderPreviewProps) {
   return (
     <FloatingCard
-      position="bottom-20 left-36 lg:bottom-24 lg:left-56"
-      title="Slider"
+      position="bottom-48 left-4 lg:bottom-52 lg:left-44"
       hoverRotate="right"
     >
       <div className="flex h-24 w-44 flex-col items-center justify-center rounded-2xl bg-card p-4 shadow-lg">
@@ -139,7 +131,7 @@ export function SliderPreview({ value, onChange }: SliderPreviewProps) {
 
 export function MobilePreview() {
   return (
-    <FloatingCard position="bottom-4 left-4 lg:bottom-8 lg:left-8">
+    <FloatingCard position="bottom-8 left-4 lg:bottom-12 lg:left-12">
       <div className="h-40 w-24 overflow-hidden rounded-xl bg-card shadow-lg">
         <div className="h-full w-full bg-linear-to-b from-muted to-muted/80 p-2">
           <div className="h-2 w-8 rounded bg-foreground/20" />
@@ -157,8 +149,7 @@ export function MobilePreview() {
 export function ButtonsPreview() {
   return (
     <FloatingCard
-      position="right-32 top-20 lg:right-52 lg:top-20"
-      title="Buttons"
+      position="bottom-48 right-4 lg:bottom-52 lg:right-44"
       hoverRotate="left"
     >
       <div className="flex h-32 w-40 flex-col items-center justify-center gap-2 rounded-2xl bg-card p-4 shadow-lg">
@@ -176,9 +167,7 @@ export function ButtonsPreview() {
 export function NavigationPreview() {
   return (
     <FloatingCard
-      position="right-4 top-44 lg:right-8 lg:top-40"
-      title="Navigation"
-      subtitle="Controls"
+      position="right-4 top-24 lg:right-12 lg:top-28"
       hoverRotate="right"
     >
       <div className="flex h-28 w-36 flex-col items-center justify-center gap-2 rounded-2xl bg-card p-4 shadow-lg">
@@ -200,9 +189,7 @@ export function NavigationPreview() {
 export function InputsPreview() {
   return (
     <FloatingCard
-      position="right-4 top-80 lg:right-20 lg:top-88"
-      title="Inputs"
-      subtitle="Forms"
+      position="right-8 top-56 lg:right-44 lg:top-48"
       hoverRotate="left"
     >
       <div className="flex h-32 w-40 flex-col items-center justify-center gap-2 rounded-2xl bg-card p-4 shadow-lg">
@@ -229,8 +216,7 @@ interface CheckboxPreviewProps {
 export function CheckboxPreview({ isChecked, onToggle }: CheckboxPreviewProps) {
   return (
     <FloatingCard
-      position="bottom-56 right-4 lg:bottom-52 lg:right-12"
-      title="Checkbox"
+      position="bottom-56 right-4 lg:bottom-52 lg:right-60"
       hoverRotate="right"
     >
       <div className="flex h-28 w-40 flex-col items-start justify-center gap-2 rounded-2xl bg-card p-4 shadow-lg">
@@ -277,8 +263,7 @@ interface AccordionPreviewProps {
 export function AccordionPreview({ isOpen, onToggle }: AccordionPreviewProps) {
   return (
     <FloatingCard
-      position="bottom-20 right-36 lg:bottom-24 lg:right-56"
-      title="Accordion"
+      position="bottom-8 right-4 lg:bottom-12 lg:right-12"
       hoverRotate="left"
     >
       <div className="w-48 rounded-2xl bg-card p-4 shadow-lg">

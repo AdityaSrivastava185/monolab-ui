@@ -17,7 +17,6 @@ const docsNav = [
   {
     title: "Customization",
     items: [
-      { title: "Theming", href: "/docs/theming" },
       { title: "Dark Mode", href: "/docs/dark-mode" },
     ],
   },

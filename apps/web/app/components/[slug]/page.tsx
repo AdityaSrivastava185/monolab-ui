@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   getComponentBySlug,
   getAllComponentSlugs,
-} from "@/lib/components/registry";
+} from "@/lib/componentsRegistry/registry";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { VariantsGrid } from "@/components/VariantsGrid";
 

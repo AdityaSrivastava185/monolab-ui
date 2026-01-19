@@ -59,12 +59,9 @@ function VariantCell({
     <div
       className={`
         group relative flex min-h-32 items-center justify-center p-8
-        border-b border-border/10
-        md:border-r md:border-border/10
-        ${isRightEdgeMd ? "md:border-r-0" : ""}
-        lg:border-r lg:border-border/10
-        ${isRightEdgeLg ? "lg:border-r-0" : ""}
-        transition-colors hover:bg-card/50
+        border-b border-border/10 m-1
+        md:border-r md:border-border/10 bg-card/80
+        rounded-sm
       `}
     >
       <div className="flex items-center justify-center">{children}</div>

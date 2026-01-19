@@ -21,13 +21,13 @@ export default function InstallationPage() {
           Prerequisites
         </h2>
         <p className="text-foreground/70">
-          MonoLab UI components are designed for modern React projects. Make
+          MonoLab UI components are designed for modern Nextjs projects. Make
           sure you have:
         </p>
         <ul className="mt-4 space-y-2 text-foreground/70">
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
-            React 18+ or React 19
+            Nextjs
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
@@ -35,7 +35,7 @@ export default function InstallationPage() {
           </li>
           <li className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
-            TypeScript (recommended, but optional)
+            TypeScript
           </li>
         </ul>
       </section>
@@ -53,11 +53,7 @@ export default function InstallationPage() {
         <p className="text-foreground/70">
           If you haven&apos;t already, set up Tailwind CSS in your project:
         </p>
-        <CodeBlock
-          code={`npm install tailwindcss @tailwindcss/postcss postcss`}
-          language="bash"
-          filename="Terminal"
-        />
+        <span className="text-foreground">Visit - </span> <Link href="https://tailwindcss.com/docs/installation/framework-guides" className="text-muted-foreground hover:underline">Tailwind Official Installation Documentation</Link>
       </section>
 
       {/* Step 2: CSS Variables */}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Grid3X3, Maximize2 } from "lucide-react";
+import { Menu, X, Grid3X3, Maximize2, LucideGithub } from "lucide-react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +13,6 @@ export function Navbar() {
       <nav className="flex items-center gap-2 rounded-full border border-border/20 bg-card/90 px-2 py-2 backdrop-blur-md shadow-lg">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 pl-3 pr-4">
-          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-            <span className="text-xs font-bold text-primary-foreground">M</span>
-          </div>
           <span className="text-sm font-semibold text-foreground">
             MONOLAB-UI
           </span>
@@ -42,11 +39,9 @@ export function Navbar() {
 
         {/* Right side icons */}
         <div className="hidden items-center gap-1 md:flex">
-          <button className="flex h-8 w-8 items-center justify-center rounded-full text-foreground/60 transition-colors hover:bg-foreground/5 hover:text-foreground">
-            <Grid3X3 className="h-4 w-4" />
-          </button>
-          <button className="flex h-8 w-8 items-center justify-center rounded-full text-foreground/60 transition-colors hover:bg-foreground/5 hover:text-foreground">
-            <Maximize2 className="h-4 w-4" />
+          <button className="group flex  items-center justify-center rounded-full transition-colors bg-foreground hover:bg-background p-2 gap-1 cursor-pointer">
+            <LucideGithub className="h-4 w-4 text-background group-hover:text-foreground" />
+            <span className="text-xs text-background group-hover:text-foreground">Star on Github</span>
           </button>
         </div>
 

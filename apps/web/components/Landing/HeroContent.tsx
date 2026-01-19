@@ -3,16 +3,13 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export function HeroContent() {
   const [copied, setCopied] = useState(false);
-  const installCommand = "npx monolab-ui add";
+  const router = useRouter();
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(installCommand);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <div className="relative z-20 flex min-h-screen flex-col items-center justify-center px-6">
@@ -38,12 +35,12 @@ export function HeroContent() {
       <div className="flex flex-col items-center gap-4 sm:flex-row">
         {/* Install Command */}
         <button
-          onClick={handleCopy}
+          onClick={() => router.push("https://github.com/AdityaSrivastava185/monolab-ui")}
           className="group flex items-center gap-3 rounded-full border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80"
         >
           <code className="text-sm text-foreground/70">
-            <span className="text-foreground/50">npx</span> monolab-ui add{" "}
-            <span className="text-primary">/component</span>
+            <span className="text-foreground/50">npx</span> give a star
+            <span className="text-primary">/github</span>
           </code>
           {copied ? (
             <Check className="h-4 w-4 text-green-500" />

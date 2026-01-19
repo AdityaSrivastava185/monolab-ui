@@ -112,6 +112,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["card", "container", "layout", "content", "box"],
     version: "1.0.0",
     preview: <CardsPreview />,
+    comingSoon: true,
   },
   {
     slug: "accordion",
@@ -137,6 +138,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["slider", "range", "progress", "input", "value"],
     version: "1.0.0",
     preview: <SliderPreview />,
+    comingSoon: true,
   },
   {
     slug: "badges",
@@ -162,6 +164,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["modal", "dialog", "popup", "overlay", "alert"],
     version: "1.0.0",
     preview: <ModalPreview />,
+    comingSoon: true,
   },
   {
     slug: "avatar",
@@ -187,6 +190,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["tabs", "navigation", "panel", "switch", "content"],
     version: "1.0.0",
     preview: <TabsPreview />,
+    comingSoon: true,
   },
   {
     slug: "dropdown",

@@ -1,4 +1,6 @@
+import PasswordInput from "@/components/ComponentPreviews/Inputs/PasswordInput";
 import { ComponentVariant } from "../types";
+import EmailErrorPreview from "@/components/ComponentPreviews/Inputs/EmailErrorPreview";
 
 /**
  * Input Variants
@@ -121,39 +123,37 @@ export const inputVariants: ComponentVariant[] = [
   {
     id: "error",
     name: "Input with Error",
-    code: `<div className="flex flex-col gap-1.5">
-  <label htmlFor="email-error" className="text-sm font-medium text-foreground">
-    Email
-  </label>
-  <input
-    id="email-error"
-    type="email"
-    defaultValue="invalid-email"
-    className="w-full rounded-md border border-red-500 bg-background px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500/20"
-  />
-  <p className="text-xs text-red-500">
-    Please enter a valid email address.
-  </p>
-</div>`,
-    preview: (
-      <div className="flex w-full flex-col gap-1.5">
-        <label
-          htmlFor="email-error"
-          className="text-sm font-medium text-foreground"
-        >
-          Email
-        </label>
-        <input
-          id="email-error"
-          type="email"
-          defaultValue="invalid-email"
-          className="w-full rounded-md border border-red-500 bg-background px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500/20"
-        />
-        <p className="text-xs text-red-500">
-          Please enter a valid email address.
-        </p>
-      </div>
-    ),
+    code: `
+'use client';
+import { useState } from 'react';
+
+export default function EmailInput() {
+  const [value, setValue] = useState('invalid-email');
+  const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+  return (
+    <div className="flex flex-col gap-1.5">
+      <label htmlFor="email-error" className="text-sm font-medium text-foreground">Email</label>
+      <input
+        id="email-error"
+        type="email"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        className={
+          "w-full rounded-md border bg-background px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-1" +
+          (value.length > 0 && !isValid
+            ? " border-red-500 focus:border-red-500 focus:ring-red-500/20"
+            : " border-border/20 focus:border-foreground/40 focus:ring-foreground/20")
+        }
+      />
+      {!isValid && value.length > 0 ? (
+        <p className="text-xs text-red-500">Please enter a valid email address.</p>
+      ) : null}
+    </div>
+  );
+}
+`,
+    preview: <EmailErrorPreview />,
   },
   {
     id: "disabled",
@@ -256,54 +256,42 @@ export const inputVariants: ComponentVariant[] = [
   {
     id: "password",
     name: "Password Input",
-    code: `<div className="relative">
-  <input
-    type="password"
-    placeholder="Enter password"
-    className="w-full rounded-md border border-border/20 bg-background py-2 pl-4 pr-10 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
-  />
-  <button
-    type="button"
-    className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/50 hover:text-foreground"
-  >
-    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      <path strokeLinecap="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-    </svg>
-  </button>
-</div>`,
-    preview: (
-      <div className="relative w-full">
-        <input
-          type="password"
-          placeholder="Enter password"
-          defaultValue="password123"
-          className="w-full rounded-md border border-border/20 bg-background py-2 pl-4 pr-10 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
-        />
-        <button
-          type="button"
-          className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/50 hover:text-foreground"
-        >
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeWidth="2"
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeWidth="2"
-              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-            />
-          </svg>
-        </button>
-      </div>
-    ),
+    code: `
+'use client';
+import { useState } from 'react';
+
+export default function PasswordInput() {
+  const [value, setValue] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const handleShowPassword = (e) => {
+    e.preventDefault();
+    setShowPassword(!showPassword);
+  };
+
+  return (
+    <div className="relative">
+      <input
+        type={showPassword ? 'text' : 'password'}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Enter password"
+        className="w-full rounded-md border border-border/20 bg-background py-2 pl-4 pr-10 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
+      />
+      <button
+        type="button"
+        className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/50 hover:text-foreground"
+        onClick={handleShowPassword}
+      >
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+`,
+    preview: <PasswordInput />,
   },
   {
     id: "textarea",

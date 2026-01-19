@@ -71,7 +71,7 @@ export default function DocsPage() {
           <FeatureCard
             icon={<Zap className="h-5 w-5" />}
             title="Modern Stack"
-            description="Built with React 19, TypeScript, and Tailwind CSS v4."
+            description="Built with Next.js, TypeScript, and Tailwind CSS v4."
           />
         </div>
       </section>
@@ -81,7 +81,6 @@ export default function DocsPage() {
         <h2 className="text-2xl font-semibold text-foreground">Tech Stack</h2>
         <div className="flex flex-wrap gap-2">
           {[
-            "React 19",
             "TypeScript",
             "Tailwind CSS v4",
             "Next.js 16",

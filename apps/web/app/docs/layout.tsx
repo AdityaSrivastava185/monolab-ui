@@ -19,7 +19,9 @@ export default function DocsLayout({
           {/* Mobile Sidebar Toggle */}
           <MobileDocsSidebar />
 
-          <div className="max-w-3xl">{children}</div>
+          <div className="max-w-3xl text-base tracking-tighter leading-tight [&_h1]:text-lg [&_h1]:tracking-tighter [&_h1]:leading-tight [&_h2]:text-lg [&_h2]:tracking-tighter [&_h2]:leading-tight [&_h3]:text-lg [&_h3]:tracking-tighter [&_h3]:leading-tight [&_p]:text-base">
+            {children}
+          </div>
         </main>
       </div>
     </div>

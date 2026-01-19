@@ -47,6 +47,8 @@ export interface ComponentMeta {
   tags: string[];
   /** Version when this component was added */
   version: string;
+  /** Whether the component is coming soon */
+  comingSoon?: boolean;
 }
 
 /**

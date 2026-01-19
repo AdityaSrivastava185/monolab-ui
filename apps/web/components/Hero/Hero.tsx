@@ -1,6 +1,10 @@
 "use client";
 
-import { HeroContent, ComponentsSection, Footer } from "../Landing";
+import {
+  HeroContent,
+  ComponentsSection,
+  Footer,
+} from "../Landing";
 import { BackgroundVideo } from "../BackgroundVideo";
 
 export function Hero() {

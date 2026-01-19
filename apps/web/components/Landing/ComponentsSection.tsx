@@ -1,5 +1,5 @@
 import { ComponentCard } from "./ComponentCard";
-import { getAvailableComponents } from "@/lib/components/registry";
+import { getAvailableComponents } from "@/lib/componentsRegistry/registry";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -59,7 +59,8 @@ export function ComponentsSection() {
                 description={component.description}
                 category={component.category}
                 hasVariants={
-                  component.variants && component.variants.length > 0
+                  Array.isArray(component.variants) &&
+                  component.variants.length > 0
                 }
                 colSpan={size.colSpan}
                 rowSpan={size.rowSpan}
@@ -96,13 +97,19 @@ function SectionHeader({ count }: { count: number }) {
       {/* Title & Description */}
       <div className="flex flex-col items-center gap-2 text-center">
         <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
-          Outstanding components
+          Refined components,
+        </h2>
+        <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
+          Zero Overhead
         </h2>
         <p className="text-sm tracking-tight text-foreground/60 md:text-base">
-          <span className="block">
-            No extra packages — just one file for each component,
+          <span className="block ">
+            Copy-paste components with no extra packages.
           </span>
-          <span className="block">Use directly with your fav ShadCN CLI.</span>
+          <span className="block max-w-3/4 mx-auto">
+            Drop them into your Next.js + Tailwind projects or pair them with
+            your projects
+          </span>
         </p>
       </div>
     </div>

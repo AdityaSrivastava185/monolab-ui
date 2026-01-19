@@ -1,3 +1,4 @@
+import { CheckboxError } from "@/components/ComponentPreviews/Checkbox/CheckboxError";
 import { ComponentVariant } from "../types";
 
 /**
@@ -363,29 +364,32 @@ export const checkboxVariants: ComponentVariant[] = [
   {
     id: "error",
     name: "Checkbox with Error",
-    code: `<div className="flex flex-col gap-1.5">
-  <label className="inline-flex cursor-pointer items-center gap-2">
-    <input
-      type="checkbox"
-      className="h-4 w-4 cursor-pointer appearance-none rounded border border-red-500 bg-background"
-    />
-    <span className="text-sm text-foreground">I agree to the terms</span>
-  </label>
-  <p className="ml-6 text-xs text-red-500">You must accept the terms to continue.</p>
-</div>`,
-    preview: (
-      <div className="flex flex-col gap-1.5">
+        code: `
+    'use client';
+    
+    import React, { useState } from "react";
+    
+    export function CheckboxError() {
+      const [isChecked, setIsChecked] = useState(false);
+    
+      return (
         <label className="inline-flex cursor-pointer items-center gap-2">
           <input
             type="checkbox"
-            className="h-4 w-4 cursor-pointer appearance-none rounded border border-red-500 bg-background"
+            required
+            checked={isChecked}
+            onChange={(e) => setIsChecked(e.target.checked)}
+            className="h-4 w-4 cursor-pointer rounded border border-red-500 bg-background"
           />
-          <span className="text-sm text-foreground">I agree to the terms</span>
+          <span
+            className={"text-sm " + (isChecked ? "text-foreground" : "text-red-500")}
+          >
+            I agree to the terms
+          </span>
         </label>
-        <p className="ml-6 text-xs text-red-500">
-          You must accept the terms to continue.
-        </p>
-      </div>
-    ),
+      );
+    }
+    `,
+        preview: <CheckboxError/>
   },
 ];

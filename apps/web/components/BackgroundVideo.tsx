@@ -11,7 +11,7 @@ export function BackgroundVideo() {
         playsInline
         className="h-full w-full object-cover"
       >
-        <source src="/loopbg.mp4" type="video/mp4" />
+        <source src="/loopbg-01.mp4" type="video/mp4" />
         {/* Fallback for browsers that don't support video */}
         Your browser does not support the video tag.
       </video>

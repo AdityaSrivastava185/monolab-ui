@@ -1,20 +1,18 @@
 "use client";
 
-import {
-  HeroContent,
-  ComponentsSection,
-  Footer,
-} from "../Landing";
+import { HeroContent, ComponentsSection, Footer } from "../Landing";
 import { BackgroundVideo } from "../BackgroundVideo";
 
 export function Hero() {
   return (
     <main className="bg-background">
-      <BackgroundVideo />
       {/* Hero Section */}
       <section className="relative min-h-screen">
+        <BackgroundVideo />
         {/* Center Content */}
-        <HeroContent />
+        <div className="relative z-10">
+          <HeroContent />
+        </div>
       </section>
 
       {/* Components Section */}

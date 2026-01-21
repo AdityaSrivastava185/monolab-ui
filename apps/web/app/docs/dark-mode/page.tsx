@@ -15,6 +15,22 @@ export default function DarkModePage() {
         </p>
       </header>
 
+      <div>
+          <span className="w-fit inline-block border-2 border-chart-2/70 rounded-xl bg-chart-2/40 py-1 px-3 text-sm text-primary tracking-wide font-light">
+            The implementation of dark mode is completely inspired by{" "}
+            <span className="underline ">
+              <Link
+                href="https://ui.shadcn.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shadcn ui
+              </Link>
+            </span>{" "}
+            , if you have already installed shadcn ui in your project, you can skip this guide and directly use dark mode in your project.You can also refer the Official documentation
+          </span>
+        </div>
+
       {/* How It Works */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">How It Works</h2>
@@ -133,103 +149,6 @@ export default function RootLayout({ children }) {
             filename="app/layout.tsx"
           />
         </div>
-      </section>
-
-      {/* Theme Toggle */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">
-          Theme Toggle Component
-        </h2>
-        <p className="text-foreground/70">
-          Create a simple toggle button to switch between themes:
-        </p>
-        <CodeBlock
-          code={`"use client";
-
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-
-export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-
-  return (
-    <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-lg p-2 hover:bg-foreground/10 transition-colors"
-      aria-label="Toggle theme"
-    >
-      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-    </button>
-  );
-}`}
-          language="tsx"
-          filename="components/ThemeToggle.tsx"
-        />
-      </section>
-
-      {/* Manual Implementation */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">
-          Manual Implementation (Vanilla JS)
-        </h2>
-        <p className="text-foreground/70">
-          If you&apos;re not using Next.js or prefer a simpler approach:
-        </p>
-        <CodeBlock
-          code={`// Check for saved preference or system preference
-function getTheme() {
-  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-    return localStorage.getItem("theme");
-  }
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-  return "light";
-}
-
-// Apply theme
-function setTheme(theme) {
-  if (theme === "dark") {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-  localStorage.setItem("theme", theme);
-}
-
-// Toggle theme
-function toggleTheme() {
-  const current = document.documentElement.classList.contains("dark") 
-    ? "dark" 
-    : "light";
-  setTheme(current === "dark" ? "light" : "dark");
-}
-
-// Initialize on page load
-setTheme(getTheme());`}
-          language="javascript"
-          filename="theme.js"
-        />
-      </section>
-
-      {/* Tailwind v4 Note */}
-      <section className="space-y-4 rounded-xl border border-border/10 bg-card/50 p-6">
-        <h2 className="text-xl font-semibold text-foreground">
-          Tailwind CSS v4 Note
-        </h2>
-        <p className="text-foreground/70">
-          If using Tailwind v4, add the custom dark variant to your CSS:
-        </p>
-        <CodeBlock
-          code={`@custom-variant dark (&:is(.dark *));`}
-          language="css"
-        />
-        <p className="text-sm text-foreground/50 mt-2">
-          This enables the{" "}
-          <code className="rounded bg-foreground/10 px-1.5 py-0.5">dark:</code>{" "}
-          variant to work with the class-based approach.
-        </p>
       </section>
 
       {/* Tips */}

@@ -19,15 +19,15 @@ export function HeroContent() {
       </p>
 
       {/* Main Headline */}
-      <h1 className="mb-2 text-center text-5xl lowercase font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
+      <h1 className="mb-2 text-center text-5xl lowercase font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl text-balance">
        minimal-layer
       </h1>
-      <h1 className="mb-6 text-center text-5xl lowercase font-bold tracking-tight text-primary md:text-6xl lg:text-7xl">
+      <h1 className="mb-6 text-center text-5xl lowercase font-bold tracking-tight text-primary md:text-6xl lg:text-7xl text-balance">
         for your codebase
       </h1>
 
       {/* Subtitle */}
-      <p className="max-w-xl mx-auto text-center mb-12 text-md font-medium lowercase tracking-normal text-primary/80">
+      <p className="max-w-xl mx-auto text-center mb-12 text-md font-medium lowercase tracking-normal text-primary/80 text-balance">
         MonoLab UI gives you a focused set of clean, accessible components that live in your codebase, not in a bundle. Copy the pieces you need, shape them to your product, and keep every line under your control.
       </p>
 

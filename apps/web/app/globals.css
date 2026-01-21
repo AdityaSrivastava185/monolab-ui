@@ -156,3 +156,18 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+/* Responsive helpers: make media elements scale down on small screens */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure container elements don't overflow on very small viewports */
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem; /* matches px-4 */
+  padding-right: 1rem;
+}

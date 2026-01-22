@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { PostHogProvider } from "./providers";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <PostHogProvider>{children}</PostHogProvider>
           </ThemeProvider>
         </body>
     </html>

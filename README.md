@@ -1,24 +1,15 @@
-# Turborepo starter
-
-This Turborepo starter is maintained by the Turborepo core team.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-
 # MonoLab UI
+
+<!-- Top visuals: place screenshots named `homepage.png` and `components.png` in the `assets/` folder. -->
+<!-- If you prefer, add them to `apps/web/public/` and update the paths below. -->
+
+<p align="center">
+	<img src="/homepage.png" alt="Homepage screenshot" style="max-width:100%; height:auto; margin-bottom: 12px;" />
+</p>
+
+<p align="center">
+	<img src="/components.png" alt="Components grid screenshot" style="max-width:100%; height:auto;" />
+</p>
 
 A documentation and demo site for the MonoLab UI component library and design system.
 
@@ -213,9 +204,6 @@ Guidelines
 - Keep snapshots / examples in the docs updated when visuals change.
 
 ## Troubleshooting & FAQ
-
-Q: The dev server won't start — port 3000 in use
-A: Run `lsof -i :3000 -sTCP:LISTEN` to find the process, then `kill <PID>` or start the dev server on another port: `PORT=3001 npm run dev`.
 
 Q: I edited `lib/componentsRegistry/variants/inputs.tsx` and now the build fails with parse errors
 A: Ensure the file contains valid TSX. Variant `code` fields must be valid JavaScript template strings (use backticks) and must not contain stray Markdown fences (```tsx). Previews that are JSX nodes must not leak into those strings. If you need interactive previews, import a client component and reference it from the `preview`field (keep`code` as a string).

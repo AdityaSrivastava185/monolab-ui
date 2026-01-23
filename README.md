@@ -1,14 +1,15 @@
 # MonoLab UI
 
-<!-- Top visuals: place screenshots named `homepage.png` and `components.png` in the `assets/` folder. -->
+<!-- Top visuals: place screenshots named `homepage.png` a<img width="1884" height="965" alt="Screenshot 2026-01-23 at 10 18 14 PM" src="https://github.com/user-attachments/assets/90eed761-cdff-4c11-8700-ee075bc70b19" />
+nd `components.png` in the `assets/` folder. -->
 <!-- If you prefer, add them to `apps/web/public/` and update the paths below. -->
 
 <p align="center">
-	<img src="public/homepage.png" alt="Homepage screenshot" style="max-width:100%; height:auto; margin-bottom: 12px;" />
+	<img src="apps/web/public/homepage.png" alt="Homepage screenshot" style="max-width:100%; height:auto; margin-bottom: 12px;" />
 </p>
 
 <p align="center">
-	<img src="public/components.png" alt="Components grid screenshot" style="max-width:100%; height:auto;" />
+	<img src="apps/web/public/components.png" alt="Components grid screenshot" style="max-width:100%; height:auto;" />
 </p>
 
 A documentation and demo site for the MonoLab UI component library and design system.

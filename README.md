@@ -17,119 +17,226 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+# MonoLab UI
 
-### Utilities
+A documentation and demo site for the MonoLab UI component library and design system.
 
-This Turborepo has some additional tools already setup for you:
+This repository is a monorepo (Turborepo) containing a Next.js frontend web app, docs site, and shared UI package. It's designed as a living component library and playground with interactive previews, component variants, and docs.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+This README gives a complete quick-start for newcomers, explains the important files and folders, and documents platform integrations (PostHog) and developer workflows.
 
-### Build
+Table of contents
 
-To build all apps and packages, run the following command:
+- About
+- Quick start (local dev)
+- Environment variables
+- Project structure (what lives where)
+- Key concepts (component registry, previews, variants)
+- PostHog integration (what is tracked and how)
+- Responsive / accessibility notes
+- Common tasks and scripts
+- Contributing
+- Troubleshooting & FAQ
 
+---
+
+## About
+
+MonoLab UI is a small component system built with React, TypeScript, Tailwind CSS and Next.js. The repo contains:
+
+- `apps/web` — the primary demo/marketing site and component playground (Next.js App Router, TypeScript).
+- `apps/docs` — documentation-focused Next.js app (if present in the monorepo).
+- `packages/ui` or `@repo/ui` — shared React components used by the apps.
+- `packages/*` — config packages like eslint/tsconfig used throughout the repo.
+
+This repo follows a registry pattern where UI components register variants (preview + code string) into a central registry so the docs and component pages can render interactive previews and copyable code samples.
+
+## Quick start (local development)
+
+Prerequisites
+
+- Node.js 18+ (recommended) and a package manager (npm, pnpm, or yarn).
+- Git
+
+1. Clone the repository
+
+```bash
+git clone <this-repo-url>
+cd monolabui
 ```
-cd my-turborepo
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+2. Install dependencies
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+We use a monorepo workspace — install from the repo root. Example with npm:
+
+```bash
+# from repo root
+npm install
+# or pnpm install
+# or yarn install
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+3. Start development
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+We typically run the `web` app while developing the UI. From repo root you can run the turbo dev script (if present) or start the app directly.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+```bash
+# start only the web app
+cd apps/web
+npm run dev
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
+# or run turbo if configured to serve everything
+cd <repo-root>
 npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+Open http://localhost:3000 (or the port printed in the terminal) to view the site.
+
+## Environment variables
+
+The web app expects a few environment variables for optional integrations. Create a `.env.local` in `apps/web` (or set env vars in your host) with the following keys when required:
+
+Required for PostHog integration (optional):
 
 ```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+NEXT_PUBLIC_POSTHOG_KEY=your_posthog_api_key
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com  # or your self-hosted PostHog host
 ```
 
-### Remote Caching
+Notes:
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+- `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` are only required if you want analytics testing locally. PostHog integration is guarded and will not break the app if missing.
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## Project structure
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+High-level layout (abridged):
 
 ```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
+apps/
+	web/                # main Next.js app (component playground + docs)
+		app/
+			page.tsx
+			layout.tsx       # wraps app with ThemeProvider, PostHog provider
+		components/        # shared UI used in the site (Navbar, Hero, etc.)
+		lib/componentsRegistry/variants/  # per-component variant definitions
+packages/
+	eslint-config/
+	typescript-config/
+	ui/                 # shared component library (if present)
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
+README.md
 ```
 
-## Useful Links
+Key files to know
 
-Learn more about the power of Turborepo:
+- `apps/web/app/layout.tsx`: application root — includes `ThemeProvider` and `PostHogProvider`.
+- `apps/web/app/providers.tsx`: initializes PostHog and exports `PostHogProvider` used in `layout.tsx`.
+- `apps/web/lib/componentsRegistry/*`: variant files (e.g., `inputs.tsx`, `accordion.tsx`) export arrays of variants that the registry uses.
+- `apps/web/components/ComponentPreviews/*`: client preview helpers (interactive examples) used by variants.
+- `apps/web/components/Hero/Hero.tsx` and `BackgroundVideo.tsx`: hero section and background media behaviour.
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+## Key concepts
+
+1. Component registry
+
+The docs and components pages use a registry that lists all UI components and their `variants`. Each variant is an object with:
+
+- `id` — a unique id for the variant
+- `name` — human-friendly name
+- `preview` — a React node (often a client component) rendered in the docs
+- `code` — a string with an example usage that can be copied by users
+
+When adding a new component:
+
+- Add its preview components to `components/ComponentPreviews` for interactive examples.
+- Add its variants (preview + code) to `lib/componentsRegistry/variants/<component>.tsx` and export them.
+- Ensure the central registry imports and assigns the variants array so the UI shows it.
+
+2. Client previews and interaction
+
+Previews that require interactivity must be React client components (use "use client" at the top). Keep state localized to previews so docs remain server-renderable.
+
+3. Landing / Component listing and ComingSoon badge
+
+Landing and /components listing compute a `hasVariants` predicate. If a component has variants (an array), the ComingSoon badge is not shown. When adding variants, ensure the registry entry contains `variants: <array>`.
+
+## PostHog integration (analytics)
+
+This project includes optional PostHog analytics wired in `apps/web/app/providers.tsx` (see the `PostHogProvider`):
+
+- `apps/web/app/providers.tsx` — initializes `posthog-js` with `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` and wraps children in `PHProvider` from `posthog-js/react`.
+- `apps/web/components/Posthog/AutoCapture.tsx` — a lightweight client component that captures `page_auto_capture` events for specific routes (docs, components and the home #components hash). This is enabled inside the PostHog provider and will only run on the client.
+- `apps/web/components/Posthog/CheckoutButton.tsx` — example client component that demonstrates `usePostHog()` and `posthog.capture('purchase_completed', { amount })`.
+
+What is tracked by default with the current setup
+
+- `page_auto_capture` events are sent when a user visits or navigates to:
+  - `/docs` and any `/docs/*` pages (includes Quick Start)
+  - `/components` and any `/components/*` pages
+  - `/` when the location hash includes `#components`
+- The Checkout button demo emits `purchase_completed` when clicked.
+
+If you want richer automatic capture (clicks/forms/pageviews), enable the PostHog options in `providers.tsx` by adding `autocapture: true` and/or `capture_pageview: true` to `posthog.init(...)`.
+
+## Responsive & accessibility notes
+
+- The demo uses Tailwind CSS utilities and attempts to be responsive by default. There are helper classes and small global rules (`img, video, iframe { max-width: 100%; height: auto; }`) to prevent overflow.
+- Interactive previews that require client state are marked with `"use client"` and scoped to the preview folder.
+- When updating layouts, prefer utility classes like `px-4 sm:px-6 lg:px-8` to add responsive containers without breaking larger layouts.
+
+## Common tasks & scripts
+
+From the `apps/web` folder the common scripts are:
+
+- `npm run dev` — start Next.js dev server (port 3000 by default)
+- `npm run build` — build the site for production
+- `npm run start` — start Next.js production server (after build)
+- `npm run lint` — run ESLint
+- `npm run check-types` — run TypeScript checks
+
+At the repo root you may have `turbo` tasks to run or build all packages.
+
+## Contributing
+
+If you'd like to contribute:
+
+1. Fork the repo and create a feature branch.
+2. Add or update variants and previews as needed. Keep previews isolated and client-only when they require interactivity.
+3. Run `npm run lint` and `npm run check-types` in `apps/web` before opening a PR.
+4. Create a PR describing your changes and which components/pages you updated.
+
+Guidelines
+
+- Keep public API stable: prefer additive changes to exported components.
+- Add tests for complex logic where practical.
+- Keep snapshots / examples in the docs updated when visuals change.
+
+## Troubleshooting & FAQ
+
+Q: The dev server won't start — port 3000 in use
+A: Run `lsof -i :3000 -sTCP:LISTEN` to find the process, then `kill <PID>` or start the dev server on another port: `PORT=3001 npm run dev`.
+
+Q: I edited `lib/componentsRegistry/variants/inputs.tsx` and now the build fails with parse errors
+A: Ensure the file contains valid TSX. Variant `code` fields must be valid JavaScript template strings (use backticks) and must not contain stray Markdown fences (```tsx). Previews that are JSX nodes must not leak into those strings. If you need interactive previews, import a client component and reference it from the `preview`field (keep`code` as a string).
+
+Q: Analytics events are not visible in PostHog
+A: Ensure `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` are set. In Chrome DevTools look for network requests to the host (path `/e/`). In PostHog, check Live events.
+
+## FAQ / notes
+
+- Where are component variants defined? — `apps/web/lib/componentsRegistry/variants/*.tsx`.
+- Why is something showing a ComingSoon badge? — The page determines `hasVariants` by checking that `component.variants` is an array and has length > 0. Make sure `variants` is set and exported from the registry.
+- How do interactive previews work? — Previews that need state are client components (use "use client") and are imported into the variant file. The `preview` prop of a variant is a React node which the registry renders inside the docs.
+
+## License
+
+This repository does not include a license file by default. Add a LICENSE file if you intend to make this project open-source.
+
+## Credits
+
+This project draws inspiration and patterns from shadcn/ui, Turborepo examples, and other community component libraries.
+
+---
+
+If you'd like, I can expand any section (installation, debug steps, PostHog options, adding a new component/variant guide) into a separate detailed doc and add a `CONTRIBUTING.md` and `DEVELOPER_GUIDE.md` — tell me which you'd prefer next.

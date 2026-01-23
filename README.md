@@ -225,7 +225,3 @@ This repository does not include a license file by default. Add a LICENSE file i
 ## Credits
 
 This project draws inspiration and patterns from shadcn/ui, Turborepo examples, and other community component libraries.
-
----
-
-If you'd like, I can expand any section (installation, debug steps, PostHog options, adding a new component/variant guide) into a separate detailed doc and add a `CONTRIBUTING.md` and `DEVELOPER_GUIDE.md` — tell me which you'd prefer next.

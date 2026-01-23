@@ -4,11 +4,11 @@
 <!-- If you prefer, add them to `apps/web/public/` and update the paths below. -->
 
 <p align="center">
-	<img src="/homepage.png" alt="Homepage screenshot" style="max-width:100%; height:auto; margin-bottom: 12px;" />
+	<img src="public/homepage.png" alt="Homepage screenshot" style="max-width:100%; height:auto; margin-bottom: 12px;" />
 </p>
 
 <p align="center">
-	<img src="/components.png" alt="Components grid screenshot" style="max-width:100%; height:auto;" />
+	<img src="public/components.png" alt="Components grid screenshot" style="max-width:100%; height:auto;" />
 </p>
 
 A documentation and demo site for the MonoLab UI component library and design system.

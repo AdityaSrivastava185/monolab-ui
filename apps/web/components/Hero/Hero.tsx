@@ -10,7 +10,7 @@ const metadata = {
   author:"Monolab ui",
 }
 
-export function Hero() {
+export function Hero(){
   return (
     <main className="bg-background">
       {/* Hero Section */}

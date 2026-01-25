@@ -1,18 +1,18 @@
 "use client";
 
 import React from "react";
-import { usePostHog } from "posthog-js/react";
+// import { usePostHog } from "posthog-js/react";
 
 export default function CheckoutButton({ amount = 99 }: { amount?: number }) {
-  const posthog = usePostHog();
+  // const posthog = usePostHog();
 
   function handlePurchase() {
-    if (posthog) {
-      posthog.capture("purchase_completed", { amount });
-    } else {
-      // PostHog not initialized yet (safeguard for server-side rendering)
-      console.warn("posthog is not available yet");
-    }
+    const payload = { event: "purchase_completed", properties: { amount } };
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
   }
 
   return (

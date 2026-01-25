@@ -11,8 +11,10 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-      autocapture: true, // capture clicks/forms automatically
-      capture_pageview: true, // capture pageviews automatically
+      // Disable aggressive client-side autocapture by default.
+      // Use explicit captures or server-side tracking for sensitive events.
+      autocapture: false,
+      capture_pageview: false,
       // other options: persistence, cross_subdomain_cookie, etc.
     });
   }, []);

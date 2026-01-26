@@ -24,6 +24,8 @@ export interface ComponentVariant {
   preview: ReactNode;
   /** Source code for copying */
   code: string;
+  /** State description (e.g., "stateless", "stateful") */
+  state: "stateless" | "stateful";
 }
 
 /**

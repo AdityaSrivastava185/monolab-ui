@@ -3,12 +3,14 @@
 import { ReactNode } from "react";
 import { CopyButton } from "@/components/CopyButton";
 import { ComingSoonBadge } from "@/components/ComingSoonBadge";
+import Badge from "@repo/ui/badge";
 
 interface VariantItem {
   id: string;
   name?: string;
   preview: ReactNode;
   code: string;
+  state: string;
 }
 
 interface VariantsGridProps {
@@ -32,6 +34,7 @@ export function VariantsGrid({ variants }: VariantsGridProps) {
           index={index}
           totalCount={variants.length}
           code={variant.code}
+          state={variant.state}
         >
           {variant.preview}
         </VariantCell>
@@ -45,11 +48,13 @@ function VariantCell({
   index,
   totalCount,
   code,
+  state,
 }: {
   children: ReactNode;
   index: number;
   totalCount: number;
   code: string;
+  state: string;
 }) {
   const cols = 3;
   const isRightEdgeLg = (index + 1) % cols === 0;
@@ -65,10 +70,20 @@ function VariantCell({
       `}
     >
       <div className="flex items-center justify-center">{children}</div>
-      <CopyButton
-        code={code}
-        className="absolute right-3 top-3 opacity-0 transition-opacity group-hover:opacity-100"
-      />
+      <div>
+        <CopyButton
+          code={code}
+          className="absolute right-3 top-3 opacity-0 transition-opacity group-hover:opacity-100"
+        />
+        <div className="absolute left-3 top-1 opacity-0 transition-opacity group-hover:opacity-100">
+          {/* <Badge variant={state === "stateful" ? "stateful" : "stateless"}>
+            {state === "stateful" ? "Stateful" : "Stateless"}
+          </Badge> */}
+          <span className="inline-flex items-center rounded-md bg-foreground px-2 py-0.5 text-xs font-medium text-background">
+            {state === "stateful" ? "Stateful" : "Stateless"}
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

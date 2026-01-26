@@ -39,6 +39,7 @@ export const checkboxVariants: ComponentVariant[] = [
         />
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "with-label",
@@ -74,6 +75,7 @@ export const checkboxVariants: ComponentVariant[] = [
         </span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "with-description",
@@ -118,6 +120,7 @@ export const checkboxVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "disabled",
@@ -140,6 +143,7 @@ export const checkboxVariants: ComponentVariant[] = [
         <span className="text-sm text-foreground">Disabled option</span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "disabled-checked",
@@ -177,6 +181,7 @@ export const checkboxVariants: ComponentVariant[] = [
         <span className="text-sm text-foreground">Disabled checked</span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "rounded",
@@ -211,6 +216,7 @@ export const checkboxVariants: ComponentVariant[] = [
         <span className="text-sm text-foreground">Rounded checkbox</span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "large",
@@ -245,6 +251,7 @@ export const checkboxVariants: ComponentVariant[] = [
         <span className="text-sm text-foreground">Large checkbox</span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "checkbox-group",
@@ -318,6 +325,7 @@ export const checkboxVariants: ComponentVariant[] = [
         </label>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "card-checkbox",
@@ -360,6 +368,7 @@ export const checkboxVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "error",
@@ -390,6 +399,7 @@ export const checkboxVariants: ComponentVariant[] = [
       );
     }
     `,
-        preview: <CheckboxError/>
+        preview: <CheckboxError/>,
+        state : "stateless"
   },
 ];

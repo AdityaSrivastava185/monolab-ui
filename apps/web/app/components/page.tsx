@@ -14,7 +14,7 @@ export default function ComponentsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Header */}
       <header className="px-6 pb-6 pt-24">

@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar/Navbar";
 export default function ComponentNotFound() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className="flex min-h-[80vh] flex-col items-center justify-center px-6">
         <div className="text-center">

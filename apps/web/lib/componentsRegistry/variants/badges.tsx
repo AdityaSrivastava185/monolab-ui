@@ -18,6 +18,7 @@ export const badgeVariants: ComponentVariant[] = [
         Badge
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "secondary",
@@ -30,6 +31,7 @@ export const badgeVariants: ComponentVariant[] = [
         Badge
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "outline",
@@ -42,6 +44,7 @@ export const badgeVariants: ComponentVariant[] = [
         Badge
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "success",
@@ -54,6 +57,7 @@ export const badgeVariants: ComponentVariant[] = [
         Success
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "warning",
@@ -66,6 +70,7 @@ export const badgeVariants: ComponentVariant[] = [
         Warning
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "error",
@@ -78,6 +83,7 @@ export const badgeVariants: ComponentVariant[] = [
         Error
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "info",
@@ -90,6 +96,7 @@ export const badgeVariants: ComponentVariant[] = [
         Info
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "with-dot",
@@ -104,6 +111,7 @@ export const badgeVariants: ComponentVariant[] = [
         Active
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "with-icon",
@@ -132,6 +140,7 @@ export const badgeVariants: ComponentVariant[] = [
         Verified
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "removable",
@@ -164,6 +173,7 @@ export const badgeVariants: ComponentVariant[] = [
         </button>
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "pill",
@@ -176,6 +186,7 @@ export const badgeVariants: ComponentVariant[] = [
         New
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "count",
@@ -188,6 +199,7 @@ export const badgeVariants: ComponentVariant[] = [
         9+
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "status-online",
@@ -208,6 +220,7 @@ export const badgeVariants: ComponentVariant[] = [
         Online
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "status-offline",
@@ -222,6 +235,7 @@ export const badgeVariants: ComponentVariant[] = [
         Offline
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "status-busy",
@@ -236,6 +250,7 @@ export const badgeVariants: ComponentVariant[] = [
         Busy
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "large",
@@ -248,6 +263,7 @@ export const badgeVariants: ComponentVariant[] = [
         Large Badge
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "gradient",
@@ -260,6 +276,7 @@ export const badgeVariants: ComponentVariant[] = [
         Pro
       </span>
     ),
+    state : "stateless"
   },
   {
     id: "badge-group",
@@ -282,6 +299,7 @@ export const badgeVariants: ComponentVariant[] = [
         </span>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "notification",
@@ -318,5 +336,6 @@ export const badgeVariants: ComponentVariant[] = [
         </span>
       </div>
     ),
+    state : "stateless"
   },
 ];

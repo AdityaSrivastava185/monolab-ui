@@ -456,6 +456,7 @@ const items = [
   ))}
 </div>`,
     preview: <SimpleAccordion />,
+    state : "stateful"
   },
   {
     id: "with-icons",
@@ -471,6 +472,7 @@ const items = [
   <ChevronIcon />
 </button>`,
     preview: <AccordionWithIcons />,
+    state : "stateful"
   },
   {
     id: "multiple-open",
@@ -491,6 +493,7 @@ const toggleItem = (index: number) => {
   {item.content}
 </div>`,
     preview: <MultipleOpenAccordion />,
+    state : "stateful"
   },
   {
     id: "bordered",
@@ -514,6 +517,7 @@ const toggleItem = (index: number) => {
   ))}
 </div>`,
     preview: <BorderedAccordion />,
+    state : "stateful"
   },
   {
     id: "plus-minus",
@@ -533,6 +537,7 @@ const toggleItem = (index: number) => {
   </span>
 </button>`,
     preview: <PlusMinusAccordion />,
+    state : "stateful"
   },
   {
     id: "flush",
@@ -557,5 +562,6 @@ const toggleItem = (index: number) => {
   ))}
 </div>`,
     preview: <FlushAccordion />,
+    state : "stateful"
   },
 ];

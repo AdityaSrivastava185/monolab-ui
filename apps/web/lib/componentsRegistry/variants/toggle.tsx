@@ -20,6 +20,7 @@ export const toggleVariants: ComponentVariant[] = [
         <div className="h-6 w-11 rounded-full bg-border/30 transition-colors after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-foreground/70 after:transition-all peer-checked:bg-foreground peer-checked:after:translate-x-full peer-checked:after:bg-background peer-focus:ring-2 peer-focus:ring-foreground/20"></div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "with-label",
@@ -42,6 +43,7 @@ export const toggleVariants: ComponentVariant[] = [
         </span>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "label-left",
@@ -62,6 +64,7 @@ export const toggleVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "with-description",
@@ -92,6 +95,7 @@ export const toggleVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "small",
@@ -106,6 +110,7 @@ export const toggleVariants: ComponentVariant[] = [
         <div className="h-5 w-9 rounded-full bg-border/30 transition-colors after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:bg-foreground/70 after:transition-all peer-checked:bg-foreground peer-checked:after:translate-x-full peer-checked:after:bg-background"></div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "large",
@@ -120,6 +125,7 @@ export const toggleVariants: ComponentVariant[] = [
         <div className="h-8 w-14 rounded-full bg-border/30 transition-colors after:absolute after:left-[3px] after:top-[3px] after:h-[26px] after:w-[26px] after:rounded-full after:bg-foreground/70 after:transition-all peer-checked:bg-foreground peer-checked:after:translate-x-full peer-checked:after:bg-background"></div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "disabled",
@@ -134,6 +140,7 @@ export const toggleVariants: ComponentVariant[] = [
         <div className="h-6 w-11 rounded-full bg-border/30 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-foreground/70"></div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "disabled-checked",
@@ -153,6 +160,7 @@ export const toggleVariants: ComponentVariant[] = [
         <div className="h-6 w-11 rounded-full bg-foreground after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:translate-x-full after:rounded-full after:bg-background"></div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "with-icons",
@@ -199,6 +207,7 @@ export const toggleVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
   {
     id: "card-toggle",
@@ -227,5 +236,6 @@ export const toggleVariants: ComponentVariant[] = [
         </div>
       </label>
     ),
+    state : "stateless"
   },
 ];

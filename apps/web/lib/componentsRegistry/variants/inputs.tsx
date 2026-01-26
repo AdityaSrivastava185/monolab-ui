@@ -24,6 +24,7 @@ export const inputVariants: ComponentVariant[] = [
         className="w-full rounded-md border border-border/20 bg-background px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
       />
     ),
+    state : "stateless"
   },
   {
     id: "with-label",
@@ -52,6 +53,7 @@ export const inputVariants: ComponentVariant[] = [
         />
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "required",
@@ -82,6 +84,7 @@ export const inputVariants: ComponentVariant[] = [
         />
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-helper-text",
@@ -119,6 +122,7 @@ export const inputVariants: ComponentVariant[] = [
         </p>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "error",
@@ -154,6 +158,7 @@ export default function EmailInput() {
 }
 `,
     preview: <EmailErrorPreview />,
+    state : "stateful"
   },
   {
     id: "disabled",
@@ -172,6 +177,7 @@ export default function EmailInput() {
         className="w-full cursor-not-allowed rounded-md border border-border/10 bg-muted px-4 py-2 text-sm text-foreground/50 placeholder:text-foreground/30"
       />
     ),
+    state : "stateless"
   },
   {
     id: "with-icon-left",
@@ -212,6 +218,7 @@ export default function EmailInput() {
         />
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-icon-right",
@@ -252,6 +259,7 @@ export default function EmailInput() {
         </svg>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "password",
@@ -292,6 +300,7 @@ export default function PasswordInput() {
 }
 `,
     preview: <PasswordInput />,
+    state : "stateful"
   },
   {
     id: "textarea",
@@ -308,6 +317,7 @@ export default function PasswordInput() {
         className="w-full resize-none rounded-md border border-border/20 bg-background px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
       />
     ),
+    state : "stateless"
   },
   {
     id: "with-prefix",
@@ -334,6 +344,7 @@ export default function PasswordInput() {
         />
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-suffix",
@@ -360,5 +371,6 @@ export default function PasswordInput() {
         </span>
       </div>
     ),
+    state : "stateless"
   },
 ];

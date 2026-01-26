@@ -22,6 +22,7 @@ export const avatarVariants: ComponentVariant[] = [
         className="h-10 w-10 rounded-full object-cover"
       />
     ),
+    state : "stateless"
   },
   {
     id: "with-initials",
@@ -34,6 +35,7 @@ export const avatarVariants: ComponentVariant[] = [
         JD
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-fallback",
@@ -60,6 +62,7 @@ export const avatarVariants: ComponentVariant[] = [
         </svg>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "sizes",
@@ -94,6 +97,7 @@ export const avatarVariants: ComponentVariant[] = [
         />
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-status",
@@ -134,6 +138,7 @@ export const avatarVariants: ComponentVariant[] = [
         </div>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-ring",
@@ -150,6 +155,7 @@ export const avatarVariants: ComponentVariant[] = [
         className="h-10 w-10 rounded-full object-cover ring-2 ring-foreground ring-offset-2 ring-offset-background"
       />
     ),
+    state : "stateless"
   },
   {
     id: "squared",
@@ -166,6 +172,7 @@ export const avatarVariants: ComponentVariant[] = [
         className="h-10 w-10 rounded-md object-cover"
       />
     ),
+    state : "stateless"
   },
   {
     id: "group",
@@ -200,6 +207,7 @@ export const avatarVariants: ComponentVariant[] = [
         </div>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-name",
@@ -228,6 +236,7 @@ export const avatarVariants: ComponentVariant[] = [
         </div>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "with-badge",
@@ -254,6 +263,7 @@ export const avatarVariants: ComponentVariant[] = [
         </span>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "colored-initials",
@@ -280,6 +290,7 @@ export const avatarVariants: ComponentVariant[] = [
         </div>
       </div>
     ),
+    state : "stateless"
   },
   {
     id: "profile-card",
@@ -320,5 +331,6 @@ export const avatarVariants: ComponentVariant[] = [
         </div>
       </div>
     ),
+    state : "stateless"
   },
 ];

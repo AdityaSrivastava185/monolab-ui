@@ -26,6 +26,7 @@ export const buttonVariants: ComponentVariant[] = [
         Button
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "secondary",
@@ -38,6 +39,7 @@ export const buttonVariants: ComponentVariant[] = [
         Button
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "outline",
@@ -50,6 +52,7 @@ export const buttonVariants: ComponentVariant[] = [
         Button
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "icon-left",
@@ -75,6 +78,7 @@ export const buttonVariants: ComponentVariant[] = [
         Button
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "destructive",
@@ -102,6 +106,7 @@ export const buttonVariants: ComponentVariant[] = [
         Delete
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "bookmark",
@@ -139,6 +144,7 @@ export function BookmarkButton() {
   );
 }`,
     preview: <BookmarkButtonPreview />,
+    state : "stateful"
   },
   {
     id: "close",
@@ -166,6 +172,7 @@ export function BookmarkButton() {
         Close
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "ghost",
@@ -178,6 +185,7 @@ export function BookmarkButton() {
         Click me
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "loading",
@@ -219,6 +227,7 @@ export function LoadingButton() {
   );
 }`,
     preview: <LoadingButtonPreview />,
+    state : "stateful"
   },
   {
     id: "alignment",
@@ -297,6 +306,7 @@ export function AlignmentButtons() {
   );
 }`,
     preview: <AlignmentButtonsPreview />,
+    state : "stateful"
   },
   {
     id: "button-group",
@@ -344,6 +354,7 @@ export function ButtonGroup() {
   );
 }`,
     preview: <ButtonGroupPreview />,
+    state : "stateful"
   },
   {
     id: "toggle-group",
@@ -391,6 +402,7 @@ export function ToggleGroup() {
   );
 }`,
     preview: <ToggleGroupPreview />,
+    state : "stateful"
   },
   {
     id: "split-button",
@@ -436,6 +448,7 @@ export function SplitButton() {
   );
 }`,
     preview: <SplitButtonPreview />,
+    state : "stateful"
   },
   {
     id: "social-google",
@@ -467,6 +480,7 @@ export function SplitButton() {
         Login with Google
       </button>
     ),
+    state : "stateless"
   },
   {
     id: "social-github",
@@ -483,5 +497,6 @@ export function SplitButton() {
         Login with GitHub
       </button>
     ),
+    state : "stateless"
   },
 ];

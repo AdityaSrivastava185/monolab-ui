@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { PostHogProvider } from "./providers";
+// import { PostHogProvider } from "./providers";
+import { Analytics } from '@vercel/analytics/next';
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -29,7 +30,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <PostHogProvider>{children}</PostHogProvider>
+            {/* <PostHogProvider>{children}</PostHogProvider> */}
+            {children}
+            <Analytics />
           </ThemeProvider>
         </body>
     </html>

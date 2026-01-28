@@ -18,9 +18,9 @@ export { dropdownVariants } from "./dropdown";
 export { selectVariants } from "./select";
 export { accordionVariants } from "./accordion";
 export { avatarVariants } from "./avatar";
+export { cardVariants } from "./cards";
 
 // TODO: Add more variant exports as they are created
-// export { cardVariants } from "./cards";
 // export { sliderVariants } from "./slider";
 // export { modalVariants } from "./modal";
 // export { tabsVariants } from "./tabs";

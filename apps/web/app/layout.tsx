@@ -32,7 +32,7 @@ export default function RootLayout({
           >
             {/* <PostHogProvider>{children}</PostHogProvider> */}
             {children}
-            <Analytics />
+            {/* <Analytics /> */}
           </ThemeProvider>
         </body>
     </html>

@@ -26,6 +26,7 @@ import {
   badgeVariants,
   dropdownVariants,
   selectVariants,
+  cardVariants,
   accordionVariants,
   avatarVariants,
 } from "./variants";
@@ -112,7 +113,7 @@ export const componentRegistry: ComponentEntry[] = [
     tags: ["card", "container", "layout", "content", "box"],
     version: "1.0.0",
     preview: <CardsPreview />,
-    comingSoon: true,
+    variants: cardVariants,
   },
   {
     slug: "accordion",
@@ -249,7 +250,7 @@ export function getComponentBySlug(slug: string): ComponentEntry | undefined {
  * Get components by category
  */
 export function getComponentsByCategory(
-  category: ComponentEntry["category"]
+  category: ComponentEntry["category"],
 ): ComponentEntry[] {
   return componentRegistry.filter((c) => c.category === category);
 }
@@ -277,6 +278,6 @@ export function searchComponents(query: string): ComponentEntry[] {
     (c) =>
       c.title.toLowerCase().includes(lowerQuery) ||
       c.description.toLowerCase().includes(lowerQuery) ||
-      c.tags.some((tag) => tag.includes(lowerQuery))
+      c.tags.some((tag) => tag.includes(lowerQuery)),
   );
 }

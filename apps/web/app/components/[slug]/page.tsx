@@ -53,7 +53,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navbar /> */}
 
       <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -68,7 +68,11 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
         </header>
 
         {/* Variants Grid */}
-        <VariantsGrid variants={component.variants || []} />
+        {/* Choose sensible defaults for column counts per component */}
+        <VariantsGrid
+          variants={component.variants || []}
+          gridCols={component.preferredGrid || { base: 1, md: 2, lg: 3 }}
+        />
 
         {/* CTA Section */}
         <section className="mt-24 text-center">

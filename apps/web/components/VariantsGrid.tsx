@@ -15,9 +15,14 @@ interface VariantItem {
 
 interface VariantsGridProps {
   variants: VariantItem[];
+  gridCols?: {
+    base?: 1 | 2 | 3 | 4;
+    md?: 1 | 2 | 3 | 4;
+    lg?: 1 | 2 | 3 | 4;
+  };
 }
 
-export function VariantsGrid({ variants }: VariantsGridProps) {
+export function VariantsGrid({ variants, gridCols }: VariantsGridProps) {
   if (!variants || variants.length === 0) {
     return (
       <div className="flex min-h-64 items-center justify-center rounded-2xl border border-border/10 bg-card/50">
@@ -27,7 +32,7 @@ export function VariantsGrid({ variants }: VariantsGridProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 border-t border-border/10 md:grid-cols-2 lg:grid-cols-3">
+    <div className={buildGridClass(gridCols)}>
       {variants.map((variant, index) => (
         <VariantCell
           key={variant.id}
@@ -41,6 +46,25 @@ export function VariantsGrid({ variants }: VariantsGridProps) {
       ))}
     </div>
   );
+}
+
+function buildGridClass(cols?: { base?: number; md?: number; lg?: number }) {
+  const base = (cols && cols.base) || 1;
+  const md = (cols && cols.md) || 2;
+  const lg = (cols && cols.lg) || 3;
+
+  const map: Record<number, string> = {
+    1: "grid-cols-1",
+    2: "grid-cols-2",
+    3: "grid-cols-3",
+    4: "grid-cols-4",
+  };
+
+  const baseCls = map[base] || map[1];
+  const mdCls = map[md] ? `md:${map[md]}` : "";
+  const lgCls = map[lg] ? `lg:${map[lg]}` : "";
+
+  return `grid ${baseCls} border-t border-border/10 ${mdCls} ${lgCls}`.trim();
 }
 
 function VariantCell({
@@ -64,9 +88,8 @@ function VariantCell({
     <div
       className={`
         group relative flex min-h-32 items-center justify-center p-8
-        border-b border-border/10 m-1
-        md:border-r md:border-border/10 bg-card/80
-        rounded-sm
+        m-1 border border-border/30
+        rounded-xl
       `}
     >
       <div className="flex items-center justify-center">{children}</div>

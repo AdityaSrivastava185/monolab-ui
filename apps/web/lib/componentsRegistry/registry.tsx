@@ -62,6 +62,7 @@ export const componentRegistry: ComponentEntry[] = [
     version: "1.0.0",
     preview: <ButtonsPreview />,
     variants: buttonVariants,
+    preferredGrid: { base: 1, md: 3, lg: 3 },
   },
   {
     slug: "inputs",
@@ -75,6 +76,7 @@ export const componentRegistry: ComponentEntry[] = [
     version: "1.0.0",
     preview: <InputsPreview />,
     variants: inputVariants,
+    preferredGrid : {base:1, md:2 , lg:3}
   },
   {
     slug: "toggle",
@@ -114,6 +116,7 @@ export const componentRegistry: ComponentEntry[] = [
     version: "1.0.0",
     preview: <CardsPreview />,
     variants: cardVariants,
+    preferredGrid: { base: 1, md: 2, lg: 2 },
   },
   {
     slug: "accordion",

@@ -63,6 +63,16 @@ export interface ComponentEntry extends ComponentMeta {
   variants?: ComponentVariant[];
   /** Full component examples for the detail page */
   examples?: ComponentExample[];
+  /**
+   * Preferred grid column counts for rendering variants.
+   * Optional metadata that page consumers can pass to the grid to
+   * control how many columns to show at different breakpoints.
+   */
+  preferredGrid?: {
+    base?: 1 | 2 | 3 | 4;
+    md?: 1 | 2 | 3 | 4;
+    lg?: 1 | 2 | 3 | 4;
+  };
 }
 
 /**

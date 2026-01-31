@@ -36,7 +36,8 @@ export function HeroContent() {
         {/* Install Command */}
         <button
           onClick={() => router.push("https://github.com/AdityaSrivastava185/monolab-ui")}
-          className="group flex items-center gap-3 rounded-full border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80"
+          className="group flex items-center gap-3 rounded-full border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80 cursor-pointer"
+          
         >
           <code className="text-sm text-foreground/70">
             <span className="text-foreground/50">npx</span> give a star

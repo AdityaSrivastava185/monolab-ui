@@ -92,7 +92,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
               Browse Components
             </Link>
             <Link
-              href="https://github.com"
+              href="https://github.com/AdityaSrivastava185/monolab-ui"
               target="_blank"
               className="rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
             >

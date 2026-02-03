@@ -21,14 +21,14 @@ export default function ComponentsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-baseline gap-2">
             <h1 className="text-3xl font-bold tracking-tight text-foreground">
-              Minimal Essentials
+              Minimal Accessibilities
             </h1>
             <span className="text-sm text-foreground/40">
               [{components.length}]
             </span>
           </div>
           <p className="max-w-md mt-2 text-sm text-foreground/50">
-            Collection of minimal components that focus on essential interactions and are easy to integrate into your projects.
+            Collection of minimal components that focus on essential interactions and accessibility and are easy to integrate into your projects.
           </p>
         </div>
       </header>

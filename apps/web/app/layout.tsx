@@ -14,6 +14,15 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "MonoLab UI",
   description: "A minimal layer for your codebase",
+  keywords: [
+    "monolab ui",
+    "react components",
+    "component library",
+    "ui components",
+    "design system",
+    "nextjs components",
+  ],
+  authors: [{ name: "MonoLab UI" }],
 };
 
 export default function RootLayout({

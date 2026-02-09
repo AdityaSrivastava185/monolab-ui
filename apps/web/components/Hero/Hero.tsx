@@ -2,6 +2,9 @@
 
 import { HeroContent, ComponentsSection, Footer } from "../Landing";
 import { BackgroundVideo } from "../BackgroundVideo";
+import InsipiredLegends from "../InspiredLegends/InsipiredLegends";
+import ToolsStacks from "../ToolsStacks/ToolsStacks";
+import Pricing from "../Pricing/Pricing";
 
 const metadata = {
   title: "MonoLab UI - A minimal layer for your codebase",
@@ -25,6 +28,15 @@ export function Hero(){
       {/* Components Section */}
       <ComponentsSection />
 
+      {/* Inspired Legends */}
+      <InsipiredLegends />
+
+      {/* Tools and Stacks */}
+      <ToolsStacks />
+
+      {/* Pricing plans */}
+      <Pricing />
+      
       {/* Footer */}
       <Footer />
     </main>

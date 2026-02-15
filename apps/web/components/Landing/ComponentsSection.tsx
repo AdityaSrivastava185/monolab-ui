@@ -97,17 +97,17 @@ function SectionHeader({ count }: { count: number }) {
       {/* Title & Description */}
       <div className="flex flex-col items-center gap-2 text-center">
         <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
-          Refined components,
+          refined components,
         </h2>
         <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
-          Zero Overhead
+          zero overhead
         </h2>
         <p className="text-sm tracking-tight text-foreground/60 md:text-base">
           <span className="block ">
-            Copy-paste components with no extra packages.
+            copy-paste components with no extra packages.
           </span>
           <span className="block max-w-3/4 mx-auto">
-            Drop them into your Next.js + Tailwind projects or pair them with
+            drop them into your Next.js + Tailwind projects or pair them with
             your projects
           </span>
         </p>

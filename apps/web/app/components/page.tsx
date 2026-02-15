@@ -1,7 +1,6 @@
 import { getAvailableComponents } from "@/lib/componentsRegistry/registry";
 import Link from "next/link";
 import { ComingSoonBadge } from "@/components/ComingSoonBadge";
-import { Navbar } from "@/components/Navbar/Navbar";
 
 export const metadata = {
   title: "Components | MonoLab UI",
@@ -13,9 +12,6 @@ export default function ComponentsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navbar */}
-      {/* <Navbar /> */}
-
       {/* Header */}
       <header className="px-6 pb-6 pt-24">
         <div className="mx-auto max-w-7xl">
@@ -28,7 +24,9 @@ export default function ComponentsPage() {
             </span>
           </div>
           <p className="max-w-md mt-2 text-sm text-foreground/50">
-            Collection of minimal components that focus on essential interactions and accessibility and are easy to integrate into your projects.
+            Collection of minimal components that focus on essential
+            interactions and accessibility and are easy to integrate into your
+            projects.
           </p>
         </div>
       </header>

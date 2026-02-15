@@ -8,16 +8,24 @@ import Pricing from "../Pricing/Pricing";
 
 const metadata = {
   title: "MonoLab UI - A minimal layer for your codebase",
-  description: "A set of clean , accessible components that live in your codebase.",
-  keywords: ["monolab ui","react components","component library","ui components","design system","nextjs components"],
-  author:"Monolab ui",
-}
+  description:
+    "A set of clean , accessible components that live in your codebase.",
+  keywords: [
+    "monolab ui",
+    "react components",
+    "component library",
+    "ui components",
+    "design system",
+    "nextjs components",
+  ],
+  author: "Monolab ui",
+};
 
-export function Hero(){
+export function Hero() {
   return (
     <main className="bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen">
+      <section className="relative min-h-screen my-24">
         <BackgroundVideo />
         {/* Center Content */}
         <div className="relative z-10">
@@ -36,7 +44,7 @@ export function Hero(){
 
       {/* Pricing plans */}
       <Pricing />
-      
+
       {/* Footer */}
       <Footer />
     </main>

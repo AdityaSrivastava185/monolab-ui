@@ -39,13 +39,10 @@ export function ComponentsSection() {
   };
 
   return (
-    <section
-      id="components"
-      className="relative w-full overflow-hidden px-5 py-24"
-    >
+    <section id="components" className="relative w-full overflow-hidden px-5">
       <div className="mx-auto max-w-[1400px]">
         {/* Section Header */}
-        <SectionHeader count={allComponents.length} />
+        {/*<SectionHeader count={allComponents.length} />*/}
 
         {/* Bento Grid - 4 columns on lg */}
         <div className="relative mt-8 grid w-full grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
@@ -96,19 +93,13 @@ function SectionHeader({ count }: { count: number }) {
 
       {/* Title & Description */}
       <div className="flex flex-col items-center gap-2 text-center">
-        <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
-          refined components,
+        <h2 className="text-primary leading-tighter text-xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-4xl xl:tracking-tighter max-w-4xl">
+          refined components , zero overhead
         </h2>
-        <h2 className="max-w-lg px-5 text-[28px] font-semibold leading-[28px] tracking-tighter md:text-[38px] md:leading-[42px]">
-          zero overhead
-        </h2>
-        <p className="text-sm tracking-tight text-foreground/60 md:text-base">
-          <span className="block ">
-            copy-paste components with no extra packages.
-          </span>
-          <span className="block max-w-3/4 mx-auto">
-            drop them into your Next.js + Tailwind projects or pair them with
-            your projects
+        <p className="text-foreground mx-auto max-w-4xl text-base text-balance sm:text-lg">
+          <span className="">
+            copy-paste components with no extra packages.drop them into your
+            Next.js + Tailwind projects or pair them with your projects
           </span>
         </p>
       </div>

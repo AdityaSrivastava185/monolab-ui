@@ -1,7 +1,6 @@
 "use client";
 
 import { HeroContent, ComponentsSection, Footer } from "../Landing";
-import { BackgroundVideo } from "../BackgroundVideo";
 import InsipiredLegends from "../InspiredLegends/InsipiredLegends";
 import ToolsStacks from "../ToolsStacks/ToolsStacks";
 import Pricing from "../Pricing/Pricing";
@@ -25,14 +24,11 @@ export function Hero() {
   return (
     <main className="bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen my-24">
-        <BackgroundVideo />
-        {/* Center Content */}
+      <section className="relative mt-24">
         <div className="relative z-10">
           <HeroContent />
         </div>
       </section>
-
       {/* Components Section */}
       <ComponentsSection />
 

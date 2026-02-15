@@ -37,13 +37,11 @@ export function ComponentCard({
   return (
     <Link
       href={`/components/${slug}`}
-      className={`group relative flex min-h-[280px] flex-col overflow-hidden rounded-3xl border border-border/10 bg-card transition-all duration-300 hover:border-border/30 hover:shadow-2xl hover:shadow-primary/5 ${colSpanClass} ${rowSpanClass}`}
+      className={`group relative flex min-h-[280px] flex-col overflow-hidden rounded-3xl bg-sidebar/60 transition-all duration-300 hover:border-border/30 hover:shadow-2xl hover:shadow-primary/5 ${colSpanClass} ${rowSpanClass}`}
     >
       {/* Badge Icon - Top Right */}
       <div className="absolute right-4 top-4 z-10">
-        {!hasVariants ? (
-          <ComingSoonBadge variant="compact" />
-        ) : null}
+        {!hasVariants ? <ComingSoonBadge variant="compact" /> : null}
       </div>
 
       {/* Preview Area - Takes most of the card */}
@@ -52,7 +50,7 @@ export function ComponentCard({
       </div>
 
       {/* Title - Bottom Left */}
-      <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-card via-card/80 to-transparent p-6 pt-12">
+      <div className="absolute bottom-0 left-0 right-0 p-6 pt-12">
         <h3 className="text-base font-medium text-foreground">{title}</h3>
       </div>
     </Link>

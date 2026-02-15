@@ -10,51 +10,38 @@ export function HeroContent() {
   const router = useRouter();
 
   return (
-    <div className="relative z-20 flex min-h-screen flex-col items-center justify-center px-6">
+    <div className=" flex flex-col items-center gap-2 px-6 py-8 text-center md:py-16 lg:py-20 xl:gap-4">
       {/* Top Label */}
-      <p className="mb-4 text-sm font-medium lowercase text-foreground/50">
+      <p className="inline-flex items-center justify-center rounded-full border border-transparent px-2 py-1 text-xs font-medium w-fit whitespace-nowrap shrink-0 overflow-hidden text-secondary-foreground [a&]:hover:bg-secondary/90 bg-muted">
         Brought by the makers of MonoLab UI
       </p>
 
       {/* Main Headline */}
-      <h1 className="mb-2 text-center text-4xl lowercase font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl text-balance">
-        minimal-layer
-      </h1>
-      <h1 className="mb-6 text-center text-4xl lowercase font-bold tracking-tight text-primary md:text-6xl lg:text-7xl text-balance">
-        for your codebase
+      <h1 className="text-primary leading-tighter text-3xl font-bold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">
+        minimal-layer for your codebase and system
       </h1>
 
       {/* Subtitle */}
-      <p className="max-w-xl mx-auto text-center mb-12 text-md font-medium lowercase tracking-normal text-primary/80 text-balance">
+      <p className="text-foreground mx-auto max-w-4xl text-sm text-balance sm:text-lg">
         monoLab UI gives you a focused set of clean, accessible components that
         live in your codebase, not in a bundle. Copy the pieces you need, shape
         them to your product, and keep every line under your control.
       </p>
 
       {/* CTA Row */}
-      <div className="flex flex-col items-center gap-4 sm:flex-row">
-        {/* Install Command */}
+      <div className="flex flex-col md:flex-row w-full items-center justify-center gap-2 pt-2">
         <button
           onClick={() =>
             router.push("https://github.com/AdityaSrivastava185/monolab-ui")
           }
-          className="group flex items-center gap-3 rounded-full border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80 cursor-pointer"
+          className="w-full md:w-auto group flex items-center gap-3 rounded-xl border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80 cursor-pointer"
         >
-          <code className="text-sm text-foreground/70">
-            <span className="text-foreground/50">npx</span> give a star
-            <span className="text-primary">/github</span>
-          </code>
-          {copied ? (
-            <Check className="h-4 w-4 text-green-500" />
-          ) : (
-            <Copy className="h-4 w-4 text-foreground/40 transition-colors group-hover:text-foreground/60" />
-          )}
+          give star on github
         </button>
 
-        {/* Quick Start Button */}
         <Link
           href="/docs"
-          className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90"
+          className="w-full md:w-auto rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90"
         >
           Quick Start
         </Link>

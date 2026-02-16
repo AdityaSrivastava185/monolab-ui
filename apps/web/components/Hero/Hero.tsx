@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <main className="bg-background">
       {/* Hero Section */}
-      <section className="relative mt-24">
+      <section className="relative">
         <div className="relative z-10">
           <HeroContent />
         </div>

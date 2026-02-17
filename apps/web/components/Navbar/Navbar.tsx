@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, ChevronRight } from "lucide-react";
 
 export function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [manifestationOpen, setManifestationOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const [manifestationOpen, setManifestationOpen] = useState<boolean>(false);
+  const [stars, setStars] = useState<number | null>(null);
 
   const handleClick = () => {
     setOpen(true);
@@ -17,6 +18,21 @@ export function Navbar() {
     setManifestationOpen(true);
     setTimeout(() => setManifestationOpen(false), 2500);
   };
+
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/repos/AdityaSrivastava185/monolab-ui",
+        );
+        const data = await response.json();
+        setStars(data.stargazers_count);
+      } catch (errors) {
+        console.log(errors);
+      }
+    };
+    fetchStars();
+  }, []);
 
   return (
     <header className="bg-background mt-3 sticky top-0 z-50 w-full md:max-w-8/12 mx-auto">
@@ -99,7 +115,7 @@ export function Navbar() {
                   ></path>
                 </svg>
                 <span className="text-muted-foreground w-fit text-xs tabular-nums">
-                  {/*107K*/}
+                  {stars}
                 </span>
               </Link>
             </div>

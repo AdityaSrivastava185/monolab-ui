@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { PricingPlanProps } from "@/types/pricing.types";
+import { Check, ChevronRight } from "lucide-react";
 
 const PremiumPlan = () => {
   const router = useRouter();
+  const [premiumPlanPopupOpen, setPremiumPlanPopupOpen] = useState(false);
   const premiumPricingPlan: PricingPlanProps = {
     pricingType: "premium plan",
     pricingDescription:
@@ -19,9 +21,15 @@ const PremiumPlan = () => {
     ],
     cta: "coming soon",
   };
+  const handlePremiumPlanPopup = () => {
+    setPremiumPlanPopupOpen(true);
+    setTimeout(() => {
+      setPremiumPlanPopupOpen(false);
+    }, 3000);
+  };
   return (
     <div className="flex flex-col items-center text-center gap-3 px-4">
-      <div className="rounded-xl border border-border bg-muted/20 mt-7 p-6 text-foreground min-w-xs max-w-xs">
+      <div className="rounded-xl bg-muted/20 mt-7 p-6 text-foreground min-w-xs max-w-xs">
         <h3 className="text-2xl font-semibold mb-2 font-sans text-start">
           {premiumPricingPlan.pricingType}
         </h3>
@@ -61,10 +69,25 @@ const PremiumPlan = () => {
         </ul>
         <button
           className=" mt-7 w-full rounded-md border border-border/20 bg-foreground px-4 py-2 text-sm text-muted transition-colors hover:bg-muted hover:text-foreground font-semibold cursor-pointer"
-          onClick={() => router.push("/components")}
+          onClick={handlePremiumPlanPopup}
         >
           {premiumPricingPlan.cta}
         </button>
+        {premiumPlanPopupOpen && (
+          <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 animate-in fade-in zoom-in-95 hidden md:block">
+            <div className="flex items-center gap-3 bg-background text-accent-foreground border border-border rounded-xl px-4 py-3 shadow-lg min-w-fit">
+              <div className="flex items-center justify-center size-8 bg-accent-foreground border border-border rounded-xl">
+                <Check className="size-4 text-background" />
+              </div>
+
+              <p className="text-sm text-accent-foreground flex-1">
+                the pricing plan will soon be coming
+              </p>
+
+              <ChevronRight className="size-4 text-accent-foreground" />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

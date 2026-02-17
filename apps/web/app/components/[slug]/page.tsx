@@ -59,10 +59,10 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
       <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-16 text-center">
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl">
+          <h1 className="text-primary leading-tighter text-3xl font-bold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter ">
             {component.title}
           </h1>
-          <p className="mx-auto max-w-2xl text-base text-foreground/50 md:text-lg">
+          <p className="text-foreground mx-auto max-w-4xl text-sm text-balance sm:text-lg">
             {component.longDescription}
           </p>
         </header>
@@ -79,7 +79,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
           <h2 className="mb-3 text-2xl font-medium text-foreground md:text-3xl">
             Didn&apos;t find what you were looking for?
           </h2>
-          <p className="mx-auto max-w-md text-sm text-foreground/40">
+          <p className="text-foreground mx-auto max-w-4xl text-sm text-balance sm:text-lg">
             Explore the original Origin UI or contribute by
             <br />
             suggesting new components and improvements.
@@ -87,7 +87,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/#components"
-              className="rounded-full border border-border/20 px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="rounded-full border border-border/20 px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               Browse Components
             </Link>

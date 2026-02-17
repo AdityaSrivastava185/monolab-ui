@@ -45,7 +45,7 @@ export function ComponentsSection() {
         {/*<SectionHeader count={allComponents.length} />*/}
 
         {/* Bento Grid - 4 columns on lg */}
-        <div className="relative mt-8 grid w-full grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid w-full grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
           {components.map((component, index) => {
             const size = getBentoSize(index);
             return (
@@ -69,13 +69,15 @@ export function ComponentsSection() {
         </div>
 
         {/* Explore All Link */}
-        <Link
-          href="/components"
-          className="group mt-5 flex items-center justify-center gap-1 text-sm font-semibold transition-all ease-in-out hover:opacity-60"
-        >
-          Explore all components
-          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-        </Link>
+        <div className="flex items-center justify-center w-full">
+          <Link
+            href="/components"
+            className="group bg-foreground max-w-fit mt-5 flex items-center justify-center gap-1 rounded-full border border-border/20 px-6 py-2.5 text-sm font-medium text-background  transition-colors  "
+          >
+            explore all components
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
     </section>
   );

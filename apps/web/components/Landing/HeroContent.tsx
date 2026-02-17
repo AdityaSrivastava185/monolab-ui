@@ -10,10 +10,10 @@ export function HeroContent() {
   const router = useRouter();
 
   return (
-    <div className=" flex flex-col items-center gap-2 px-6 py-8 text-center md:py-16 lg:py-20 xl:gap-4">
+    <div className=" flex flex-col items-center gap-2 px-6 py-8 text-center md:py-16] xl:gap-4">
       {/* Top Label */}
       <p className="inline-flex items-center justify-center rounded-full border border-transparent px-2 py-1 text-xs font-medium w-fit whitespace-nowrap shrink-0 overflow-hidden text-secondary-foreground [a&]:hover:bg-secondary/90 bg-muted">
-        Brought by the makers of MonoLab UI
+        brought by the makers of MonoLab UI
       </p>
 
       {/* Main Headline */}
@@ -22,14 +22,14 @@ export function HeroContent() {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-foreground mx-auto max-w-4xl text-sm text-balance sm:text-lg">
+      <p className="text-foreground mx-auto md:max-w-2/5 text-sm sm:text-lg">
         monoLab UI gives you a focused set of clean, accessible components that
         live in your codebase, not in a bundle. Copy the pieces you need, shape
         them to your product, and keep every line under your control.
       </p>
 
       {/* CTA Row */}
-      <div className="flex flex-col md:flex-row w-full items-center justify-center gap-2 pt-2">
+      <div className="flex flex-col md:flex-row w-full items-center justify-center gap-4 mt-2">
         <button
           onClick={() =>
             router.push("https://github.com/AdityaSrivastava185/monolab-ui")

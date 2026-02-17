@@ -19,24 +19,10 @@ const freemiumPlan = () => {
     ],
     cta: "explore instant access",
   };
-  const premiumPricingPlan: PricingPlanProps = {
-    pricingType: "premium plan",
-    pricingDescription:
-      "Start with our freemium plan and experience the power of our platform",
-    price: 200,
-    monthOrYear: "month",
-    features: [
-      "access to all premium and current components",
-      "copy-paste , single file code (free + premium)",
-      "regular new components and variants",
-      "access to premium website templates",
-      "full usage rights and no sign-up required",
-    ],
-    cta: "coming soon",
-  };
+
   return (
     <div className="flex flex-col items-center text-center gap-3 px-4">
-      <div className="rounded-xl border border-border bg-muted/20 mt-7 p-6 text-foreground min-w-xs max-w-xs">
+      <div className="rounded-xl bg-muted/20 mt-7 p-6 text-foreground min-w-xs max-w-xs">
         <h3 className="text-2xl font-semibold mb-2 font-sans text-start">
           {freemiumPricingPlan.pricingType}
         </h3>

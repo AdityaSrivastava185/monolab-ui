@@ -30,6 +30,7 @@ import {
   accordionVariants,
   avatarVariants,
 } from "./variants";
+import alertVariants from "@/lib/componentsRegistry/variants/alert";
 
 /**
  * Component Registry
@@ -65,6 +66,20 @@ export const componentRegistry: ComponentEntry[] = [
     preferredGrid: { base: 1, md: 3, lg: 3 },
   },
   {
+    slug: "alert",
+    title: "alert",
+    description: "alert variants depending upon the requirements",
+    longDescription:
+      "alert is a lightweight feedback component highlights status updates, warnings, errors, or general information in a clear and unobtrusive way, helping users understand what’s happening and what action, if any, is required.\n",
+    category: "Display",
+    isAvailable: true,
+    tags: ["alert"],
+    version: "1.0.0",
+    preview: <InputsPreview />,
+    variants: alertVariants,
+    preferredGrid: { base: 1, md: 2, lg: 2 },
+  },
+  {
     slug: "inputs",
     title: "Inputs",
     description: "Text inputs, textareas, and form fields",
@@ -76,7 +91,7 @@ export const componentRegistry: ComponentEntry[] = [
     version: "1.0.0",
     preview: <InputsPreview />,
     variants: inputVariants,
-    preferredGrid : {base:1, md:2 , lg:3}
+    preferredGrid: { base: 1, md: 2, lg: 3 },
   },
   {
     slug: "toggle",

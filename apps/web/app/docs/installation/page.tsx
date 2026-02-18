@@ -4,37 +4,37 @@ import { ArrowRight } from "lucide-react";
 
 export default function InstallationPage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-10">
       {/* Header */}
-      <header className="space-y-4">
+      <header className="space-y-3">
         <h1 className="text-4xl font-bold tracking-tight text-foreground">
           Installation
         </h1>
-        <p className="text-lg text-foreground/60">
+        <p className="text-base text-muted-foreground">
           Set up your project to use MonoLab UI components in minutes.
         </p>
       </header>
 
       {/* Prerequisites */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
           Prerequisites
         </h2>
-        <p className="text-foreground/70">
+        <p className="text-muted-foreground">
           MonoLab UI components are designed for modern Nextjs projects. Make
           sure you have:
         </p>
-        <ul className="mt-4 space-y-2 text-foreground/70">
+        <ul className="mt-4 space-y-2 text-muted-foreground">
           <li className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
+            <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60" />
             Nextjs
           </li>
           <li className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
+            <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60" />
             Tailwind CSS v4 (or v3 with minor adjustments)
           </li>
           <li className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
+            <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60" />
             TypeScript
           </li>
         </ul>
@@ -43,26 +43,32 @@ export default function InstallationPage() {
       {/* Step 1: Tailwind Setup */}
       <section className="space-y-4">
         <div className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/40 text-sm font-semibold text-foreground">
             1
           </span>
-          <h2 className="text-2xl font-semibold text-foreground">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             Install Tailwind CSS
           </h2>
         </div>
-        <p className="text-foreground/70">
+        <p className="text-muted-foreground">
           If you haven&apos;t already, set up Tailwind CSS in your project:
         </p>
-        <span className="text-foreground">Visit - </span> <Link href="https://tailwindcss.com/docs/installation/framework-guides" className="text-muted-foreground hover:underline">Tailwind Official Installation Documentation</Link>
+        <span className="text-muted-foreground">Visit - </span>{" "}
+        <Link
+          href="https://tailwindcss.com/docs/installation/framework-guides"
+          className="text-foreground underline underline-offset-4"
+        >
+          Tailwind Official Installation Documentation
+        </Link>
       </section>
 
       {/* Step 2: CSS Variables */}
       <section className="space-y-4">
         <div className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/40 text-sm font-semibold text-foreground">
             2
           </span>
-          <h2 className="text-2xl font-semibold text-foreground">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             Add CSS Variables
           </h2>
         </div>
@@ -137,14 +143,14 @@ export default function InstallationPage() {
       {/* Step 3: Utility Functions */}
       <section className="space-y-4">
         <div className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/40 text-sm font-semibold text-foreground">
             3
           </span>
-          <h2 className="text-2xl font-semibold text-foreground">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             Add Utility Functions
           </h2>
         </div>
-        <p className="text-foreground/70">
+        <p className="text-muted-foreground">
           Create a utility file for className merging. Install dependencies
           first:
         </p>
@@ -153,7 +159,7 @@ export default function InstallationPage() {
           language="bash"
           filename="Terminal"
         />
-        <p className="text-foreground/70">Then create the utility:</p>
+        <p className="text-muted-foreground">Then create the utility:</p>
         <CodeBlock
           code={`import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -169,14 +175,14 @@ export function cn(...inputs: ClassValue[]) {
       {/* Step 4: Icons (Optional) */}
       <section className="space-y-4">
         <div className="flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-muted/40 text-sm font-semibold text-foreground">
             4
           </span>
-          <h2 className="text-2xl font-semibold text-foreground">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             Install Icons (Optional)
           </h2>
         </div>
-        <p className="text-foreground/70">
+        <p className="text-muted-foreground">
           Many components use Lucide icons. Install them if you want icon
           support:
         </p>
@@ -188,11 +194,11 @@ export function cn(...inputs: ClassValue[]) {
       </section>
 
       {/* Done */}
-      <section className="space-y-4 rounded-xl border border-border/10 bg-card/50 p-6">
+      <section className="space-y-4 rounded-lg border border-border bg-muted/30 p-6">
         <h2 className="text-xl font-semibold text-foreground">
           You&apos;re Ready! 🎉
         </h2>
-        <p className="text-foreground/70">
+        <p className="text-muted-foreground">
           Your project is now set up to use MonoLab UI components. Browse the
           components, find what you need, and copy the code directly into your
           project.
@@ -200,14 +206,14 @@ export function cn(...inputs: ClassValue[]) {
         <div className="flex flex-wrap gap-4 pt-2">
           <Link
             href="/docs/usage"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
           >
             Learn How to Use
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/#components"
-            className="inline-flex items-center gap-2 rounded-full border border-border/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
+            className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/50"
           >
             Browse Components
           </Link>

@@ -80,7 +80,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
             Didn&apos;t find what you were looking for?
           </h2>
           <p className="text-foreground mx-auto max-w-4xl text-sm text-balance sm:text-lg">
-            Explore the original Origin UI or contribute by
+            Explore the design and components or contribute by
             <br />
             suggesting new components and improvements.
           </p>

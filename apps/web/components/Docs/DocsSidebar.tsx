@@ -14,13 +14,12 @@ const docsNav = [
   },
   {
     title: "Customization",
-    items: [
-      { title: "Dark Mode", href: "/docs/dark-mode" },
-    ],
+    items: [{ title: "Dark Mode", href: "/docs/dark-mode" }],
   },
   {
     title: "Components",
     items: [
+      { title: "alert", href: "/components/alert" },
       { title: "Buttons", href: "/components/buttons" },
       { title: "Inputs", href: "/components/inputs" },
       { title: "Toggle", href: "/components/toggle" },
@@ -42,11 +41,11 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 overflow-y-auto border-r border-border/10 py-12 pr-8 lg:block">
-      <nav className="space-y-8">
+    <aside className="sticky top-16 hidden h-[calc(100vh-4rem)] w-60 shrink-0 overflow-y-auto border-r border-border/40 pr-6 pt-8 lg:block">
+      <nav className="space-y-6">
         {docsNav.map((section) => (
           <div key={section.title}>
-            <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-foreground/40">
+            <h4 className="mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               {section.title}
             </h4>
             <ul className="space-y-1">
@@ -56,10 +55,10 @@ export function DocsSidebar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={`block rounded-md px-3 py-2 text-sm transition-colors ${
+                      className={`block rounded-md px-3 py-1.5 text-sm transition-colors ${
                         isActive
-                          ? "bg-foreground/5 font-medium text-foreground"
-                          : "text-foreground/60 hover:bg-foreground/5 hover:text-foreground"
+                          ? "bg-muted/60 font-medium text-foreground"
+                          : "text-muted-foreground hover:bg-muted/40 hover:text-foreground"
                       }`}
                     >
                       {item.title}

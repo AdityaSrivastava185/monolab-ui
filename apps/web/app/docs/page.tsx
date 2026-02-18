@@ -3,29 +3,33 @@ import { ArrowRight, Copy, Palette, Zap } from "lucide-react";
 
 export default function DocsPage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-10">
       {/* Hero */}
-      <header className="space-y-4">
+      <header className="space-y-3">
         <h1 className="text-4xl font-bold tracking-tight text-foreground">
           Introduction
         </h1>
-        <p className="text-foreground/60 text-md">
-          MonoLab UI gives you a focused set of clean, accessible components that live in your codebase, not in a bundle. Copy the pieces you need, shape them to your product, and keep every line under your control.
+        <p className="text-base text-muted-foreground">
+          MonoLab UI gives you a focused set of clean, accessible components
+          that live in your codebase, not in a bundle. Copy the pieces you need,
+          shape them to your product, and keep every line under your control.
         </p>
       </header>
 
       {/* Philosophy */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">Philosophy</h2>
-        <p className="text-foreground/70 leading-relaxed">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+          Philosophy
+        </h2>
+        <p className="text-muted-foreground">
           MonoLab UI is not a traditional component library. Instead of
           installing packages and dealing with dependency hell, you simply{" "}
           <strong className="text-foreground">copy the code</strong> into your
           project. This gives you:
         </p>
-        <ul className="mt-4 space-y-3 text-foreground/70">
+        <ul className="mt-4 space-y-3 text-muted-foreground">
           <li className="flex items-start gap-3">
-            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-foreground/10 text-xs">
+            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-xs text-foreground">
               ✓
             </span>
             <span>
@@ -34,7 +38,7 @@ export default function DocsPage() {
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-foreground/10 text-xs">
+            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-xs text-foreground">
               ✓
             </span>
             <span>
@@ -43,7 +47,7 @@ export default function DocsPage() {
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-foreground/10 text-xs">
+            <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-xs text-foreground">
               ✓
             </span>
             <span>
@@ -56,7 +60,9 @@ export default function DocsPage() {
 
       {/* Features */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-foreground">Features</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+          Features
+        </h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <FeatureCard
             icon={<Copy className="h-5 w-5" />}
@@ -78,41 +84,42 @@ export default function DocsPage() {
 
       {/* Tech Stack */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">Tech Stack</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+          Tech Stack
+        </h2>
         <div className="flex flex-wrap gap-2">
-          {[
-            "TypeScript",
-            "Tailwind CSS v4",
-            "Next.js 16",
-            "Lucide Icons",
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full border border-border/20 bg-card px-3 py-1 text-sm text-foreground/70"
-            >
-              {tech}
-            </span>
-          ))}
+          {["TypeScript", "Tailwind CSS v4", "Next.js 16", "Lucide Icons"].map(
+            (tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-border bg-muted/30 px-3 py-1 text-xs text-muted-foreground"
+              >
+                {tech}
+              </span>
+            ),
+          )}
         </div>
       </section>
 
       {/* Quick Start */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">Quick Start</h2>
-        <p className="text-foreground/70">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+          Quick Start
+        </h2>
+        <p className="text-muted-foreground">
           Ready to add beautiful components to your project?
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
             href="/docs/installation"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
           >
             Installation Guide
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/#components"
-            className="inline-flex items-center gap-2 rounded-full border border-border/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
+            className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/50"
           >
             Browse Components
           </Link>
@@ -132,12 +139,12 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="rounded-xl border border-border/10 bg-card/50 p-5">
-      <div className="mb-3 inline-flex rounded-lg bg-foreground/5 p-2 text-foreground/70">
+    <div className="rounded-lg border border-border bg-card p-5 transition-colors hover:bg-muted/30">
+      <div className="mb-3 inline-flex rounded-md bg-muted p-2 text-foreground">
         {icon}
       </div>
-      <h3 className="mb-1 font-medium text-foreground">{title}</h3>
-      <p className="text-sm text-foreground/50">{description}</p>
+      <h3 className="mb-1 text-sm font-medium text-foreground">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
 }

@@ -31,6 +31,7 @@ import {
   avatarVariants,
 } from "./variants";
 import alertVariants from "@/lib/componentsRegistry/variants/alert";
+import { AlertPreview } from "@/lib/componentsRegistry/previews/alert";
 
 /**
  * Component Registry
@@ -75,7 +76,7 @@ export const componentRegistry: ComponentEntry[] = [
     isAvailable: true,
     tags: ["alert"],
     version: "1.0.0",
-    preview: <InputsPreview />,
+    preview: <AlertPreview />,
     variants: alertVariants,
     preferredGrid: { base: 1, md: 2, lg: 2 },
   },

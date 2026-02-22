@@ -171,3 +171,6 @@ iframe {
   padding-left: 1rem; /* matches px-4 */
   padding-right: 1rem;
 }
+.card-secondary {
+  background-color: #0f0f0f;
+}

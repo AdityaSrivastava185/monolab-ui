@@ -28,10 +28,8 @@ export function HeroContent() {
 
           {/* Main Headline */}
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-            The minimal layer for your{" "}
-            <span className="bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-              codebase
-            </span>
+            The minimal layer for your codebase
+            
           </h1>
 
           {/* Subtitle */}

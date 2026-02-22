@@ -6,7 +6,7 @@ import { CreditCard } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <section className="py-16 lg:py-24">
+    <section id="#pricing" className="py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-6">
         {/* Section Header - Cal.com style */}
         <div className="mb-12 flex flex-col items-center gap-4 text-center">

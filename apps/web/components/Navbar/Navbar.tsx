@@ -35,7 +35,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="mt-3 sticky top-0 z-50 w-full md:max-w-6xl border-x border-border mx-auto">
+    <header className="mt-3 sticky top-0 z-50 w-full md:max-w-6xl lg:max-w-7xl border-x border-border mx-auto">
       <div className="container-wrapper 3xl:fixed:px-0 px-6">
         <div className="3xl:fixed:container flex  items-center">
           <Link
@@ -120,7 +120,7 @@ export function Navbar() {
               </Link>
             </div>
             <Link
-              href="/"
+              href="#pricing"
               className="items-center justify-center whitespace-nowrap text-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-foreground hover:bg-primary/20 gap-1.5 px-3 has-[>svg]:px-2.5 hidden h-[31px] rounded-lg sm:flex  md:inline-flex"
             >
               pricing

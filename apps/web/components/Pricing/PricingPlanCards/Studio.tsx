@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { PricingPlanProps } from "@/types/pricing.types";
 import { Check, ArrowRight, Zap } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Studio = () => {
+  const router = useRouter();
   const [showToast, setShowToast] = useState(false);
   const StudioPricingPlan: PricingPlanProps = {
     pricingType: "Studio",
@@ -10,18 +12,20 @@ const Studio = () => {
     price: 500,
     monthOrYear: "project",
     features: [
-      "Custom component development",
-      "Full website design & build",
-      "Figma designs included",
-      "Source code ownership",
-      "Dedicated support",
-    ],
+  "Custom component development or full website builds",
+  "Bespoke Figma designs tailored to your brand",
+  "Next.js + TypeScript + Tailwind development",
+  "Complete source code ownership",
+  "Dedicated project manager",
+  "Post-launch support included"
+],
     cta: "Contact Us",
   };
 
   const handleClick = () => {
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 3000);
+    // setShowToast(true);
+    // setTimeout()
+    router.push("https://cal.com/monolabui-dev-studio/30min")
   };
 
   return (
@@ -49,7 +53,7 @@ const Studio = () => {
         <span className="text-4xl font-bold text-foreground">
           ${StudioPricingPlan.price}
         </span>
-        <span className="text-muted-foreground">+</span>
+        <span className="text-muted-foreground">/month</span>
       </div>
 
       {/* Features */}
@@ -65,7 +69,7 @@ const Studio = () => {
       {/* CTA Button */}
       <button
         onClick={handleClick}
-        className="group/btn flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background py-3 text-sm font-medium text-foreground transition-all hover:bg-muted"
+        className="group/btn flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background py-3 text-sm font-medium text-foreground transition-all hover:bg-muted cursor-pointer"
       >
         {StudioPricingPlan.cta}
         <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />

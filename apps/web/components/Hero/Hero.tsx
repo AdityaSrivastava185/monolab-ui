@@ -28,7 +28,7 @@ export function Hero() {
   return (
     <main className="bg-background">
       {/* Hero Section */}
-      <section className="relative max-w-6xl mx-auto border-x border-border p-2 md:p-7">
+      <section className="relative md:max-w-6xl lg:max-w-7xl mx-auto border-x border-border p-2 md:p-7">
         <div className="relative z-10 bg-secondary/20 rounded-2xl">
           <HeroContent />
         </div>

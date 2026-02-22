@@ -41,7 +41,7 @@ export function ComponentsSection() {
   return (
     <section
       id="components"
-      className="relative w-full overflow-hidden py-16 "
+      className="relative w-full overflow-hidden py-16 px-6 md:px-0 "
     >
       <div className="mx-auto">
         {/* Section Header - Cal.com style */}

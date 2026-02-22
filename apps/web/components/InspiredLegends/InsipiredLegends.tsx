@@ -1,21 +1,31 @@
 import React from "react";
+import { Heart } from "lucide-react";
 
 const InsipiredLegends = () => {
   return (
-    <section className="mt-24 flex flex-col items-center text-center gap-4 px-4">
-      <span className="inline-flex items-center justify-center rounded-full border border-transparent px-2 py-1 text-xs font-medium w-fit whitespace-nowrap shrink-0 overflow-hidden text-secondary-foreground [a&]:hover:bg-secondary/90 bg-muted">
-        inspired by Legends
-      </span>
+    <section className="">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="flex flex-col items-center gap-6 text-center">
+          {/* Badge */}
+          <div className="flex items-center gap-2 rounded-full border border-border/40 bg-muted/50 px-4 py-1.5">
+            <Heart className="h-3.5 w-3.5 text-primary/70" />
+            <span className="text-xs font-medium text-muted-foreground">
+              Standing on shoulders of giants
+            </span>
+          </div>
 
-      <h2 className="text-primary leading-tighter text-3xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">
-        inspired Legends
-      </h2>
+          {/* Title */}
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            Inspired by legends
+          </h2>
 
-      <p className="text-foreground mx-auto max-w-4xl text-base text-balance sm:text-lg">
-        the platform's design is inspired by legendary figures and their
-        stories. By drawing inspiration from these legends we aim to create a
-        design that is visually appealing, functional and easy to use.
-      </p>
+          {/* Description */}
+          <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
+            Our design philosophy draws from the best in the ecosystem. We stand
+            on the shoulders of these incredible projects.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

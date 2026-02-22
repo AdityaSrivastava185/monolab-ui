@@ -1,7 +1,7 @@
 import { ComponentCard } from "./ComponentCard";
 import { getAvailableComponents } from "@/lib/componentsRegistry/registry";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layers } from "lucide-react";
 
 // Define bento grid layout pattern
 // Each item specifies: colSpan (1 or 2), rowSpan (1 or 2) for lg screens
@@ -39,13 +39,30 @@ export function ComponentsSection() {
   };
 
   return (
-    <section id="components" className="relative w-full overflow-hidden px-5">
-      <div className="mx-auto max-w-[1400px]">
-        {/* Section Header */}
-        {/*<SectionHeader count={allComponents.length} />*/}
+    <section
+      id="components"
+      className="relative w-full overflow-hidden py-16 "
+    >
+      <div className="mx-auto">
+        {/* Section Header - Cal.com style */}
+        <div className="mb-12 flex flex-col items-center gap-4 text-center">
+          <div className="flex items-center gap-2 rounded-full border border-border/40 bg-muted/50 px-4 py-1.5">
+            <Layers className="h-3.5 w-3.5 text-primary/70" />
+            <span className="text-xs font-medium text-muted-foreground">
+              {allComponents.length}+ components
+            </span>
+          </div>
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+            Refined components, zero overhead
+          </h2>
+          <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
+            Copy-paste components with no extra packages. Drop them into your
+            Next.js + Tailwind projects.
+          </p>
+        </div>
 
         {/* Bento Grid - 4 columns on lg */}
-        <div className="relative grid w-full grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid w-full grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
           {components.map((component, index) => {
             const size = getBentoSize(index);
             return (
@@ -68,14 +85,14 @@ export function ComponentsSection() {
           })}
         </div>
 
-        {/* Explore All Link */}
-        <div className="flex items-center justify-center w-full">
+        {/* Explore All Link - Cal.com style button */}
+        <div className="mt-12 flex items-center justify-center">
           <Link
             href="/components"
-            className="group bg-foreground max-w-fit mt-5 flex items-center justify-center gap-1 rounded-full border border-border/20 px-6 py-2.5 text-sm font-medium text-background  transition-colors  "
+            className="group flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
           >
-            explore all components
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            Explore all components
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </div>

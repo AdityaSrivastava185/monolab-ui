@@ -18,4 +18,5 @@ export { Badge } from "./Badge";
 export { HeroContent } from "./HeroContent";
 export { ComponentCard } from "./ComponentCard";
 export { ComponentsSection } from "./ComponentsSection";
+export { FeaturesSection } from "./FeaturesSection";
 export { Footer } from "./Footer";

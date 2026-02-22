@@ -37,7 +37,7 @@ export function ComponentCard({
   return (
     <Link
       href={`/components/${slug}`}
-      className={`group relative flex min-h-[280px] flex-col overflow-hidden rounded-3xl bg-sidebar/60 transition-all duration-300 hover:border-border/30 hover:shadow-2xl hover:shadow-primary/5 ${colSpanClass} ${rowSpanClass}`}
+      className={`group relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl border border-border/30 bg-muted/30 transition-all duration-300 hover:border-border/60 hover:bg-muted/50 hover:shadow-xl ${colSpanClass} ${rowSpanClass}`}
     >
       {/* Badge Icon - Top Right */}
       <div className="absolute right-4 top-4 z-10">
@@ -45,13 +45,14 @@ export function ComponentCard({
       </div>
 
       {/* Preview Area - Takes most of the card */}
-      <div className="flex flex-1 items-center justify-center p-10 transition-transform duration-300 group-hover:scale-[1.02]">
-        <div className="scale-125">{children}</div>
+      <div className="flex flex-1 items-center justify-center p-8 transition-transform duration-300 group-hover:scale-[1.01]">
+        <div className="scale-110">{children}</div>
       </div>
 
-      {/* Title - Bottom Left */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 pt-12">
-        <h3 className="text-base font-medium text-foreground">{title}</h3>
+      {/* Title - Bottom with subtle gradient overlay */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-5 pt-10">
+        <h3 className="text-sm font-medium text-foreground">{title}</h3>
+        <p className="mt-0.5 text-xs text-muted-foreground">{category}</p>
       </div>
     </Link>
   );

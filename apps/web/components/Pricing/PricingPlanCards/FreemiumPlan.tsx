@@ -1,71 +1,66 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { PricingPlanProps } from "@/types/pricing.types";
+import { Check, ArrowRight } from "lucide-react";
 
-const freemiumPlan = () => {
+const FreemiumPlan = () => {
   const router = useRouter();
   const freemiumPricingPlan: PricingPlanProps = {
-    pricingType: "freemium plan",
+    pricingType: "Free",
     pricingDescription:
-      "Start with our freemium plan and experience the power of our platform",
+      "Perfect for getting started with high-quality components",
     price: 0,
     monthOrYear: "month",
     features: [
-      "all current components",
-      "copy-paste , single file code",
-      "regular new components and variants",
-      "production-ready code components and quality (responsive and dark mode ready)",
-      "full usage rights and no sign-up required",
+      "All current components",
+      "Copy-paste, single file code",
+      "Regular new components",
+      "Dark mode & responsive",
+      "MIT License",
     ],
-    cta: "explore instant access",
+    cta: "Get Started",
   };
 
   return (
-    <div className="flex flex-col items-center text-center gap-3 px-4">
-      <div className="rounded-xl bg-muted/20 mt-7 p-6 text-foreground min-w-xs max-w-xs">
-        <h3 className="text-2xl font-semibold mb-2 font-sans text-start">
+    <div className="group relative flex flex-col h-full rounded-2xl border border-border/50 bg-background p-6 transition-all hover:border-border hover:shadow-lg">
+      {/* Plan Header */}
+      <div className="mb-6">
+        <h3 className="text-xl font-semibold text-foreground">
           {freemiumPricingPlan.pricingType}
         </h3>
-        <p className="text-sm text-foreground/60 mb-4 font-sans text-start max-w-xs">
+        <p className="mt-2 text-sm text-muted-foreground">
           {freemiumPricingPlan.pricingDescription}
         </p>
-
-        <p className="text-sm text-foreground/60 mb-4 font-sans text-start max-w-xs">
-          <span className="text-4xl text-foreground font-bold">
-            ${freemiumPricingPlan.price}{" "}
-          </span>
-          /month
-        </p>
-        <ul className="mt-4 space-y-3 text-sm text-foreground/70 text-start">
-          {freemiumPricingPlan &&
-            freemiumPricingPlan.features.length > 0 &&
-            freemiumPricingPlan.features.map((feature, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="flex-none mt-0.5 h-4 w-4 text-primary">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-primary"
-                  >
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </span>
-                <span className="">{feature}</span>
-              </li>
-            ))}
-        </ul>
-        <button className=" mt-7 w-full rounded-md border border-border/20 bg-foreground px-4 py-2 text-sm text-muted transition-colors hover:bg-muted hover:text-foreground font-semibold cursor-pointer">
-          {freemiumPricingPlan.cta}
-        </button>
       </div>
+
+      {/* Price */}
+      <div className="mb-6">
+        <span className="text-4xl font-bold text-foreground">
+          ${freemiumPricingPlan.price}
+        </span>
+        <span className="text-muted-foreground">/month</span>
+      </div>
+
+      {/* Features */}
+      <ul className="mb-8 flex-1 space-y-3">
+        {freemiumPricingPlan.features.map((feature, index) => (
+          <li key={index} className="flex items-start gap-3 text-sm">
+            <Check className="mt-0.5 h-4 w-4 flex-none text-foreground" />
+            <span className="text-muted-foreground">{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA Button */}
+      <button
+        onClick={() => router.push("/components")}
+        className="group/btn flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background py-3 text-sm font-medium text-foreground transition-all hover:bg-muted cursor-pointer"
+      >
+        {freemiumPricingPlan.cta}
+        <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
+      </button>
     </div>
   );
 };
 
-export default freemiumPlan;
+export default FreemiumPlan;

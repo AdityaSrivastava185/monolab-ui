@@ -5,7 +5,7 @@ import Hero from "@/components/Hero/Hero";
 const page = () => {
   return (
     <>
-      <div className="md:m-7 m-4">
+      <div className="">
         {/* <Navbar /> */}
         <Hero />
       </div>

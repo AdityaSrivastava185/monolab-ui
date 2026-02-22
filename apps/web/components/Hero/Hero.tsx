@@ -1,8 +1,12 @@
 "use client";
 
-import { HeroContent, ComponentsSection, Footer } from "../Landing";
+import {
+  HeroContent,
+  ComponentsSection,
+  FeaturesSection,
+  Footer,
+} from "../Landing";
 import InsipiredLegends from "../InspiredLegends/InsipiredLegends";
-import ToolsStacks from "../ToolsStacks/ToolsStacks";
 import Pricing from "../Pricing/Pricing";
 
 const metadata = {
@@ -24,25 +28,21 @@ export function Hero() {
   return (
     <main className="bg-background">
       {/* Hero Section */}
-      <section className="relative">
-        <div className="relative z-10">
+      <section className="relative max-w-6xl mx-auto border-x border-border p-2 md:p-7">
+        <div className="relative z-10 bg-secondary/20 rounded-2xl">
           <HeroContent />
         </div>
-      </section>
-      {/* Components Section */}
+        {/* Components Section */}
       <ComponentsSection />
-
+      {/* How it Works / Features */}
+      <FeaturesSection />
       {/* Inspired Legends */}
       <InsipiredLegends />
-
-      {/* Tools and Stacks */}
-      <ToolsStacks />
-
-      {/* Pricing plans */}
+       {/* Pricing plans */}
       <Pricing />
-
       {/* Footer */}
       <Footer />
+      </section>
     </main>
   );
 }

@@ -1,50 +1,89 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
+import { ArrowRight, Github, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export function HeroContent() {
-  const [copied, setCopied] = useState(false);
-  const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className=" flex flex-col items-center gap-2 px-6 py-8 text-center md:py-16] xl:gap-4">
-      {/* Top Label */}
-      <p className="inline-flex items-center justify-center rounded-full border border-transparent px-2 py-1 text-xs font-medium w-fit whitespace-nowrap shrink-0 overflow-hidden text-secondary-foreground [a&]:hover:bg-secondary/90 bg-muted">
-        brought by the makers of MonoLab UI
-      </p>
+    <div className="relative px-6 py-16 lg:py-24">
+      {/* Subtle gradient background */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-gradient-to-b from-primary/5 to-transparent blur-3xl" />
+      </div>
 
-      {/* Main Headline */}
-      <h1 className="text-primary leading-tighter text-3xl font-bold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter max-w-4xl">
-        minimal-layer for your codebase and system
-      </h1>
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        {/* Left Side - Content */}
+        <div className="flex flex-col gap-6">
+          {/* Top Badge */}
+          <div className="flex w-fit items-center gap-2 rounded-full border border-border/40 bg-muted/50 px-4 py-1.5 backdrop-blur-sm">
+            <Sparkles className="h-3.5 w-3.5 text-primary/70" />
+            <span className="text-xs font-medium text-muted-foreground">
+              Open Source UI Components
+            </span>
+          </div>
 
-      {/* Subtitle */}
-      <p className="text-foreground mx-auto md:max-w-2/5 text-sm sm:text-lg">
-        monoLab UI gives you a focused set of clean, accessible components that
-        live in your codebase, not in a bundle. Copy the pieces you need, shape
-        them to your product, and keep every line under your control.
-      </p>
+          {/* Main Headline */}
+          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]">
+            The minimal layer for your{" "}
+            <span className="bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+              codebase
+            </span>
+          </h1>
 
-      {/* CTA Row */}
-      <div className="flex flex-col md:flex-row w-full items-center justify-center gap-4 mt-2">
-        <button
-          onClick={() =>
-            router.push("https://github.com/AdityaSrivastava185/monolab-ui")
-          }
-          className="w-full md:w-auto group flex items-center gap-3 rounded-xl border border-border/30 bg-card/50 px-5 py-3 backdrop-blur-sm transition-all hover:border-border/50 hover:bg-card/80 cursor-pointer"
-        >
-          give star on github
-        </button>
+          {/* Subtitle */}
+          <p className="max-w-xl text-base text-muted-foreground sm:text-lg lg:text-xl">
+            A focused set of clean, accessible components that live in your
+            codebase. Copy what you need, shape it to your product, and keep
+            every line under your control.
+          </p>
 
-        <Link
-          href="/docs"
-          className="w-full md:w-auto rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90"
-        >
-          Quick Start
-        </Link>
+          {/* CTA Buttons */}
+          <div className="mt-2 flex flex-col gap-4 w-full">
+            <Link
+              href="/components"
+              className="w-full group flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Start Building with Components
+              <ArrowRight
+                className={`h-4 w-4 transition-transform duration-200 ${isHovered ? "translate-x-0.5" : ""}`}
+              />
+            </Link>
+
+            <Link
+              href="https://github.com/AdityaSrivastava185/monolab-ui"
+              target="_blank"
+              className="w-full group flex items-center justify-center gap-2 rounded-full border border-border/50 bg-background px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-border hover:bg-muted/50"
+            >
+              <Github className="h-4 w-4" />
+              View and Star on GitHub
+            </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <p className="text-xs text-muted-foreground">
+            No sign-up required · Free forever · MIT License
+          </p>
+        </div>
+
+        {/* Right Side - Components Preview Image */}
+        <div className="relative hidden lg:flex items-center justify-center">
+          <div className="relative w-full">
+            <Image
+              src="/hero-image.png"
+              alt="MonoLab UI Components Preview"
+              width={1000}
+              height={750}
+              className="w-full h-auto rounded-2xl"
+              priority
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

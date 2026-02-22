@@ -96,13 +96,7 @@ export function Footer() {
             © {new Date().getFullYear()} monolab/ui. MIT License.
           </p>
           <p className="text-sm text-muted-foreground">
-            Built with ❤️ by{" "}
-            <Link
-              href="https://github.com/AdityaSrivastava185"
-              className="text-foreground hover:underline"
-            >
-              Aditya Srivastava
-            </Link>
+            Built with ❤️ by the makers of monolab/ui
           </p>
         </div>
       </div>

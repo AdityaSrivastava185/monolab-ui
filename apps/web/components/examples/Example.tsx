@@ -15,7 +15,7 @@ import LoadingStateCard from "./exampleComponents/LoadingStateCard";
 const ExamplesSection = () => {
   return (
     <div>
-      <div className="hidden md:flex scroll-mt-24">
+      <div className="flex scroll-mt-24">
         <div className="container flex items-center justify-between gap-4 py-4">
           <div className="flex items-center [&>a:first-child]:text-primary flex-1 overflow-hidden">
             <div className="relative max-w-[96%] md:max-w-[600px] lg:max-w-none">
@@ -43,7 +43,7 @@ const ExamplesSection = () => {
               <PaymentCard />
               <ProfileSettingsCard />
             </div>
-            <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
+            <div className="hidden md:flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
               <TeamInviteCard />
               <TasksCard />
               <ToastExampleCard />
@@ -53,7 +53,7 @@ const ExamplesSection = () => {
               <ComputeCard />
               <NotificationsCard />
             </div>
-            <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
+            <div className="hidden md:flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
               <AssistantCard />
               <AuthCard />
               <LoadingStateCard />

@@ -35,7 +35,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="mt-3 sticky top-0 z-50 w-full md:max-w-6xl lg:max-w-7xl border-x border-border mx-auto">
+    <header className="mt-3 sticky top-0 z-50 w-full md:max-w-6xl lg:max-w-7xl mx-auto">
       <div className="container-wrapper 3xl:fixed:px-0 px-6">
         <div className="3xl:fixed:container flex  items-center">
           <Link

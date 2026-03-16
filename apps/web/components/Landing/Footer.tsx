@@ -31,8 +31,7 @@ export function Footer() {
               monolab/ui
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-              A minimal layer of clean, accessible components for your codebase.
-              Copy what you need, keep full control.
+              A carefully crafted set of components and patterns for building high-quality product interfaces. Customize, extend, and make it your own.
             </p>
             {/* Social Links */}
             <div className="mt-4 flex gap-3">

@@ -13,52 +13,51 @@ import InputFieldsCard from "./exampleComponents/InputFieldsCard";
 import LoadingStateCard from "./exampleComponents/LoadingStateCard";
 
 const ExamplesSection = () => {
+  const showcaseTabs = [
+    "Examples",
+  ];
+
   return (
-    <div>
-      <div className="flex scroll-mt-24">
-        <div className="container flex items-center justify-between gap-4 py-4">
-          <div className="flex items-center [&>a:first-child]:text-primary flex-1 overflow-hidden">
-            <div className="relative max-w-[96%] md:max-w-[600px] lg:max-w-none">
-              <div className="focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1">
-                <div className="flex items-center">
-                  <Link
-                    href={"/"}
-                    className="text-muted-foreground hover:text-primary data-[active=true]:text-primary flex h-7 items-center justify-center gap-2 px-4 text-center text-base font-medium transition-colors"
-                  >
-                    Examples
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="rounded-2xl p-3">
+      <div className="scroll-mt-24">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1">
+          {showcaseTabs.map((tab, index) => (
+            <Link
+              key={tab}
+              href="/"
+              className={`shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors ${
+                index === 0
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {tab}
+            </Link>
+          ))}
         </div>
       </div>
 
-      {/* ****************** Exmaple ************************* */}
-
-      <div className="container-wrapper section-soft flex-1 pb-6">
-        <div className="container">
-          <section className="theme-container mx-auto grid gap-8 py-1 md:grid-cols-2 xl:grid-cols-4 xl:gap-6 2xl:gap-8">
-            <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
-              <PaymentCard />
-              <ProfileSettingsCard />
-            </div>
-            <div className="hidden md:flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
-              <TeamInviteCard />
-              <TasksCard />
-              <ToastExampleCard />
-              <InputFieldsCard />
-            </div>
-            <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
-              <ComputeCard />
-              <NotificationsCard />
-            </div>
-            <div className="hidden md:flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
-              <AssistantCard />
-              <AuthCard />
-              <LoadingStateCard />
-            </div>
-          </section>
+      <div className="mt-5">
+        <div className="theme-container mx-auto grid gap-5 md:grid-cols-2 xl:grid-cols-4 xl:gap-6 2xl:gap-8">
+          <div className="flex flex-col gap-5 *:[div]:w-full *:[div]:max-w-full">
+            <PaymentCard />
+            <ProfileSettingsCard />
+          </div>
+          <div className="hidden md:flex flex-col gap-5 *:[div]:w-full *:[div]:max-w-full">
+            <TeamInviteCard />
+            <TasksCard />
+            <ToastExampleCard />
+            <InputFieldsCard />
+          </div>
+          <div className="flex flex-col gap-5 *:[div]:w-full *:[div]:max-w-full">
+            <ComputeCard />
+            <NotificationsCard />
+          </div>
+          <div className="hidden md:flex flex-col gap-5 *:[div]:w-full *:[div]:max-w-full">
+            <AssistantCard />
+            <AuthCard />
+            <LoadingStateCard />
+          </div>
         </div>
       </div>
     </div>

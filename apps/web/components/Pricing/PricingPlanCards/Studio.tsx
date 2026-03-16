@@ -7,7 +7,7 @@ const Studio = () => {
   const router = useRouter();
   const [showToast, setShowToast] = useState(false);
   const StudioPricingPlan: PricingPlanProps = {
-    pricingType: "Enterprise Studio",
+    pricingType: "Monoverse",
     pricingDescription: "Custom solutions for your startup or business",
     price: 1500,
     monthOrYear: "project",

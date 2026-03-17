@@ -8,12 +8,12 @@ import ExamplesSection from "../examples/Example";
 export function Hero() {
   return (
     <main className="px-3 pb-6 pt-3 sm:px-5 sm:pt-5 lg:px-8">
-      <section className="mx-auto w-full max-w-7xl">
+      <section className="mx-auto w-full md:max-w-7xl 2xl:max-w-[1470]">
         <div className="relative overflow-hidden">
           <HeroContent />
         </div>
 
-        <section className="mt-8 w-full rounded-xl bg-card/80 p-2 md:hidden">
+        <section className="md:mt-8 w-full rounded-xl bg-card/80 p-2 md:hidden">
           <div
             className="relative overflow-hidden rounded-xl"
             style={{ height: "clamp(24rem, 78vw, 36rem)" }}
@@ -30,15 +30,15 @@ export function Hero() {
           </div>
         </section>
 
-        <section className="mx-auto mt-8 hidden w-full max-w-7xl sm:mt-10 md:block">
+        <section className="mx-auto mt-8 hidden w-full  sm:mt-10 md:block">
           <ExamplesSection />
         </section>
 
-        <section className="mx-auto mt-10 w-full max-w-7xl sm:mt-14">
+        <section className="mx-auto md:mt-10 w-full sm:mt-14">
           <Pricing />
         </section>
 
-        <section className="mx-auto mt-8 w-full max-w-7xl sm:mt-10">
+        <section className="mx-auto md:mt-8 w-full sm:mt-10">
           <Footer />
         </section>
       </section>

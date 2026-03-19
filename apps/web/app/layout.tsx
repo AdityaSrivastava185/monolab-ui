@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 // import { PostHogProvider } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
-import { Navbar } from "@/components/Navbar";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -41,7 +40,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* <PostHogProvider>{children}</PostHogProvider> */}
-          <Navbar />
           {children}
           <Analytics />
         </ThemeProvider>

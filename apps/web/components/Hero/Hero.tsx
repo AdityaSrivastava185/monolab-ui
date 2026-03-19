@@ -4,11 +4,13 @@ import Image from "next/image";
 import { HeroContent, Footer } from "../Landing";
 import Pricing from "../Pricing/Pricing";
 import ExamplesSection from "../examples/Example";
+import { Navbar } from "../Navbar";
 
 export function Hero() {
   return (
     <main className="px-3 pb-6 pt-3 sm:px-5 sm:pt-5 lg:px-8">
       <section className="mx-auto w-full md:max-w-7xl 2xl:max-w-[1470]">
+        <Navbar/>
         <div className="relative overflow-hidden">
           <HeroContent />
         </div>

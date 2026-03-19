@@ -66,7 +66,7 @@ const ExamplesSection = () => {
 
         {activeTab === 1 && (
           <div className="mx-auto">
-             <AuthExamplePage/>
+            <AuthExamplePage />
           </div>
         )}
       </div>

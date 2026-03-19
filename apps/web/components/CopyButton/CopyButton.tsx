@@ -12,7 +12,7 @@ interface CopyButtonProps {
  * A button that copies the provided code to clipboard
  * Shows a checkmark icon briefly after successful copy
  */
-export function CopyButton({ code, className = "" }: CopyButtonProps) {
+export function CopyButton({ code="the code is copied", className = "" }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {

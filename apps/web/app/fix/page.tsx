@@ -1,51 +1,45 @@
 "use client";
 
-import Link from "next/link";
+import React from "react";
 
-const AuthExamplePage = () => {
+import Link from "next/link";
+import Image from "next/image";
+
+const LoginFormWithInstructions = () => {
   return (
     <div>
       <div id="component-container" className="w-full bg-card p-2">
         <div className="flex justify-between h-full">
           <div className="flex flex-row w-full h-full">
-            <div className="hidden min-h-screen h-full xl:max-w-[50%] w-full bg-secondary lg:flex  flex-col justify-between p-8">
-              <div>
-                <div className="flex gap-2">
-                  <Link
-                    href={"/"}
-                    className="bg-foreground h-fit w-fit px-3 py-2 rounded-xl"
-                  >
-                    <p className="text-background font-semibold">Acme Inc.</p>
-                  </Link>
+            <div className="hidden min-h-screen h-full xl:max-w-[50%] w-full lg:flex flex-col justify-end p-8 relative overflow-hidden bg-[url('https://i.pinimg.com/736x/65/e4/01/65e4010fc0f48a6d1d75aba13b5278f1.jpg')] bg-no-repeat bg-cover">
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="flex flex-row w-full items-center justify-between md:gap-7 2xl:gap-20">
+                <div className="text-4xl tracking-tight font-semibold py-7 max-w-[220px]">
+                  <p>Get Started With Us</p>
+                </div>
+                <div className="text-lg font-medium tracking-tighter text-balance text-right max-w-[220px]">
+                  <p>Complete those easy steps to complete your user profile</p>
                 </div>
               </div>
-              <div className="space-y-4 text-sm">
-                <div className="flex gap-2">
-                  <p className="text-sm text-foreground leading-relaxed max-w-xl">
-                    A carefully crafted set of components and patterns for
-                    building high-quality product interfaces. Customize, extend,
-                    and make it your own.
-                  </p>
-                </div>
-                <div className="flex gap-6">
-                  <Link
-                    href="#"
-                    className="text-ring hover:text-foreground transition"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-ring hover:text-foreground transition"
-                  >
-                    FAQ
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-ring hover:text-foreground transition"
-                  >
-                    Support
-                  </Link>
+              <div>
+                <div className="hidden md:flex flex-row items-center justify-between">
+                  <div className="max-w-[10rem] w-full rounded-xl border border-border bg-foreground text-background p-6">
+                    <p className="text-xl text-balance tracking-tight leading-tight">
+                      Register your account
+                    </p>
+                  </div>
+
+                  <div className="max-w-[10rem] w-full rounded-xl border border-foreground/20 bg-transparent backdrop-blur-xl text-foreground p-6 hover:bg-foreground/15 transition">
+                    <p className="text-xl text-balance tracking-tight leading-tight">
+                      Setup your profile details
+                    </p>
+                  </div>
+                  <div className="max-w-[10rem]  w-full rounded-xl bg-tranparent backdrop-blur-xl border border-foreground/20  text-foreground hover:bg-foreground/15 transition p-6">
+                    <p className="text-xl text-balance tracking-tight leading-tight">
+                      Start using for free
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -64,7 +58,7 @@ const AuthExamplePage = () => {
                 </div>
 
                 {/* Social Login Buttons */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3">
                   <button className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black py-3 rounded-lg transition font-medium text-sm">
                     <svg
                       className="w-5 h-5"
@@ -78,28 +72,47 @@ const AuthExamplePage = () => {
                     </svg>
                     Sign in with Google
                   </button>
-                  <button className="w-full flex items-center justify-center gap-2 bg-foreground hover:bg-gray-100 text-background py-3 rounded-lg transition font-medium text-sm">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-github-icon lucide-github"
-                    >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                      <path d="M9 18c-4.51 2-5-2-7-2" />
-                    </svg>
-                    Sign in with github
-                  </button>
                 </div>
 
-                <div className="text-center w-full">
-                   <span className="text-muted-foreground">or</span>
+                <div className="text-center w-full my-3">
+                  <span className="text-muted-foreground">or</span>
+                </div>
+
+                {/* firstname */}
+
+                <div className="flex flex-row w-full items-center justify-center gap-3 md:gap-7">
+                  <div>
+                    <div className="flex flex-col gap-1.5">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium text-foreground"
+                      >
+                        Firstname
+                      </label>
+                      <input
+                        id="firstname"
+                        type="text"
+                        placeholder="First Name"
+                        className="w-full rounded-md border border-border/20 bg-[#1c1c1c] px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                      />
+                    </div>
+                  </div>
+                 <div>
+                    <div className="flex flex-col gap-1.5">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium text-foreground"
+                      >
+                        Lastname
+                      </label>
+                      <input
+                        id="lastname"
+                        type="text"
+                        placeholder="Last Name"
+                        className="w-full rounded-md border border-border/20 bg-[#1c1c1c] px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:border-foreground/40 focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 {/* Email Input */}
@@ -140,26 +153,25 @@ const AuthExamplePage = () => {
 
                 {/* Forgot Password Link */}
                 <div className="text-right mb-5">
-                  <Link
-                    href="#"
-                    className="text-sm text-ring hover:underline"
-                  >
+                  <Link href="#" className="text-sm text-ring hover:underline">
                     Forgot Password?
                   </Link>
                 </div>
 
                 <label className="flex cursor-pointer items-start gap-3 my-4">
-                    <div className="flex flex-col">
+                  <div className="flex flex-col">
                     <span className="text-sm font-medium text-foreground">
                       Recieve features updates and hiring tips
                     </span>
                     <span className="text-xs text-ring">
-                      Receive emails about new products and features.Get ocassional insights , new feature releases and hiring updates at monolabui and monoverse
+                      Receive emails about new products and features.Get
+                      ocassional insights , new feature releases and hiring
+                      updates at monolabui and monoverse
                     </span>
                   </div>
                   <div className="relative mt-0.5">
                     <input type="checkbox" className="peer sr-only" />
-                    <div className="h-6 w-11 rounded-full bg-secondary  transition-colors after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-foreground/70 after:transition-all peer-checked:bg-foreground peer-checked:after:translate-x-full peer-checked:after:bg-background"></div>
+                    <div className="h-6 w-11 rounded-full bg-secondary  transition-colors after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-foreground/70 after:transition-all peer-checked:bg-foreground peer-checked:after:translate-x-full peer-checked:after:bg-background"></div>
                   </div>
                 </label>
 
@@ -189,4 +201,4 @@ const AuthExamplePage = () => {
   );
 };
 
-export default AuthExamplePage;
+export default LoginFormWithInstructions;

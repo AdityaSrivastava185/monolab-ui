@@ -5,10 +5,11 @@ import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 
 export const metadata: Metadata = {
-  title: "Monolabui Studio | Product Design and Frontend Studio",
+  title: "Monolabui Studio | The AI-Native Web Studio",
   description:
-    "Monolabui Studio helps startups design, ship, and scale high-quality web products faster with design systems, frontend engineering, and launch support.",
+    "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
   keywords: [
+    "Components Library",
     "Monolabui Studio",
     "product studio",
     "frontend engineering",

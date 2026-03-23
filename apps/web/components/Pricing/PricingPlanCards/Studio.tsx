@@ -8,7 +8,7 @@ const Studio = () => {
   const [showToast, setShowToast] = useState(false);
   const StudioPricingPlan: PricingPlanProps = {
     pricingType: "Monoverse",
-    pricingDescription: "Custom solutions for your startup or business",
+    pricingDescription: "Monolabui Studio designed for startups and enterpise which combine AI system with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
     price: 1500,
     monthOrYear: "project",
     features: [

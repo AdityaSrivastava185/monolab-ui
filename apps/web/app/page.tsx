@@ -22,18 +22,18 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Monolabui Studio | Product Design and Frontend Studio",
+    title: "Monolabui Studio | The AI-Native Web Studio",
     description:
-      "A focused product studio for teams building polished digital products from concept to launch.",
+      "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
     url: "/",
     siteName: "Monolabui Studio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monolabui Studio | Product Design and Frontend Studio",
+    title: "Monolabui Studio | The AI-Native Web Studio",
     description:
-      "Design systems, frontend builds, and product execution for modern software teams.",
+      "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.Design systems, frontend builds, and product execution for modern software teams.",
   },
 };
 

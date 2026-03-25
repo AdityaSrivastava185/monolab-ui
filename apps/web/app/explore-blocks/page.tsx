@@ -8,6 +8,7 @@ import LoginFormWithInstructions from "@/components/LoginForm/LoginFormWithInstr
 import { CopyButton } from "@/components/CopyButton";
 import Image from "next/image";
 import Link from "next/link";
+import HeroBlock1 from "@/components/ExploreBlocksComponents/HeroBlocks/HeroBlock1/page";
 
 // Component code snippets for copying
 const COMPONENT_CODES = {
@@ -562,11 +563,131 @@ const LoginFormWithInstructions = () => {
 
 export default LoginFormWithInstructions;
 `,
+  heroBlock1: `
+  import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const HeroBlock1 = () => {
+  return (
+    <div className="bg-foreground w-full min-h-screen">
+      <div className=" flex justify-center px-4 py-12 sm:px-6 lg:px-8">
+        <div className="w-full space-y-8 mx-auto md:max-w-7xl 2xl:max-w-[1176]">
+          <div>
+            <div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center gap-7">
+                  <div
+                    id="logo"
+                    className="bg-background text-foreground px-4 py-2 rounded-xl"
+                  >
+                    <p className="">Acme Inc.</p>
+                  </div>
+                  <div
+                    id="navbar-list"
+                    className="hidden md:flex gap-7 list-none text-muted text-sm"
+                  >
+                    <div>
+                      <li>
+                        <Link href={"/"}>Creative</Link>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <Link href={"/"}>Agents</Link>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <Link href={"/"}>API</Link>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <Link href={"/"}>Resource</Link>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <Link href={"/"}>Enterprise</Link>
+                      </li>
+                    </div>
+                    <div>
+                      <li>
+                        <Link href={"/"}>Pricing</Link>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <Link
+                    href={"/"}
+                    className=" bg-foreground px-4 rounded-xl py-2 text-sm font-medium text-background border-2 border-border transition-colors"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    href={"/"}
+                    className=" bg-background px-4 rounded-xl py-2 text-sm font-medium text-foreground transition-colors"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row w-full items-center justify-between md:pt-20 pt-10">
+            <div className="flex flex-col gap-3 items-center justify-center">
+              <h1 className="text-background max-w-md text-balance md:text-5xl">
+                Bringing technology to life
+              </h1>
+              <div className="flex flex-row items-center gap-2 w-full">
+                <Link
+                  href={"/"}
+                  className=" bg-foreground p-4 px-5 rounded-full text-sm font-medium text-background border border-muted-foreground transition-colors"
+                >
+                  Sign up
+                </Link>
+                <Link
+                  href={"/"}
+                  className=" bg-background p-4 rounded-full text-sm font-medium text-foreground transition-colors"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </div>
+            <h2 className="text-background max-w-[600px]">
+              Powering the best enterprises, creators, and developers. From
+              ElevenAgents for customer experience, ElevenCreative for content
+              creation, to the leading AI voice generator.
+            </h2>
+          </div>
+          <div className="relative w-full bg-[#f5f2f0] p-4 rounded-2xl">
+            <Image
+              src={"https://i.pinimg.com/1200x/8c/6d/c7/8c6dc760d6f8818849a2d57a08362170.jpg"}
+              alt="hero-block-1-image"
+              className="w-full h-auto object-contain rounded-2xl"
+              width={1176}
+              height={600}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1176px"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroBlock1;
+
+
+`,
 };
 
 const ExploreBlocks = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const showcaseTabs = ["Login"];
+  const showcaseTabs = ["Login", "Hero"];
 
   return (
     <div className="rounded-2xl p-3 mx-auto w-full md:max-w-7xl 2xl:max-w-[1470]">
@@ -588,7 +709,7 @@ const ExploreBlocks = () => {
               lineHeight: "clamp(2rem, 7.5vw, 3.7rem)",
             }}
           >
-           Building complete pages is just one click away with Blocks
+            Building complete pages is just one click away with Blocks
           </h1>
 
           <p
@@ -599,9 +720,10 @@ const ExploreBlocks = () => {
             }}
           >
             A carefully crafted set of blocks and patterns for building
-            high-quality  pages having clean , responsive and minimal interfaces. Customize, extend, and make it your own.
+            high-quality pages having clean , responsive and minimal interfaces.
+            Customize, extend, and make it your own.
           </p>
-           <div className="mt-1 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-1 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link
               href="/components"
               className="group inline-flex h-10 w-full items-center justify-center gap-2 whitespace-nowrap rounded-md bg-foreground px-5 font-medium text-background transition-all hover:opacity-90 sm:w-auto"
@@ -695,34 +817,67 @@ const ExploreBlocks = () => {
       </div>
       <div className="md:hidden py-4">
         <div className="flex flex-col items-center justify-center gap-3">
-          <div className="bg-card p-1">
-            <Image
-              src={"/login-form.png"}
-              height={700}
-              width={700}
-              alt="login form alt"
-              className="rounded-xl"
-            />
-          </div>
-          <div className="bg-card p-1">
-            <Image
-              src={"/login-form-with-image.png"}
-              height={700}
-              width={700}
-              alt="login form alt"
-              className="rounded-xl"
-            />
-          </div>
-          <div className="bg-card p-1">
-            <Image
-              src={"/login-form-with-instructions.png"}
-              height={700}
-              width={700}
-              alt="login form alt"
-              className="rounded-xl"
-            />
-          </div>
+          {activeTab === 0 && (
+            <>
+              <div className="bg-card p-1">
+                <Image
+                  src={"/login-form.png"}
+                  height={700}
+                  width={700}
+                  alt="login form alt"
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="bg-card p-1">
+                <Image
+                  src={"/login-form-with-image.png"}
+                  height={700}
+                  width={700}
+                  alt="login form alt"
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="bg-card p-1">
+                <Image
+                  src={"/login-form-with-instructions.png"}
+                  height={700}
+                  width={700}
+                  alt="login form alt"
+                  className="rounded-xl"
+                />
+              </div>
+            </>
+          )}
+          {activeTab === 1 && (
+            <div className="bg-card p-1 w-full">
+              <Image
+                src={"/heroblock1.png"}
+                height={700}
+                width={700}
+                alt="hero block 1"
+                className="rounded-xl w-full h-auto"
+              />
+            </div>
+          )}
         </div>
+      </div>
+      <div className="hidden md:flex md:flex-col">
+        {activeTab === 1 && (
+          <>
+            <div className="my-7">
+              <div className="flex items-center justify-end mb-2 gap-2">
+                <span className="text-xs text-muted-foreground">Copy code</span>
+                <CopyButton code={COMPONENT_CODES.heroBlock1} />
+              </div>
+              <div
+                id="component-container"
+                className="w-full bg-card rounded-lg overflow-hidden p-2"
+              >
+                <HeroBlock1 />
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

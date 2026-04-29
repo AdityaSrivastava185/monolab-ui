@@ -7,8 +7,8 @@ const Studio = () => {
   const router = useRouter();
   const [showToast, setShowToast] = useState(false);
   const StudioPricingPlan: PricingPlanProps = {
-    pricingType: "Monoverse",
-    pricingDescription: "Monolabui Studio designed for startups and enterpise which combine AI system with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
+    pricingType: "Enterprise",
+    pricingDescription: "Engineering AI-Native Software Infrastructure.",
     price: 1500,
     monthOrYear: "project",
     features: [
@@ -19,7 +19,7 @@ const Studio = () => {
   "Dedicated project manager",
   "Post-launch support included"
 ],
-    cta: "Contact Us",
+    cta: "Contact Sales",
   };
 
   const handleClick = () => {

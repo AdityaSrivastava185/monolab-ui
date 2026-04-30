@@ -88,20 +88,20 @@ const ExploreBlocks = () => {
           </p>
         </div>
       </div>
-      <div className="scroll-mt-24">
-        <div className="flex items-center gap-2 overflow-x-auto pb-1">
+      <div className="scroll-mt-24 w-full">
+        <div className="w-fit flex items-center gap-2 overflow-x-auto bg-zinc-800 p-2 rounded-xl mx-auto">
           {showcaseTabs.map((tab, index) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(index)}
-              className={`shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors ${
-                index === activeTab
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {tab}
-            </button>
+              <button
+                key={tab}
+                onClick={() => setActiveTab(index)}
+                className={`shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors  ${
+                  index === activeTab
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {tab}
+              </button>
           ))}
         </div>
       </div>

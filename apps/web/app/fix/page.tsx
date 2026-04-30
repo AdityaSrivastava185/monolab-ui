@@ -1,112 +1,69 @@
-
-  import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
-const HeroBlock1 = () => {
+const HeroBlock2 = () => {
   return (
-    <div className="bg-foreground w-full min-h-screen">
-      <div className=" flex justify-center px-4 py-12 sm:px-6 lg:px-8">
-        <div className="w-full space-y-8 mx-auto md:max-w-7xl 2xl:max-w-[1176]">
-          <div>
-            <div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center gap-7">
-                  <div
-                    id="logo"
-                    className="bg-background text-foreground px-4 py-2 rounded-xl"
-                  >
-                    <p className="">Acme Inc.</p>
-                  </div>
-                  <div
-                    id="navbar-list"
-                    className="hidden md:flex gap-7 list-none text-muted text-sm"
-                  >
-                    <div>
-                      <li>
-                        <Link href={"/"}>Creative</Link>
-                      </li>
-                    </div>
-                    <div>
-                      <li>
-                        <Link href={"/"}>Agents</Link>
-                      </li>
-                    </div>
-                    <div>
-                      <li>
-                        <Link href={"/"}>API</Link>
-                      </li>
-                    </div>
-                    <div>
-                      <li>
-                        <Link href={"/"}>Resource</Link>
-                      </li>
-                    </div>
-                    <div>
-                      <li>
-                        <Link href={"/"}>Enterprise</Link>
-                      </li>
-                    </div>
-                    <div>
-                      <li>
-                        <Link href={"/"}>Pricing</Link>
-                      </li>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <Link
-                    href={"/"}
-                    className=" bg-foreground px-4 rounded-xl py-2 text-sm font-medium text-background border-2 border-border transition-colors"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    href={"/"}
-                    className=" bg-background px-4 rounded-xl py-2 text-sm font-medium text-foreground transition-colors"
-                  >
-                    Sign up
-                  </Link>
-                </div>
+    <div className="bg-background min-h-screen mx-7 my-3">
+      <div className="w-full ">
+        {/* Navbar Section */}
+        <nav className="flex flex-row items-center justify-between w-full">
+          <div id="logo">
+            <h1>Acme Inc.</h1>
+          </div>
+          <div
+            id="nav-items-list-container"
+            className="flex items-center justify-center"
+          >
+            <div className="hidden md:flex items-center gap-7 border-border border-r-2 pr-7 text-muted-foreground">
+              <Link href={"/"} className="hover:text-foreground">
+                Product
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Resource
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Customer
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Pricing
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Now
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Contact
+              </Link>
+            </div>
+            <div className="flex items-center justify-center gap-7 pl-7">
+              <div>
+                <Link href={"/"}>Log in</Link>
+              </div>
+              <div className="bg-foreground py-2 rounded-xl text-background px-3 text-sm">
+                <Link href={"/"}>Sign up</Link>
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center justify-between md:pt-20 pt-10">
-            <div className="flex flex-col gap-3 items-center justify-center">
-              <h1 className="text-background max-w-md text-balance md:text-5xl">
-                Bringing technology to life
-              </h1>
-              <div className="flex flex-row items-center gap-2 w-full">
-                <Link
-                  href={"/"}
-                  className=" bg-foreground p-4 px-5 rounded-full text-sm font-medium text-background border border-muted-foreground transition-colors"
-                >
-                  Sign up
-                </Link>
-                <Link
-                  href={"/"}
-                  className=" bg-background p-4 rounded-full text-sm font-medium text-foreground transition-colors"
-                >
-                  Contact Sales
-                </Link>
-              </div>
-            </div>
-            <h2 className="text-background max-w-[600px]">
-              Powering the best enterprises, creators, and developers. From
-              ElevenAgents for customer experience, ElevenCreative for content
-              creation, to the leading AI voice generator.
-            </h2>
+        </nav>
+        {/* Hero Section */}
+        <div>
+          <div className="mt-60 max-w-3xl">
+            <h1 className="text-6xl font-sans font-medium">
+              The product development system for teams and agents
+            </h1>
           </div>
-          <div className="relative w-full bg-[#f5f2f0] p-4 rounded-2xl">
-            <Image
-              src={"https://i.pinimg.com/1200x/8c/6d/c7/8c6dc760d6f8818849a2d57a08362170.jpg"}
-              alt="hero-block-1-image"
-              className="w-full h-auto object-contain rounded-2xl"
-              width={1176}
-              height={600}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1176px"
-              priority
-            />
+          <div className="mt-9 w-full flex flex-row items-center justify-between">
+            <p className="text-muted-foreground">
+              Purpose-built for planning and building products. Designed for the
+              AI era.
+            </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2">
+              <div className="h-4 w-4 rounded-full bg-chart-4/20 flex items-center justify-center">
+                <div className=" h-2 w-2 bg-chart-4 rounded-full"></div>
+              </div>
+              <p className="text-foreground">Issue tracking is dead</p>
+              <Link className="text-muted-foreground" href={"/"}>acme.app/next</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -114,6 +71,4 @@ const HeroBlock1 = () => {
   );
 };
 
-export default HeroBlock1;
-
-
+export default HeroBlock2;

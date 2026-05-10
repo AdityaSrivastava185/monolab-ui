@@ -1,12 +1,11 @@
-
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
 const HeroBlock2 = () => {
   return (
-    <div className="bg-background min-h-screen mx-7 my-3">
-      <div className="w-full md:max-w-7xl mx-auto">
+    <div className="bg-background min-h-screen">
+      <div className="w-full md:max-w-7xl mx-auto py-7">
         {/* Navbar Section */}
         <nav className="flex flex-row items-center justify-between w-full">
           <div id="logo">
@@ -89,4 +88,3 @@ const HeroBlock2 = () => {
 };
 
 export default HeroBlock2;
-

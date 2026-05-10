@@ -13,6 +13,8 @@ import { loginFormCode } from "@/components/CodeSnippet/loginForm";
 import { authExampleCode } from "@/components/CodeSnippet/authExample";
 import { loginFormWithInstructionsCode } from "@/components/CodeSnippet/loginFormWithInstructions";
 import { heroBlock1Code } from "@/components/CodeSnippet/heroBlock1";
+import { heroBlock2Code } from "@/components/CodeSnippet/heroBlock2";
+import HeroBlock2 from "@/components/ExploreBlocksComponents/HeroBlocks/HeroBlock2/page";
 
 // Component code snippets for copying
 const COMPONENT_CODES = {
@@ -20,6 +22,7 @@ const COMPONENT_CODES = {
   authExample: authExampleCode,
   loginFormWithInstructions: loginFormWithInstructionsCode,
   heroBlock1: heroBlock1Code,
+  heroBlock2 : heroBlock2Code,
 };
 
 const ExploreBlocks = () => {
@@ -186,6 +189,7 @@ const ExploreBlocks = () => {
             </>
           )}
           {activeTab === 1 && (
+            <>
             <div className="bg-card p-1 w-full">
               <Image
                 src={"/heroblock1.png"}
@@ -195,9 +199,20 @@ const ExploreBlocks = () => {
                 className="rounded-xl w-full h-auto"
               />
             </div>
+            <div className="bg-card p-1 w-full">
+              <Image
+                src={"/heroBlock2.png"}
+                height={700}
+                width={700}
+                alt="hero block 2"
+                className="rounded-xl w-full h-auto"
+              />
+            </div>
+            </>
           )}
         </div>
       </div>
+      {/* desktop view */}
       <div className="hidden md:flex md:flex-col">
         {activeTab === 1 && (
           <>
@@ -211,6 +226,18 @@ const ExploreBlocks = () => {
                 className="w-full bg-card rounded-lg overflow-hidden p-2"
               >
                 <HeroBlock1 />
+              </div>
+            </div>
+            <div className="my-7">
+              <div className="flex items-center justify-end mb-2 gap-2">
+                <span className="text-xs text-muted-foreground">Copy code</span>
+                <CopyButton code={COMPONENT_CODES.heroBlock2} />
+              </div>
+              <div
+                id="component-container"
+                className="w-full bg-card rounded-lg overflow-hidden p-2"
+              >
+                <HeroBlock2/>
               </div>
             </div>
           </>

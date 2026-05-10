@@ -1,4 +1,4 @@
-
+export const heroBlock2Code =  `
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -90,3 +90,4 @@ const HeroBlock2 = () => {
 
 export default HeroBlock2;
 
+`

@@ -52,6 +52,14 @@ const HeroBlock2 = () => {
           <div className="max-w-4xl text-balance mx-auto md:text-xl pb-7">
             <p className="text-center text-muted-foreground">Liveblocks provides the infrastructure to handle concurrent edits on shared data, so people and AI agents can collaborate without breaking your app.</p>
           </div>
+          <div className="flex md:flex-row items-center justify-center md:gap-7">
+            <div className="bg-foreground text-background px-4 py-2 rounded-md">
+              <button className="cursor-pointer">Get started for free</button>
+            </div>
+            <div className="bg-muted text-foreground px-4 py-2 rounded-md">
+              <button className="cursor-pointer hover:underline">Contact sales</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

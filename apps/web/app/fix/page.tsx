@@ -41,6 +41,18 @@ const HeroBlock2 = () => {
           </div>
         </nav>
         {/* Hero Section */}
+        <div className="my-20">
+          <div className="border-1 border-purple-600 p-2 w-fit mx-auto flex items-center justify-center gap-2">
+            <span className="bg-purple-600 text-purple-400 px-2 py-1">RECAP</span>
+            <p className="text-center">The Age of Agent Ready Software</p>
+          </div>
+          <div className="max-w-4xl text-balance mx-auto md:text-6xl py-7">
+            <h1 className="text-center">Realtime infrastructure for multiplayer apps and agents</h1>
+          </div>
+          <div className="max-w-4xl text-balance mx-auto md:text-xl pb-7">
+            <p className="text-center text-muted-foreground">Liveblocks provides the infrastructure to handle concurrent edits on shared data, so people and AI agents can collaborate without breaking your app.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-
+export const heroBlock3Code = `
 
 import Image from "next/image";
 import React from "react";
@@ -83,3 +83,4 @@ export default HeroBlock3;
 
 
 
+`

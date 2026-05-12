@@ -15,6 +15,8 @@ import { loginFormWithInstructionsCode } from "@/components/CodeSnippet/loginFor
 import { heroBlock1Code } from "@/components/CodeSnippet/heroBlock1";
 import { heroBlock2Code } from "@/components/CodeSnippet/heroBlock2";
 import HeroBlock2 from "@/components/ExploreBlocksComponents/HeroBlocks/HeroBlock2/page";
+import HeroBlock3 from "@/components/ExploreBlocksComponents/HeroBlocks/HeroBlock3/page";
+import { heroBlock3Code } from "@/components/CodeSnippet/heroBlock3";
 
 // Component code snippets for copying
 const COMPONENT_CODES = {
@@ -23,6 +25,7 @@ const COMPONENT_CODES = {
   loginFormWithInstructions: loginFormWithInstructionsCode,
   heroBlock1: heroBlock1Code,
   heroBlock2 : heroBlock2Code,
+  heroBlock3 : heroBlock3Code,
 };
 
 const ExploreBlocks = () => {
@@ -238,6 +241,18 @@ const ExploreBlocks = () => {
                 className="w-full bg-card rounded-lg overflow-hidden p-2"
               >
                 <HeroBlock2/>
+              </div>
+            </div>
+            <div className="my-7">
+              <div className="flex items-center justify-end mb-2 gap-2">
+                <span className="text-xs text-muted-foreground">Copy code</span>
+                <CopyButton code={COMPONENT_CODES.heroBlock3} />
+              </div>
+              <div
+                id="component-container"
+                className="w-full bg-card rounded-lg overflow-hidden p-2"
+              >
+                <HeroBlock3/>
               </div>
             </div>
           </>

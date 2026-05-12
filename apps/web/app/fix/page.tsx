@@ -60,6 +60,18 @@ const HeroBlock2 = () => {
               <button className="cursor-pointer hover:underline">Contact sales</button>
             </div>
           </div>
+          <div className="w-[170%] md:w-full mx-auto mt-10 md:my-20 relative overflow-hidden h-80 sm:h-96 md:h-auto md:overflow-visible">
+            <Image
+              src="https://i.pinimg.com/1200x/92/21/6d/92216d078016acd8fc45ea51da435f6f.jpg"
+              alt="Hero Image"
+              width={7000}
+              height={7000}
+              className="max-w-none md:static md:h-auto md:w-full md:max-w-full md:rounded-xl"
+            />
+          </div>
+          <div>
+            <p className="text-center text-muted-foreground">Trusted by leading engineering, product, and design teams</p>
+          </div>
         </div>
       </div>
     </div>

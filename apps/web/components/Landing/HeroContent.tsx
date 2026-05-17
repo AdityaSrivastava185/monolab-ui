@@ -18,13 +18,15 @@ export function HeroContent() {
           </div>
 
           <h1
-            className="max-w-4xl text-balance font-semibold tracking-tighter text-primary"
+            className="max-w-4xl text-balance font-semibold tracking-tight text-primary"
             style={{
               fontSize: "clamp(1.75rem, 7vw, 3.35rem)",
               lineHeight: "clamp(2rem, 7.5vw, 3.7rem)",
             }}
           >
-            The Foundation for Modern Product Interfaces
+            The Professional's Choice 
+            <br />
+            for Design System
           </h1>
 
           <p

@@ -7,7 +7,7 @@ const PremiumPlan = () => {
   const premiumPricingPlan: PricingPlanProps = {
     pricingType: "Premium",
     pricingDescription: "For teams and professionals who need more",
-    price: 200,
+    price:20,
     monthOrYear: "month",
     features: [
       "All free components",

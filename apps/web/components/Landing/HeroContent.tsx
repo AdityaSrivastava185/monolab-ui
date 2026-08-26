@@ -5,7 +5,16 @@ import Link from "next/link";
 
 export function HeroContent() {
   return (
-    <div className="relative px-3 py-4 sm:px-4 sm:py-5">
+    <div
+      className="relative px-3 py-4 sm:px-4 sm:py-5"
+      // style={{
+      //   backgroundImage: `
+      //     linear-gradient(90deg, rgba(107, 114, 128, 0.1) 1px, transparent 1px),
+      //     linear-gradient(0deg, rgba(107, 114, 128, 0.1) 1px, transparent 1px)
+      //   `,
+      //   backgroundSize: "70px 70px",
+      // }}
+    >
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
         <div className="flex w-full flex-col items-center gap-3 px-2 py-6 text-center sm:px-4 sm:py-8">
           <div
@@ -13,7 +22,7 @@ export function HeroContent() {
             style={{ fontSize: "clamp(0.7rem, 2.1vw, 0.8rem)" }}
           >
             <Sparkles className="h-3.5 w-3.5 text-foreground/70" />
-            <span className="truncate">Brought by the maker of monolabui</span>
+            <span className="truncate">Brought by the maker of monolabui </span>
             {/* <ArrowRight className="h-3.5 w-3.5" /> */}
           </div>
 
@@ -24,9 +33,7 @@ export function HeroContent() {
               lineHeight: "clamp(2rem, 7.5vw, 3.7rem)",
             }}
           >
-            The Professional's Choice 
-            <br />
-            for Design System
+            Meticulously crafted, fully accessible UI components built for the next interface.
           </h1>
 
           <p
@@ -37,8 +44,7 @@ export function HeroContent() {
             }}
           >
             A carefully crafted set of components and patterns for building
-            high-quality product interfaces. Customize, extend, and make it your
-            own.
+            high-quality product interfaces. A quiet, flexible foundation for building products with intent — no visual noise, no compromises.
           </p>
 
           <div className="mt-1 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">

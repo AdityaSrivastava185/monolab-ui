@@ -1,115 +1,86 @@
 
- 
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 
-const HeroBlock1 = () => {
+const HeroBlock2 = () => {
   return (
-    <div className="bg-foreground w-full min-h-screen">
-      <div className="flex justify-center px-5 py-10 sm:px-6 sm:py-12 lg:px-8">
-        <div className="mx-auto w-full max-w-full space-y-10 sm:space-y-12 md:max-w-7xl 2xl:max-w-[1176]">
-          <header>
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex min-w-0 items-center gap-4 sm:gap-7">
-                <div
-                  id="logo"
-                  className="shrink-0 rounded-xl bg-background px-3 py-2 text-foreground sm:px-4"
-                >
-                  <p>Acme Inc.</p>
-                </div>
-                <div
-                  id="navbar-list"
-                  className="hidden list-none gap-7 text-sm text-muted md:flex"
-                >
-                  <div>
-                    <li>
-                      <Link href={"/"}>Creative</Link>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <Link href={"/"}>Agents</Link>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <Link href={"/"}>API</Link>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <Link href={"/"}>Resource</Link>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <Link href={"/"}>Enterprise</Link>
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <Link href={"/"}>Pricing</Link>
-                    </li>
-                  </div>
-                </div>
+    <div className="bg-background min-h-screen mx-7 my-3">
+      <div className="w-full md:max-w-7xl mx-auto">
+        {/* Navbar Section */}
+        <nav className="flex flex-row items-center justify-between w-full">
+          <div id="logo">
+            <h1>Acme Inc.</h1>
+          </div>
+          <div
+            id="nav-items-list-container"
+            className="flex items-center justify-center"
+          >
+            <div className="hidden md:flex items-center gap-7 border-border border-r-2 pr-7 text-muted-foreground">
+              <Link href={"/"} className="hover:text-foreground">
+                Product
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Resource
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Customer
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Pricing
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Now
+              </Link>
+              <Link href={"/"} className="hover:text-foreground">
+                Contact
+              </Link>
+            </div>
+            <div className="flex items-center justify-center gap-7 pl-7">
+              <div>
+                <Link href={"/"}>Log in</Link>
               </div>
-              <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-                <Link
-                  href={"/"}
-                  className="rounded-xl border-2 border-border bg-foreground px-3 py-2 text-sm font-medium text-background transition-colors sm:px-4"
-                >
-                  Login
-                </Link>
-                <Link
-                  href={"/"}
-                  className="rounded-xl bg-background px-3 py-2 text-sm font-medium text-foreground transition-colors sm:px-4"
-                >
-                  Sign up
-                </Link>
+              <div className="bg-foreground py-2 rounded-xl text-background px-3 text-sm">
+                <Link href={"/"}>Sign up</Link>
               </div>
             </div>
-          </header>
-
-          <section className="flex w-full flex-col gap-8 pt-6 md:flex-row md:items-center md:justify-between md:pt-20">
-            <div className="contents md:flex md:flex-col md:gap-3">
-              <h1 className="order-1 w-full max-w-md text-balance text-5xl text-background sm:text-5xl md:text-5xl">
-                Bringing technology to life
-              </h1>
-              <div className="order-3 flex flex-row flex-wrap items-center gap-3 md:order-2">
-                <Link
-                  href={"/"}
-                  className="rounded-full border border-muted-foreground bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors sm:py-4"
-                >
-                  Sign up
-                </Link>
-                <Link
-                  href={"/"}
-                  className="rounded-full bg-background px-5 py-3 text-sm font-medium text-foreground transition-colors sm:py-4"
-                >
-                  Contact Sales
-                </Link>
+          </div>
+        </nav>
+        {/* Hero Section */}
+        <div>
+          <div className=" mt-30 md:mt-60 max-w-80 md:max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-sans font-medium">
+              The product development system for teams and agents
+            </h1>
+          </div>
+          <div className="mt-5 md:mt-9 w-full flex flex-row items-center justify-between">
+            <p className="text-muted-foreground max-w-80 md:max-w-2xl">
+              Purpose-built for planning and building products. Designed for the
+              AI era.
+            </p>
+            <div className="hidden md:flex flex-col md:flex-row items-center justify-center gap-2">
+              <div className="h-4 w-4 rounded-full bg-chart-4/20 flex items-center justify-center">
+                <div className=" h-2 w-2 bg-chart-4 rounded-full"></div>
               </div>
+              <p className="text-foreground">Issue tracking is dead</p>
+              <Link className="text-muted-foreground" href={"/"}>acme.app/next</Link>
             </div>
-            <h2 className="order-2 max-w-[600px] text-lg tracking-tight leading-7 text-background sm:text-lg md:order-0">
-              Powering the best enterprises, creators, and developers. From
-              ElevenAgents for customer experience, ElevenCreative for content
-              creation, to the leading AI voice generator.
-            </h2>
-          </section>
-
-          <div className="relative w-full overflow-hidden rounded-2xl bg-[#f5f2f0] p-3 sm:p-4">
-            <Image
-              src={
-                "https://i.pinimg.com/1200x/8c/6d/c7/8c6dc760d6f8818849a2d57a08362170.jpg"
-              }
-              alt="hero-block-1-image"
-              className="h-auto w-full rounded-2xl object-contain"
-              width={1176}
-              height={600}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1176px"
-              priority
-            />
+          </div>
+        </div>
+        {/* Hero Image Section */}
+        <div className="w-[170%] md:w-full mx-auto mt-10 md:my-20 relative overflow-hidden h-80 sm:h-96 md:h-auto md:overflow-visible">
+          <Image
+            src="/linear-image.png"
+            alt="Hero Image"
+            width={7000}
+            height={7000}
+            className="max-w-none md:static md:h-auto md:w-full md:max-w-full md:rounded-xl"
+          />
+        </div>
+        {/* Description Section  */}
+        <div className=" w-full mt-7 md:my-20">
+          <div className="w-full max-w-3xl ">
+            <h2 className="text-[##8a8f98] text-lg md:text-2xl font-sans">A new species of product tool. <span className="text-ring">Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.</span></h2>
           </div>
         </div>
       </div>
@@ -117,6 +88,5 @@ const HeroBlock1 = () => {
   );
 };
 
-export default HeroBlock1;
-
+export default HeroBlock2;
 

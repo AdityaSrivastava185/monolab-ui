@@ -5,35 +5,35 @@ import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 
 export const metadata: Metadata = {
-  title: "Monolabui Studio | The AI-Native Web Studio",
+  title: "Monolab UI | Component Library",
   description:
-    "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
+    "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
   keywords: [
-    "Components Library",
-    "Monolabui Studio",
-    "product studio",
+    "Monolab UI",
+    "component library",
+    "UI components",
     "frontend engineering",
-    "design system studio",
-    "web product design",
-    "startup product development",
-    "UI UX studio",
+    "design system",
+    "web UI library",
+    "React components",
+    "Next.js components",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Monolabui Studio | The AI-Native Web Studio",
+    title: "Monolab UI | Component Library",
     description:
-      "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.",
+      "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
     url: "/",
-    siteName: "Monolabui Studio",
+    siteName: "Monolab UI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monolabui Studio | The AI-Native Web Studio",
+    title: "Monolab UI | Component Library",
     description:
-      "Monolabui Studio combine AI tools with our proprietary MonoLab UI Library to deliver clean , optimized , polished and finished products in few days—at software margins.Design systems, frontend builds, and product execution for modern software teams.",
+      "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
   },
 };
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div>
-      <Hero/>
+      <Hero />
     </div>
   );
 };

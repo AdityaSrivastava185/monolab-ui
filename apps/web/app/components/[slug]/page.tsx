@@ -5,7 +5,6 @@ import {
   getComponentBySlug,
   getAllComponentSlugs,
 } from "@/lib/componentsRegistry/registry";
-import { Navbar } from "@/components/Navbar/Navbar";
 import { VariantsGrid } from "@/components/VariantsGrid";
 
 /**

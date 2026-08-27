@@ -40,8 +40,8 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div>
-      <Hero />
+    <div className="flex items-center justify-center min-h-screen h-full w-full">
+      <p>THE LIBRARY IS UNDER-REVAMPING</p>
     </div>
   );
 };

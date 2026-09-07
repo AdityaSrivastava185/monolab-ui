@@ -1,49 +1,50 @@
 import type { Metadata } from "next";
-import React from "react";
-import Link from "next/link";
-import styles from "./page.module.css";
-import Hero from "@/components/Hero/Hero";
+
+import { BlocksShowcase } from "@/components/blocks-showcase";
+
 
 export const metadata: Metadata = {
-  title: "Monolab UI | Component Library",
+  title: "MonoLab UI | Installation-Free Component Library",
   description:
-    "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
+    "MonoLab is a design lab delivering copy-paste ready components for Next.js, React, and TypeScript. No npm install, no node_modules, no lock-in. Just clean, accessible code you own.",
   keywords: [
-    "Monolab UI",
+    "MonoLab UI",
     "component library",
-    "UI components",
-    "frontend engineering",
-    "design system",
-    "web UI library",
     "React components",
     "Next.js components",
+    "TypeScript components",
+    "copy paste components",
+    "design system",
+    "UI components",
+    "Tailwind CSS components",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Monolab UI | Component Library",
+    title: "MonoLab UI | Installation-Free Component Library",
     description:
-      "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
+      "Copy-paste ready components for modern React. No npm install. Fully customizable.",
     url: "/",
-    siteName: "Monolab UI",
+    siteName: "MonoLab UI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monolab UI | Component Library",
+    title: "MonoLab UI | Installation-Free Component Library",
     description:
-      "Monolab UI is a modern component library for building clean, optimized, polished, and production-ready web interfaces faster.",
+      "Copy-paste ready components for modern React. No npm install. Fully customizable.",
   },
 };
 
-
-const page = () => {
+export default function HomePage() {
   return (
-    <div className="flex items-center justify-center min-h-screen h-full w-full">
-      <p>THE LIBRARY IS UNDER-REVAMPING</p>
-    </div>
+    <>
+     
+      <main className="min-h-screen">
+        
+      </main>
+      
+    </>
   );
-};
-
-export default page;
+}

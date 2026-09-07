@@ -157,6 +157,23 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* Fade in up animation for hero content */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
 /* Responsive helpers: make media elements scale down on small screens */
 img,
 video,

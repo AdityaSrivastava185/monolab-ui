@@ -72,7 +72,7 @@ const LoginBlock = () => (
         </div>
         <button type="submit" className="w-full rounded-md bg-primary py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">Sign in</button>
       </form>
-      <p className="mt-6 text-center text-sm text-muted-foreground">Don't have an account? <a href="#" className="text-primary hover:underline">Sign up</a></p>
+      <p className="mt-6 text-center text-sm text-muted-foreground">Don&apos;t have an account? <a href="#" className="text-primary hover:underline">Sign up</a></p>
     </div>
   </div>
 );

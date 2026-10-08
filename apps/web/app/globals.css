@@ -123,7 +123,8 @@
   }
 
   body {
-    font-family: var(--font-roboto), "Roboto", sans-serif;
+     font-family: var(--font-familjen-grotesk), sans-serif;
+     font-weight: 500;
   }
 }
 

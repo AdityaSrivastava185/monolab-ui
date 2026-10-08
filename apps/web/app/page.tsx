@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-
-import { BlocksShowcase } from "@/components/blocks-showcase";
-
+import FrontendBadge from "@/components/FrontendBadge";
 
 export const metadata: Metadata = {
   title: "MonoLab UI | Installation-Free Component Library",
@@ -40,11 +38,16 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-     
-      <main className="min-h-screen">
-        
+
+      <main className="min-h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center gap-2 border-1 border-[#ff5e1f] border-dashed rounded-md p-2 bg-[#ff5e1f]/5">
+          <span>
+            <FrontendBadge />
+          </span>
+          <p className="text-[#ff5e1f]">The library is under development</p>
+        </div>
       </main>
-      
+
     </>
   );
 }

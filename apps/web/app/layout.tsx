@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Familjen_Grotesk ,Geist, Geist_Mono } from "next/font/google";
 // import { PostHogProvider } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 
-const roboto = Roboto({
+const familjenGrotesk = Familjen_Grotesk({
+  variable: "--font-familjen-grotesk",
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
 });
+
 
 export const metadata: Metadata = {
   title: "MonoLab UI",
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className={`dark ${familjenGrotesk.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"

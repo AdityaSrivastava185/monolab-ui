@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 
 const navItems = [
-  "Home",
-  "Products",
-  "Features",
-  "Developers",
-  "Blog",
-  "Company",
+  "Blocks",
+  "Components",
+  "Labs",
+  "Docs",
+  "Changelog",
+  "Github"
 ];
 
 const Logo = "MonolabUI"
@@ -40,14 +40,15 @@ const Navbar = () => {
                 className={`${navItemClass} border-l border-surface-dark hidden md:block`}
                 href=""
               >
-                Explore
+                Get in touch
               </Link>
 
               <Link
-                className={`${navItemClass} bg-foreground text-background`}
+                className={`${navItemClass} bg-primary text-foreground flex gap-2 items-center justify-center`}
                 href=""
               >
-                Get in touch
+                Start Building
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>
               </Link>
             </div>
           </div>

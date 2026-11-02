@@ -72,11 +72,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-familjen-grotesk), sans-serif;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .container {
-  @apply mx-auto w-full md:max-w-[1350px] 2xl:max-w-[1740px];
+  @apply w-full mx-auto  2xl:max-w-[1740px];
 }
 
 .inner-container {
@@ -84,5 +84,5 @@ body {
 }
 
 .section {
-  @apply border-x border-b border-brand-gray-darker;
+  @apply border-x border-dashed border-brand-gray-darker;
 }

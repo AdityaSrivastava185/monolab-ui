@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import FrontendBadge from "@/components/FrontendBadge";
 import Header from "@/components/Header/Header";
+import Hero from "@/components/main/Hero/Hero";
 
 export const metadata: Metadata = {
   title: "MonoLab UI | Installation-Free Component Library",
@@ -40,6 +41,7 @@ export default function HomePage() {
   return (
     <>
       <Header/>
+      <Hero/>
     </>
   );
 }

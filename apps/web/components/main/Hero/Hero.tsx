@@ -11,7 +11,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="container">
-      <section className="section">
+      <section className="">
         <div className="grid h-full grid-cols-[minmax(0,1fr)_9fr_minmax(0,1fr)]">
           <div className="relative">
             <Pattern />
@@ -28,9 +28,10 @@ const Hero = () => {
               <Pattern />
               <div className="flex items-center justify-center gap-2 border-1 border-primary border-dashed p-2 bg-brand-transparent">
                 <span>
-                  {/* <FrontendBadge /> */}
+                  <FrontendBadge />
                 </span>
-                {/* <p className="text-primary">FRONTEND</p> */}
+                <p className="text-primary">NEW COMPONENTS</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff5229" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
               </div>
             </div>
             <div className="max-w-5xl mx-auto">
@@ -47,7 +48,7 @@ const Hero = () => {
             <div className="w-full border-y border-brand-gray-dark">
         <div className="container bg-background-secondary p-5 md:p-2">
           <Image
-            src="/images/image-1.webp"
+            src="/images/image-1.png"
             width={1700}
             height={800}
             alt="hero image"

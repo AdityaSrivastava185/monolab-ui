@@ -84,5 +84,5 @@ body {
 }
 
 .section {
-  @apply border-x border-dashed border-brand-gray-darker;
+  @apply border-x border-brand-gray-darker;
 }

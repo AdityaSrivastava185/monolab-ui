@@ -31,7 +31,7 @@ const Hero = () => {
                   <FrontendBadge />
                 </span>
                 <p className="text-primary">NEW COMPONENTS</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff5229" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff5229" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>
               </div>
             </div>
             <div className="max-w-5xl mx-auto">
@@ -43,19 +43,21 @@ const Hero = () => {
               />
             </div>
 
-            <button className="bg-primary text-foreground px-5 py-3 rounded-full">Start building for free</button>
+            <div className="p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary">
+              <button className="bg-primary text-foreground px-5 py-3 rounded-full cursor-pointer">Start building for free</button>
+            </div>
 
             <div className="w-full border-y border-brand-gray-dark">
-        <div className="container bg-background-secondary p-5 md:p-2">
-          <Image
-            src="/images/image-1.png"
-            width={1700}
-            height={800}
-            alt="hero image"
-            className="h-auto w-full object-cover"
-          />
-        </div>
-      </div>
+              <div className="container bg-background-secondary p-5 md:p-2">
+                <Image
+                  src="/images/image-1.png"
+                  width={1700}
+                  height={800}
+                  alt="hero image"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="relative">

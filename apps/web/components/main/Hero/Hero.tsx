@@ -7,22 +7,13 @@ import FrontendBadge from "@/components/FrontendBadge";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import PatternContainer from "@/components/(utility)/utility/PatternContainer";
 
 const Hero = () => {
   return (
     <div className="container">
       <section className="">
-        <div className="grid h-full grid-cols-[minmax(0,1fr)_9fr_minmax(0,1fr)]">
-          <div className="relative">
-            <Pattern />
-            <div className="absolute inset-y-0 left-0 z-10 w-px">
-              <VerticalBorder />
-            </div>
-            <div className="absolute inset-y-0 right-0 z-10 w-px">
-              <VerticalBorder />
-            </div>
-          </div>
-
+        <PatternContainer>
           <div className="flex flex-col items-center gap-10 inner-container">
             <div className="relative flex items-center justify-center h-36 w-72">
               <Pattern />
@@ -59,19 +50,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          <div className="relative">
-            <Pattern />
-
-            <div className="absolute inset-y-0 left-0 z-10 w-px">
-              <VerticalBorder />
-            </div>
-
-            <div className="absolute inset-y-0 right-0 z-10 w-px">
-              <VerticalBorder />
-            </div>
-          </div>
-        </div>
+        </PatternContainer>
       </section>
 
     </div>

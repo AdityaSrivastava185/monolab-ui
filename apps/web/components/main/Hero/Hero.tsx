@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="flex flex-col items-center gap-10 inner-container">
             <div className="relative flex items-center justify-center h-36 w-72">
               <Pattern />
-              <div className="flex items-center justify-center gap-2 border-1 border-primary border-dashed p-2 bg-brand-transparent">
+              <div className="flex items-center justify-center gap-2 border-1 border-primary border-dashed p-2 bg-brand-transparent rounded-full">
                 <span>
                   <FrontendBadge />
                 </span>
@@ -38,17 +38,7 @@ const Hero = () => {
               <button className="bg-primary text-foreground px-5 py-3 rounded-full cursor-pointer">Start building for free</button>
             </div>
 
-            <div className="w-full border-y border-brand-gray-dark">
-              <div className="container bg-background-secondary p-5 md:p-2">
-                <Image
-                  src="/images/image-1.png"
-                  width={1700}
-                  height={800}
-                  alt="hero image"
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-            </div>
+            <HeroImage src="/images/image-1.png"/>
           </div>
         </PatternContainer>
       </section>

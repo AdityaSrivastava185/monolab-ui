@@ -12,7 +12,7 @@ import PatternContainer from "@/components/(utility)/utility/PatternContainer";
 const Hero = () => {
   return (
     <div className="container">
-      <section className="">
+      <section>
         <PatternContainer>
           <div className="flex flex-col items-center gap-10 inner-container">
             <div className="relative flex items-center justify-center h-36 w-72">

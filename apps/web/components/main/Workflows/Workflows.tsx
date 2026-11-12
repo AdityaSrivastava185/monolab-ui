@@ -43,8 +43,8 @@ const Workflows = () => {
                         </div>
                     </div>
 
-                    <div className="px-4 xl:px-0 py-10 flex flex-col gap-15">
-                        <div className="flex flex-col gap-3 md:max-w-lg xl:max-w-full px-4">
+                    <div className="px-4 xl:px-0 md:pt-10 md:pb-20 flex flex-col md:gap-15">
+                        <div className="flex flex-col md:gap-3 md:max-w-lg xl:max-w-full px-4">
                             <h2 className="text-2xl sm:text-4xl xl:text-5xl text-balance text-center">Your developer team's advantage</h2>
                             <p className="text-sm sm:text-xl text-center">
                                 Built for code ownership and velocity, optimized for modern developer workflows.

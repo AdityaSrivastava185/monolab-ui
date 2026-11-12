@@ -3,6 +3,7 @@ import FrontendBadge from "@/components/FrontendBadge";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/main/Hero/Hero";
 import Workflows from "@/components/main/Workflows/Workflows";
+import ComponentCategories from "@/components/main/ComponentCategories/ComponentCategoriesSection";
 
 export const metadata: Metadata = {
   title: "MonoLab UI | Installation-Free Component Library",
@@ -44,6 +45,7 @@ export default function HomePage() {
       <Header/>
       <Hero/>
       <Workflows/>
+      <ComponentCategories/>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import GridCards from "@/components/(utility)/utility/GridCards";
 import Pattern from "@/components/(utility)/utility/Pattern";
+import PatternContainer from "@/components/(utility)/utility/PatternContainer";
 import VerticalBorder from "@/components/(utility)/utility/VerticalBorder";
 import Link from "next/link";
 import React from "react";
@@ -32,17 +33,7 @@ const Workflows = () => {
     return (
         <section className="w-full">
             <div className="container">
-                <div className="grid h-full grid-cols-[minmax(0,1fr)_9fr_minmax(0,1fr)]">
-                    <div className="relative">
-                        <Pattern />
-                        <div className="absolute inset-y-0 left-0 z-10 w-px">
-                            <VerticalBorder />
-                        </div>
-                        <div className="absolute inset-y-0 right-0 z-10 w-px">
-                            <VerticalBorder />
-                        </div>
-                    </div>
-
+                <PatternContainer>
                     <div className="px-4 xl:px-0 md:pt-10 md:pb-20 flex flex-col md:gap-15">
                         <div className="flex flex-col md:gap-3 md:max-w-lg xl:max-w-full px-4">
                             <h2 className="text-2xl sm:text-4xl xl:text-5xl text-balance text-center">Your developer team's advantage</h2>
@@ -52,16 +43,7 @@ const Workflows = () => {
                         </div>
                         <GridCards />
                     </div>
-                    <div className="relative">
-                        <Pattern />
-                        <div className="absolute inset-y-0 left-0 z-10 w-px">
-                            <VerticalBorder />
-                        </div>
-                        <div className="absolute inset-y-0 right-0 z-10 w-px">
-                            <VerticalBorder />
-                        </div>
-                    </div>
-                </div>
+                </PatternContainer>
             </div>
         </section>
     );

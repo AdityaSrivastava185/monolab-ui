@@ -1,4 +1,3 @@
-import GridCards from "@/components/(utility)/utility/GridCards";
 import HeroImage from "@/components/(utility)/utility/HeroImage";
 import Pattern from "@/components/(utility)/utility/Pattern";
 import SectionHeader from "@/components/(utility)/utility/SectionHeader";
@@ -29,13 +28,13 @@ const Hero = () => {
               <SectionHeader
                 title="Build and deploy beautiful interfaces faster with MonoLab UI components"
                 description="Bring any Next.js project, copy the component you need, and paste it straight into your codebase -- a single TypeScript file styled with Tailwind CSS, with zero dependencies and nothing to install. The code is yours completely"
-                titleClassName="text-2xl"
+                titleClassName="text-[1.5rem] leading-tight md:leading-none"
                 descriptionClassName="text-md"
               />
             </div>
 
-            <div className="p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary">
-              <button className="bg-primary text-foreground px-5 py-3 rounded-full cursor-pointer">Start building for free</button>
+            <div className="w-full md:w-fit p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary">
+              <button className="w-full md:w-fit bg-primary text-foreground px-5 py-3 rounded-lg md:rounded-full cursor-pointer">Start building for free</button>
             </div>
 
             <HeroImage src="/images/image-1.png"/>

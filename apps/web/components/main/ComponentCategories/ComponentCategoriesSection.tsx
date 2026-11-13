@@ -105,7 +105,7 @@ const componentCategories = [
 
 const ComponentCategories = () => {
     return (
-        <div className="container border-t border-brand-gray-darker">
+        <div className="container border-y border-brand-gray-darker">
             <section className="w-full md:px-10 section pt-20">
                 <div className="mx-auto w-full max-w-432">
                     <div className="grid grid-cols-1 md:grid-cols-10">

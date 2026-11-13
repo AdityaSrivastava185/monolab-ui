@@ -5,16 +5,9 @@ import Image from "next/image";
 import { useState } from "react";
 import PatternContainer from "@/components/(utility)/utility/PatternContainer";
 import SectionHeader from "@/components/(utility)/utility/SectionHeader";
+import { GetStartedStepProps } from "@/types/GetStarted.type";
 
-type Step = {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    imageAlt: string;
-};
-
-const steps: Step[] = [
+const steps: GetStartedStepProps[] = [
     {
         id: "choose-components",
         title: "Choose your components.",

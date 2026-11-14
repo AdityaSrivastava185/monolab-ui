@@ -11,9 +11,8 @@ const navItems = [
 ];
 
 const Logo = "MonolabUI"
-const description = ""
 
-const navItemClass = "px-5 py-3";
+const navItemClass = "px-2 py-3 md:px-5 md:py-3";
 
 const Navbar = () => {
   return (
@@ -23,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center divide-x divide-surface-dark">
               <div className={navItemClass}>
-                <h1>{Logo}</h1>
+                <h1 className="text-md md:text-base">{Logo}</h1>
               </div>
 
               <div className="hidden xl:flex divide-x divide-surface-dark border-r border-surface-dark">
@@ -37,7 +36,7 @@ const Navbar = () => {
 
             <div className="items-center divide-x divide-surface-dark flex">
               <Link
-                className={`${navItemClass} border-l border-surface-dark hidden md:block`}
+                className={`${navItemClass} border-l border-surface-dark hidden lg:block`}
                 href=""
               >
                 Get in touch
@@ -47,7 +46,7 @@ const Navbar = () => {
                 className={`${navItemClass} bg-primary text-foreground flex gap-2 items-center justify-center`}
                 href=""
               >
-                Start Building
+                <p className="text-sm md:text-base">Start building</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>
               </Link>
             </div>

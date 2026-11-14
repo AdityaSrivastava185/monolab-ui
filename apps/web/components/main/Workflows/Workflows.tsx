@@ -1,8 +1,6 @@
 import GridCards from "@/components/(utility)/utility/GridCards";
-import Pattern from "@/components/(utility)/utility/Pattern";
 import PatternContainer from "@/components/(utility)/utility/PatternContainer";
-import VerticalBorder from "@/components/(utility)/utility/VerticalBorder";
-import Link from "next/link";
+import SectionHeader from "@/components/(utility)/utility/SectionHeader";
 import React from "react";
 
 const supportCarditems = [
@@ -34,13 +32,9 @@ const Workflows = () => {
         <section className="w-full">
             <div className="container">
                 <PatternContainer>
-                    <div className="px-4 xl:px-0 md:pt-10 md:pb-20 flex flex-col md:gap-15">
-                        <div className="flex flex-col md:gap-3 md:max-w-lg xl:max-w-full px-4">
-                            <h2 className="text-2xl sm:text-4xl xl:text-5xl text-balance text-center">Your developer team's advantage</h2>
-                            <p className="text-sm sm:text-xl text-center">
-                                Built for code ownership and velocity, optimized for modern developer workflows.
-                            </p>
-                        </div>
+                    <div className="flex flex-col gap-8 px-4 py-7 sm:gap-10 sm:py-16 md:gap-15 md:pt-10 md:pb-20 xl:px-0">
+
+                        <SectionHeader title=" Your developer team's advantage" description="Built for code ownership and velocity, optimized for modern developer workflows." />
                         <GridCards />
                     </div>
                 </PatternContainer>

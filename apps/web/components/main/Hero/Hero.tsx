@@ -13,31 +13,31 @@ const Hero = () => {
     <div className="container">
       <section>
         <PatternContainer>
-          <div className="flex flex-col items-center gap-10 inner-container">
-            <div className="relative flex items-center justify-center h-36 w-72">
+          <div className="flex flex-col md:items-center gap-10 inner-container">
+            <div className="relative flex md:items-center md:justify-center lg:h-36 lg:w-72">
               <Pattern />
-              <div className="flex items-center justify-center gap-2 border-1 border-primary border-dashed p-2 bg-brand-transparent rounded-full">
+              <div className="flex md:items-center md:justify-center gap-2 border-1 border-primary border-dashed p-2 bg-brand-transparent rounded-full mt-10 lg:mt-0 ml-4 md:ml-0">
                 <span>
                   <FrontendBadge />
                 </span>
-                <p className="text-primary">NEW COMPONENTS</p>
+                <p className="text-sm md:text-base text-primary">NEW COMPONENTS</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff5229" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>
               </div>
             </div>
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-xs text-balance md:max-w-5xl mx-auto">
               <SectionHeader
                 title="Build and deploy beautiful interfaces faster with MonoLab UI components"
                 description="Bring any Next.js project, copy the component you need, and paste it straight into your codebase -- a single TypeScript file styled with Tailwind CSS, with zero dependencies and nothing to install. The code is yours completely"
-                titleClassName="text-[1.5rem] leading-tight md:leading-none"
-                descriptionClassName="text-md"
+                titleClassName="text-[1.5rem] leading-tight md:leading-none text-balance text-start md:text-center "
+                descriptionClassName="text-start md:text-center md:text-md"
               />
             </div>
 
-            <div className="w-full md:w-fit p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary">
+            <div className="w-full md:w-fit p-4 md:p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary -mt-5 md:mt-0">
               <button className="w-full md:w-fit bg-primary text-foreground px-5 py-3 rounded-lg md:rounded-full cursor-pointer">Start building for free</button>
             </div>
 
-            <HeroImage src="/images/image-1.png"/>
+            <HeroImage src="/images/image-1.png" />
           </div>
         </PatternContainer>
       </section>

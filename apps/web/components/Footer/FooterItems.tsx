@@ -74,15 +74,10 @@ const FooterItems = () => {
             <div className="border border-surface-dark">
                 <div className="container flex flex-col gap-5 border-x border-surface-dark p-5 sm:p-6 md:flex-row md:items-center md:justify-between md:p-7">
                     {/* Source */}
-                    <div className="text-lg">
+                    <div className="text-lg text-balance md:max-w-md">
                         <span>
-                            Built for developers, inspired by{" "}
-                            <Link
-                                href="https://ui.shadcn.com/"
-                                className="text-primary transition-colors hover:text-primary/80"
-                            >
-                                shadcn/ui
-                            </Link>
+                            Thoughtfully crafted components for{" "}
+                            <span className="text-primary">modern web development.</span>
                         </span>
                     </div>
 

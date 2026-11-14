@@ -32,6 +32,10 @@
   --color-blue-600: #2563eb;
   --color-cyan-500: #06b6d4;
   --color-cyan-400: #22d3ee;
+  --color-yellow-light: #ff8204;
+  --color-orange-light: #fe2f00;
+  --color-red-neutral: #a90000;
+  --color-red-dark: #ff0606;
 }
 
 @theme inline {
@@ -66,6 +70,10 @@
   --color-blue-600: var(--color-blue-600);
   --color-cyan-500: var(--color-cyan-500);
   --color-cyan-400: var(--color-cyan-400);
+  --color-yellow-light: var(--color-yellow-light);
+  --color-orange-light: var(--color-orange-light);
+  --color-red-neutral: var(--color-red-neutral);
+  --color-red-dark: var(--color-red-dark);
 }
 
 body {

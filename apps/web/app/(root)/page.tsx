@@ -5,6 +5,7 @@ import Hero from "@/components/main/Hero/Hero";
 import Workflows from "@/components/main/Workflows/Workflows";
 import ComponentCategories from "@/components/main/ComponentCategories/ComponentCategoriesSection";
 import GetStarted from "@/components/main/Get-Started/GetStarted";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "MonoLab UI | Installation-Free Component Library",
@@ -48,6 +49,7 @@ export default function HomePage() {
       <Workflows/>
       <ComponentCategories/>
       <GetStarted/>
+      <Footer/>
     </>
   );
 }

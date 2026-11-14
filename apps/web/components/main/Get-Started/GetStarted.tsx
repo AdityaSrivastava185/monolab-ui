@@ -9,7 +9,7 @@ import { GetStartedStepProps } from "@/types/GetStarted.type";
 
 const steps: GetStartedStepProps[] = [
     {
-        id: "choose-components",
+        id: 1,
         title: "Choose your components.",
         description:
             "Explore the MonoLab UI library and discover components that fit your project. From buttons and inputs to complex interface patterns, find the right building blocks to get started quickly.",
@@ -17,7 +17,7 @@ const steps: GetStartedStepProps[] = [
         imageAlt: "Explore MonoLab UI components",
     },
     {
-        id: "deep-customization",
+        id: 2,
         title: "Deep customization.",
         description:
             "Make every component your own. Customize styles, colors, spacing, and behavior to match your application's design system while keeping the flexibility of reusable components.",
@@ -25,7 +25,7 @@ const steps: GetStartedStepProps[] = [
         imageAlt: "Customize MonoLab UI components",
     },
     {
-        id: "build-and-ship",
+        id: 3,
         title: "Build and ship.",
         description:
             "Bring your ideas to life with reusable components built for real-world applications. Integrate them into your workflow and spend more time building meaningful products.",
@@ -35,12 +35,13 @@ const steps: GetStartedStepProps[] = [
 ];
 
 const GetStarted = () => {
-    const [activeStepId, setActiveStepId] = useState<string>(steps[0]!.id);
+    const [activeStepId, setActiveStepId] = useState<number>(1);
 
     // Get the currently active step
     const activeStep = steps.find(
         (step) => step.id === activeStepId
     )!;
+    console.log(activeStep.image);
 
     return (
         <div className="container">
@@ -72,7 +73,6 @@ const GetStarted = () => {
                                                     : "bg-transparent hover:bg-white/[0.03]"
                                                     }`}
                                             >
-                                                {/* Active indicator */}
                                                 {isActive && (
                                                     <span className="absolute left-0 top-0 h-full w-[3px] bg-[#ffb000]" />
                                                 )}
@@ -104,8 +104,6 @@ const GetStarted = () => {
                             <div className="relative flex min-h-[450px] items-center justify-center overflow-hidden p-6 lg:min-h-0 ">
 
                                 <div className="relative aspect-square w-full max-w-[780px] overflow-hidden border-t border-brand-gray-darker">
-
-                                    {/* Dynamic image based on active ID */}
                                     <Image
                                         key={activeStep.id}
                                         src={activeStep.image}
@@ -115,10 +113,6 @@ const GetStarted = () => {
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                         className="object-cover transition-opacity duration-500"
                                     />
-
-                                    {/* Optional subtle overlay */}
-                                    <div className="pointer-events-none absolute inset-0 bg-black/10" />
-
                                 </div>
                             </div>
 

@@ -10,7 +10,7 @@ const componentCategories = [
         description:
             "Build consistent interactions with carefully crafted buttons, icon buttons, and action elements designed for modern applications.",
         buttonText: "Explore Buttons",
-        image: "/images/image-1.png",
+        image: "/images/component-categories-image-1.png",
         imageAlt: "Buttons and actions",
         tags: [
             "BUTTON VARIANTS",

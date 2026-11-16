@@ -33,8 +33,12 @@ const Workflows = () => {
             <div className="container">
                 <PatternContainer>
                     <div className="flex flex-col gap-8 px-4 py-7 sm:gap-10 sm:py-16 md:gap-15 md:pt-10 md:pb-20 xl:px-0">
-
-                        <SectionHeader title=" Your developer team's advantage" description="Built for code ownership and velocity, optimized for modern developer workflows." />
+                        <SectionHeader 
+                        title=" Your developer team's advantage" 
+                        description="Built for code ownership and velocity, optimized for modern developer workflows." 
+                        titleClassName="text-3xl leading-tight md:leading-none text-balance text-start md:text-center "
+                        descriptionClassName="text-start md:text-center text-lg md:text-md"
+                        />
                         <GridCards />
                     </div>
                 </PatternContainer>

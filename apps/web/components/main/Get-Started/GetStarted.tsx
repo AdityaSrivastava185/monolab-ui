@@ -49,8 +49,9 @@ const GetStarted = () => {
                         className="py-12 md:py-20"
                         title="Get Started with MonolabUI"
                         description="Everything you need to bring MonoLab UI into your next project. Pick a component, add it to your codebase, and make it yours."
-                        descriptionClassName="md:max-w-2xl md:text-balance md:mx-auto"
-                    />
+                        titleClassName="text-3xl leading-tight md:leading-none text-balance text-start md:text-center "
+                        descriptionClassName="text-start md:text-center text-lg md:text-md"
+                        />
 
                     <section className="w-full text-foreground border-y border-brand-gray-darker">
 
@@ -71,11 +72,11 @@ const GetStarted = () => {
                                             )}
                                             aria-expanded={isActive}
                                             className={`flex w-full items-center justify-between gap-4 px-5 py-6 text-left transition-colors duration-300 sm:px-8 ${isActive
-                                                    ? "bg-[#19191c]"
+                                                    ? "md:bg-[#19191c]"
                                                     : "bg-transparent"
                                                 }`}
                                         >
-                                            <span className="text-lg font-medium tracking-tight sm:text-xl">
+                                            <span className="text-start md:text-balance text-lg font-medium tracking-tight sm:text-xl">
                                                 {step.title}
                                             </span>
 
@@ -108,7 +109,7 @@ const GetStarted = () => {
                                         >
                                             <div className="overflow-hidden">
                                                 <div className="flex flex-col gap-5 px-5 pb-6 sm:px-8">
-                                                    <p className="text-sm leading-6 text-foreground/70">
+                                                    <p className="text-brand-gray-light md:text-balance text-start text-md text-md leading-6">
                                                         {step.description}
                                                     </p>
 

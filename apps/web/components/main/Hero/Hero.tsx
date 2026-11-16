@@ -28,8 +28,8 @@ const Hero = () => {
               <SectionHeader
                 title="Build and deploy beautiful interfaces faster with MonoLab UI components"
                 description="Bring any Next.js project, copy the component you need, and paste it straight into your codebase -- a single TypeScript file styled with Tailwind CSS, with zero dependencies and nothing to install. The code is yours completely"
-                titleClassName="text-[1.5rem] leading-tight md:leading-none text-balance text-start md:text-center "
-                descriptionClassName="text-start md:text-center md:text-md"
+                titleClassName="text-3xl leading-tight md:leading-none text-balance text-start md:text-center "
+                descriptionClassName="text-start md:text-center text-lg md:text-md"
               />
             </div>
 

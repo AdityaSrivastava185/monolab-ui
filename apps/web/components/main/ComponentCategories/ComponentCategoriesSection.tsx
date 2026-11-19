@@ -26,7 +26,7 @@ const componentCategories = [
         description:
             "Create intuitive form experiences with flexible input fields, selection controls, and components built for seamless data entry.",
         buttonText: "Explore Forms",
-        image: "/images/image-1.png",
+        image: "/images/forms.png",
         imageAlt: "Forms and inputs",
         tags: [
             "INPUT FIELDS",

@@ -8,25 +8,25 @@ const FooterCta = () => {
             <section className='relative bg-primary h-[500px] w-full rounded-2xl items-center justify-center flex flex-col'>
                 <div>
                     <h1 className="text-3xl md:text-5xl text-foreground text-center">
-                        Deploy your frontend easily
+                        Stop installing. Start owning.
                     </h1>
                     <p className="text-center text-balance max-w-4xl mx-auto w-full py-2">
-                        Join thousands of developers who've eliminated infrastructure
-                        complexity and deployed globally with Edgeform. Start building for
-                        free — no credit card required.
+                        Join developers who've broken up with dependency hell. Browse the library,
+                        copy a component, and paste it straight into your codebase — free and open
+                        source, no sign-up required.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-3 py-2">
                         <Link
                             href={""}
                             className="bg-foreground text-background rounded-full px-5 py-3"
                         >
-                            Start Building for free
+                            Browse Components
                         </Link>
                         <Link
                             href=""
                             className="rounded-full border border-foreground/10 bg-foreground/5 px-5 py-3 text-foreground backdrop-blur-2xl transition-all duration-300 hover:bg-foreground/10"
                         >
-                            View Docs
+                            View on GitHub
                         </Link>
                     </div>
                 </div>

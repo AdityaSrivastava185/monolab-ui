@@ -1,13 +1,33 @@
 import Link from "next/link";
 import React from "react";
+import Button from "../(utility)/utility/ui/Button";
+
 
 const navItems = [
-  "Blocks",
-  "Components",
-  "Docs",
-  "Changelog",
-  "Pricing",
-  "Github"
+  {
+    title: "Blocks",
+    url: "/v1/blocks",
+  },
+  {
+    title: "Components",
+    url: "/v1/components",
+  },
+  {
+    title: "Docs",
+    url: "/docs",
+  },
+  {
+    title: "Changelog",
+    url: "/changelog",
+  },
+  {
+    title: "Pricing",
+    url: "/v1/pricing"
+  },
+  {
+    title: "GitHub",
+    url: "https://github.com/AdityaSrivastava185/monolab-ui",
+  },
 ];
 
 const Logo = "MonolabUI"
@@ -27,8 +47,8 @@ const Navbar = () => {
 
               <div className="hidden xl:flex divide-x divide-surface-dark border-r border-surface-dark">
                 {navItems.map((item) => (
-                  <div key={item} className={navItemClass}>
-                    <Link href="/">{item}</Link>
+                  <div key={item.title} className={navItemClass}>
+                    <Link href={item.url}>{item.title}</Link>
                   </div>
                 ))}
               </div>
@@ -42,13 +62,10 @@ const Navbar = () => {
                 Get in touch
               </Link>
 
-              <Link
-                className={`${navItemClass} bg-primary text-foreground flex gap-2 items-center justify-center`}
-                href=""
-              >
-                <p className="text-sm md:text-base">Start building</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>
-              </Link>
+              <Button 
+              outerBorder={false}
+              className={`${navItemClass} !rounded-none bg-primary text-foreground flex gap-2 items-center justify-center hover:bg-primary`}
+              icon = {<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>} >Start Building</Button>
             </div>
           </div>
         </div>

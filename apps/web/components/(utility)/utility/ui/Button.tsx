@@ -31,7 +31,7 @@ const Button = ({
     };
 
     return (
-        <div className={`w-full md:w-fit p-4 md:p-1 ${outerBorder ? "border transition-all duration-300 border-transparent rounded-xl hover:border hover:border-dashed hover:border-foreground" : ""} -mt-5 md:mt-0`}>
+        <div className={`w-full md:w-fit p-4 md:p-0 ${outerBorder ? "border transition-all duration-300 border-transparent rounded-xl hover:border hover:border-dashed hover:border-foreground" : ""} -mt-5 md:mt-0`}>
             <button
                 disabled={disabled}
                 onClick={onClick}

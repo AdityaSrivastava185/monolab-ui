@@ -50,7 +50,7 @@ const GetStarted = () => {
                         title="Get Started with MonolabUI"
                         description="Everything you need to bring MonoLab UI into your next project. Pick a component, add it to your codebase, and make it yours."
                         titleClassName="text-3xl leading-tight md:leading-none text-balance text-start md:text-center "
-                        descriptionClassName="text-start md:text-center text-lg md:text-md"
+                        descriptionClassName="md:max-w-xl mx-auto text-start md:text-center text-lg md:text-md"
                         />
 
                     <section className="w-full text-foreground border-y border-brand-gray-darker">

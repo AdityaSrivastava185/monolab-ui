@@ -1,12 +1,10 @@
 import HeroImage from "@/components/(utility)/utility/HeroImage";
 import Pattern from "@/components/(utility)/utility/Pattern";
 import SectionHeader from "@/components/(utility)/utility/SectionHeader";
-import VerticalBorder from "@/components/(utility)/utility/VerticalBorder"
 import FrontendBadge from "@/components/FrontendBadge";
-import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import PatternContainer from "@/components/(utility)/utility/PatternContainer";
+import Button from "@/components/(utility)/utility/ui/Button";
 
 const Hero = () => {
   return (
@@ -33,9 +31,10 @@ const Hero = () => {
               />
             </div>
 
-            <div className="w-full md:w-fit p-4 md:p-1 border transition-all duration-300 border-transparent rounded-full hover:border hover:border-dashed hover:border-primary -mt-5 md:mt-0">
-              <button className="w-full md:w-fit bg-primary text-foreground px-5 py-3 rounded-lg md:rounded-full cursor-pointer">Start building for free</button>
-            </div>
+            <Button
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>}>
+              Start building for free
+            </Button>
 
             <HeroImage src="/images/image-1.png" />
           </div>

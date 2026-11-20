@@ -16,16 +16,16 @@ const GridCards = () => {
             className="flex flex-1 gap-0 flex-col items-start p-3 lg:p-8"
             titleClassName="text-start text-lg md:text-balance md:text-lg"
             descriptionClassName="text-brand-gray-light md:text-balance text-start text-md"
-            title="One file per component"
-            description="Every component is a single, self-contained file — no packages to install, no config to maintain. Copy it, paste it, and it works."
+            title="Find what you need"
+            description="Browse the component collection, explore examples, and find the right building blocks for your application."
           />
         </div>
         <SectionHeader
           className="border-surface relative flex h-full flex-col border col-span-1 items-start p-3 lg:p-8 gap-0"
-          title="Typed, tested, and Next.js-native"
+          title="Make it yours"
           titleClassName="md:text-lg md:text-balance text-start text-lg"
           descriptionClassName="text-brand-gray-light text-balance text-start text-md"
-          description="Full TypeScript support, built for Next.js, React, and Tailwind CSS. Clean props, predictable APIs, and code your team can read at a glance."
+          description="Copy the component directly into your project and customize its styles, props, and behavior to fit your needs."
         />
         <div className="border-surface relative flex h-full flex-col border col-span-1">
           <div className="pointer-events-none absolute inset-0 z-10 select-none">
@@ -36,10 +36,10 @@ const GridCards = () => {
           </div>
           <SectionHeader
             className="flex flex-1 gap-0 flex-col items-start p-3 lg:p-8"
-            title="Yours forever, zero lock-in"
+            title="Build with confidence"
             titleClassName="md:text-lg md:text-balance text-start text-lg"
             descriptionClassName="text-md md:text-base text-brand-gray-light text-balance text-start"
-            description="The code stops belonging to us the moment you copy it. No version upgrades, no breaking changes, no dependency drift — just components you fully control."
+            description="Integrate it into your existing codebase, combine it with other components, and keep building without changing your workflow."
           />
         </div>
       </div>

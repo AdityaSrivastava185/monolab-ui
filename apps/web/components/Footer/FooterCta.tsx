@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Button from '../(utility)/utility/ui/Button'
 
 const FooterCta = () => {
     return (
@@ -16,18 +17,12 @@ const FooterCta = () => {
                         source, no sign-up required.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-3 py-2">
-                        <Link
-                            href={""}
-                            className="bg-foreground text-background rounded-full px-5 py-3"
-                        >
-                            Browse Components
-                        </Link>
-                        <Link
-                            href=""
-                            className="rounded-full border border-foreground/10 bg-foreground/5 px-5 py-3 text-foreground backdrop-blur-2xl transition-all duration-300 hover:bg-foreground/10"
-                        >
-                            View on GitHub
-                        </Link>
+                        <Button
+                            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right preview-icon"><path d="m6 17 5-5-5-5" /><path d="m13 17 5-5-5-5" /></svg>}>
+                            Start building for free
+                        </Button>
+                        
+                        <Button outerBorder={false} variant='secondary'>Star on github</Button>
                     </div>
                 </div>
                 <div

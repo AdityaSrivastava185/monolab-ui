@@ -4,9 +4,9 @@ import React from "react";
 const navItems = [
   "Blocks",
   "Components",
-  "Labs",
   "Docs",
   "Changelog",
+  "Pricing",
   "Github"
 ];
 

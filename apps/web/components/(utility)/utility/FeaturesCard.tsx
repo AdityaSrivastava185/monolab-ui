@@ -1,16 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import { ComponentCategoriesProps } from "@/types/ComponentCategoriesSectionCards.type";
+import { FeaturesCardProps } from "@/types/ComponentCategoriesSectionCards.type";
 import Link from "next/link";
 
-const ComponentCategoriesSectionCard = ({
+const FeaturesCard = ({
   title,
   description,
   buttonText,
   image,
   imageAlt = "content image",
   tags,
-}: ComponentCategoriesProps) => {
+}: FeaturesCardProps) => {
   return (
     <div className="">
       {/* Header */}
@@ -63,7 +63,7 @@ const ComponentCategoriesSectionCard = ({
         />
 
         <div className="flex flex-wrap gap-2 py-6">
-          {tags.map((item) => (
+          {tags && tags.map((item) => (
             <span
               key={item}
               className="bg-tag-background px-2 py-1 font-mono uppercase"
@@ -77,4 +77,4 @@ const ComponentCategoriesSectionCard = ({
   );
 };
 
-export default ComponentCategoriesSectionCard;
+export default FeaturesCard;

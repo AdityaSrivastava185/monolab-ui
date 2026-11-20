@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import FrontendBadge from "@/components/FrontendBadge";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/main/Hero/Hero";
 import Workflows from "@/components/main/Workflows/Workflows";
-import ComponentCategories from "@/components/main/ComponentCategories/ComponentCategoriesSection";
+import Features from "@/components/main/Features/Features";
 import GetStarted from "@/components/main/Get-Started/GetStarted";
 import Footer from "@/components/Footer/Footer";
 
@@ -47,7 +46,7 @@ export default function HomePage() {
       <Header/>
       <Hero/>
       <Workflows/>
-      <ComponentCategories/>
+      <Features/>
       <GetStarted/>
       <Footer/>
     </>

@@ -23,7 +23,8 @@ const Button = ({
     variant = "primary",
     outerBorder = true
 }: ButtonProps) => {
-    const baseStyles = "w-full md:w-fit px-5 py-3 cursor-pointer flex items-center justify-between gap-2 transition-all duration-300";
+    const baseStyles =
+        "w-full px-5 py-3 cursor-pointer flex items-center justify-between gap-2 transition-all duration-300";
 
     const variants = {
         primary: "bg-foreground text-background rounded-md md:rounded-xl hover:bg-foreground/90",

@@ -100,7 +100,7 @@ export function PricingCard({ data }: PricingCardProps) {
                 <div className="mt-auto border-t border-brand-gray-darker p-4 sm:p-5">
                     <button
                         onClick={onButtonClick}
-                        className="flex w-full items-center justify-between gap-3 rounded-lg bg-foreground px-5 py-3 text-left text-lg font-medium text-background transition-colors hover:bg-white sm:px-6"
+                        className={`flex w-full items-center justify-between gap-3 rounded-lg bg-foreground px-5 py-3 text-left text-lg font-medium text-background transition-colors hover:bg-white sm:px-6 ${comingSoon ? "cursor-not-allowed" : "cursor-pointer"}`}
                     >
                         {buttonText}
                         {buttonIcon ?? (

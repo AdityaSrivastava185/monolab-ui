@@ -92,6 +92,7 @@ const pricingPlans: PricingCardData[] = [
     ],
     buttonText: "Start Team",
     buttonIcon: icon(Users, 2),
+    comingSoon: true,
   },
   {
     id: "enterprise",
@@ -108,6 +109,7 @@ const pricingPlans: PricingCardData[] = [
     ],
     buttonText: "Contact Us",
     buttonIcon: icon(Building2, 2),
+    comingSoon: true,
   },
 ];
 export default function PricingPage() {

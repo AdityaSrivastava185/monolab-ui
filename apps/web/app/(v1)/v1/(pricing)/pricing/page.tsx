@@ -1,15 +1,28 @@
 import {
+  BadgeCheck,
   Building2,
   Check,
+  Component,
+  Cpu,
   Crown,
   Headphones,
+  Infinity,
   Infinity as InfinityIcon,
   Layers,
+  LayoutGrid,
+  LineSquiggle,
   Lock,
+  MessageSquare,
+  PencilIcon,
   Rocket,
+  ScanSearch,
+  Sigma,
   Snowflake,
   Sparkles,
+  Target,
   Users,
+  UserStarIcon,
+  Waypoints,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -18,6 +31,7 @@ import {
   type PricingCardData,
 } from "@/components/main/Pricing/PricingCard";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 // Small helper so every icon gets the same size and class
 const icon = (Icon: LucideIcon, strokeWidth = 2) => (
@@ -29,75 +43,73 @@ const pricingPlans: PricingCardData[] = [
   {
     id: "free",
     title: "Free",
-    description: "Free components for everyday projects.",
-    price: "$00",
+    description: "The complete component library. Copy everything, forever.",
+    price: "$0",
     pricePeriod: "/mo",
     icon: icon(Snowflake),
     features: [
-      { icon: icon(Check), text: "Test out ui's capabilities" },
-      { icon: icon(Check), text: "Access on web and mobile" },
-      { icon: icon(Layers), text: "Limited number of components" },
-      { icon: icon(Check), text: "Basic seo features and theming" },
-      { icon: icon(Check), text: "Limited variants" },
+      { icon: icon(Component), text: "Full catalogue of components" },
+      { icon: icon(Target), text: "Unlimited projects, unlimited copies" },
+      { icon: icon(Cpu), text: "TypeScript + Tailwind CSS, zero dependencies" },
+      { icon: icon(LineSquiggle), text: "Dark mode and design tokens" },
+      { icon: icon(PencilIcon), text: "Weekly updates, public changelog" },
     ],
-    buttonText: "Start Free",
-    buttonIcon: icon(Sparkles, 1),
+    buttonText: "Browse Components",
+    buttonIcon: icon(Layers, 2),
   },
   {
     id: "pro",
     title: "Pro",
-    description: "Everything you need to ship production apps.",
+    description: "Full-page blocks and the design kit behind them.",
     price: "$19",
     pricePeriod: "/mo",
-    icon: icon(Zap),
+    icon: icon(BadgeCheck),
     isPopular: true,
     popularLabel: "Popular",
-    popularIcon: icon(Sparkles),
+    popularIcon: icon(Crown),
     features: [
-      { icon: icon(Layers), text: "100+ components" },
-      { icon: icon(Zap), text: "All variants unlocked" },
-      { icon: icon(Check), text: "Advanced seo and theming" },
-      { icon: icon(Headphones), text: "Email support" },
+      { icon: icon(Snowflake), text: "Everything in Free" },
+      { icon: icon(LayoutGrid), text: "40+ page blocks: heroes, pricing, dashboards" },
+      { icon: icon(Sigma), text: "Figma kit matching every component" },
       { icon: icon(Rocket), text: "Early access to new components" },
+      { icon: icon(Headphones), text: "Priority GitHub support" },
     ],
-    buttonText: "Go Pro",
-    buttonIcon: icon(Sparkles, 1),
+    buttonText: "Get Pro",
+    buttonIcon: icon(BadgeCheck, 2),
   },
   {
     id: "team",
     title: "Team",
-    description: "Collaborate and share components with your team.",
+    description: "Shared tokens and theming for teams that ship together.",
     price: "$49",
     pricePeriod: "/mo",
     icon: icon(Users),
     features: [
-      { icon: icon(Users), text: "Up to 10 team members" },
-      { icon: icon(Layers), text: "Shared component library" },
-      { icon: icon(Check), text: "Everything in Pro" },
-      { icon: icon(Headphones), text: "Priority support" },
+      { icon: icon(Users), text: "Up to 10 team seats" },
+      { icon: icon(Waypoints), text: "Shared theme tokens and brand presets" },
+      { icon: icon(Layers), text: "Team onboarding session" },
+      { icon: icon(BadgeCheck), text: "Everything in Pro" },
     ],
     buttonText: "Start Team",
-    buttonIcon: icon(Sparkles, 1),
+    buttonIcon: icon(Users, 2),
   },
   {
     id: "enterprise",
     title: "Enterprise",
-    description: "Custom solutions for large organizations.",
+    description: "Design engineering support for large organizations.",
     price: "Custom",
     pricePeriod: "",
     icon: icon(Building2),
-    comingSoon: true,
     features: [
-      { icon: icon(InfinityIcon), text: "Unlimited team members" },
-      { icon: icon(Lock), text: "SSO and advanced security" },
-      { icon: icon(Crown), text: "Dedicated account manager" },
-      { icon: icon(Headphones), text: "24/7 support" },
+      { icon: icon(UserStarIcon), text: "Custom component development" },
+      { icon: icon(ScanSearch), text: "Security and code review" },
+      { icon: icon(Infinity), text: "Unlimited team members" },
+      { icon: icon(MessageSquare), text: "Dedicated Slack channel" },
     ],
-    buttonText: "Contact Sales",
-    buttonIcon: icon(Sparkles, 1),
+    buttonText: "Contact Us",
+    buttonIcon: icon(Building2, 2),
   },
 ];
-
 export default function PricingPage() {
   return (
     <div>
@@ -107,13 +119,14 @@ export default function PricingPage() {
           <div className='pb-7 border-b border-brand-gray-darker'>
             <h1 className='text-xl md:text-5xl'>Pricing</h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch">
+          <div className="grid auto-rows-fr grid-cols-1 items-stretch gap-y-5 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-5 lg:grid-cols-4 lg:gap-y-0">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.id} data={plan} />
             ))}
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

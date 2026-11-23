@@ -1,8 +1,6 @@
-
 "use client";
 
 import type { ReactNode } from "react";
-import Button from "@/components/(utility)/utility/ui/Button";
 
 export interface PricingFeature {
     icon: ReactNode;
@@ -48,77 +46,73 @@ export function PricingCard({ data }: PricingCardProps) {
     } = data;
 
     return (
-        <div className="h-full flex flex-col">
+        <article className="flex h-full min-w-0 flex-col">
             {/* Popular banner */}
             {isPopular ? (
-                <div className="bg-primary h-9 flex items-center w-full shrink-0">
-                    <div className="flex flex-row items-center justify-between w-full px-6">
-                        <p className="text-foreground">{popularLabel}</p>
+                <div className="flex h-12 w-full shrink-0 items-center bg-primary">
+                    <div className="flex w-full items-center justify-between px-5 sm:px-6">
+                        <p className="text-base font-medium text-foreground sm:text-lg">{popularLabel}</p>
                         {popularIcon}
                     </div>
                 </div>
             ) : (
-                <div className="bg-transparent h-9 shrink-0" />
+                <div className="h-12 shrink-0" />
             )}
 
             {/* Main card */}
-            <div className="flex flex-col flex-1 gap-7 border border-brand-gray-dark py-4 px-7">
+            <div className={`flex flex-1 flex-col border border-brand-gray-darker ${isPopular? "bg-brand-gray-darker/20" : "bg-transparent"}`}>
+                <div className="flex flex-1 flex-col px-5 py-7 sm:px-6 sm:py-8 lg:px-7">
+                    {/* Header */}
+                    <div className="min-w-0">
+                        <div className="flex min-w-0 flex-wrap items-center gap-3 sm:gap-4">
+                            <span className={`flex h-12 w-12 shrink-0 items-center justify-center [&>svg]:h-6 [&>svg]:w-6 ${isPopular ? "bg-primary text-white" : "bg-brand-gray-dark text-foreground"}`}>{icon}</span>
 
-                {/* Header */}
-                <div>
-                    <div className="flex flex-row gap-3 items-center">
-                        {icon}
-                        <p className="text-2xl">{title}</p>
-                        {comingSoon && (
-                            <span className="bg-primary text-foreground text-xs px-2 py-1 rounded-full">
-                                Coming Soon
-                            </span>
-                        )}
+                            <p className="text-2xl font-medium tracking-tight sm:text-3xl">{title}</p>
+                        </div>
+                        <p className="min-h-24 pt-6 text-lg sm:min-h-28 sm:pt-8">{description}</p>
                     </div>
-                    <p className="pt-4">{description}</p>
-                </div>
 
-                {/* Price */}
-                <div>
-                    <p className="text-5xl">
-                        {price}
-                        <span className="text-brand-gray-light">{pricePeriod}</span>
-                    </p>
-                </div>
+                    {/* Price */}
+                    <div className="min-h-24">
+                        <p className="break-words text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+                            {price}
+                            <span className="text-2xl font-normal text-brand-gray-light sm:text-2xl">{pricePeriod}</span>
+                        </p>
+                    </div>
 
-                {/* Flexible spacing */}
-                <div className="flex-1 min-h-24" />
-
-                {/* Features */}
-                <div>
-                    <div className="flex flex-col justify-center gap-3">
-                        {features.map((feature, index) => (
-                            <div
-                                key={`${feature.text}-${index}`}
-                                className="flex flex-row items-center gap-3"
-                            >
-                                {feature.icon}
-                                <p>{feature.text}</p>
-                            </div>
-                        ))}
+                    {/* Features */}
+                    <div className="pt-8 sm:pt-12">
+                        <div className="flex flex-col justify-start gap-2">
+                            {features.map((feature, index) => (
+                                <div
+                                    key={`${feature.text}-${index}`}
+                                    className="flex flex-row items-start gap-3 text-base leading-relaxed sm:text-md"
+                                >
+                                    <span className="shrink-0">{feature.icon}</span>
+                                    <p>{feature.text}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {/* Bottom button */}
-                <div className="!md:w-full mt-auto">
-                    <Button
-                        variant="primary"
-                        outerBorder={false}
+                <div className="mt-auto border-t border-brand-gray-darker p-4 sm:p-5">
+                    <button
                         onClick={onButtonClick}
-                        disabled={comingSoon}
-                        icon={buttonIcon}
-                        className="!md:w-full"
+                        className="flex w-full items-center justify-between gap-3 rounded-lg bg-foreground px-5 py-3 text-left text-lg font-medium text-background transition-colors hover:bg-white sm:px-6"
                     >
                         {buttonText}
-                    </Button>
+                        {buttonIcon ?? (
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="m6 17 5-5-5-5" />
+                                <path d="m13 17 5-5-5-5" />
+                            </svg>
+                        )}
+                    </button>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

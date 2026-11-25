@@ -56,7 +56,7 @@ export function PricingCard({ data }: PricingCardProps) {
                     </div>
                 </div>
             ) : (
-                <div className="h-12 shrink-0" />
+                <div className="hidden md:block h-12 shrink-0" />
             )}
 
             {/* Main card */}

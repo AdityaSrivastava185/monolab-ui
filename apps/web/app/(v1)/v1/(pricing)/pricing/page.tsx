@@ -61,7 +61,7 @@ const pricingPlans: PricingCardData[] = [
     id: "pro",
     title: "Pro",
     description: "Full-page blocks and the design kit behind them.",
-    price: "$19",
+    price: "$10",
     pricePeriod: "/mo",
     icon: icon(BadgeCheck),
     isPopular: true,
@@ -117,11 +117,11 @@ export default function PricingPage() {
     <div>
       <Header />
       <div className='container py-7'>
-        <div className='flex flex-col gap-7 justify-center'>
-          <div className='pb-7 border-b border-brand-gray-darker'>
-            <h1 className='text-xl md:text-5xl'>Pricing</h1>
+        <div className='flex flex-col gap-4 md:gap-7 justify-center'>
+          <div className='py-10 md:py-0 md:pb-7 border-b border-brand-gray-darker'>
+            <h1 className='text-5xl text-center md:text-start'>Pricing</h1>
           </div>
-          <div className="grid auto-rows-fr grid-cols-1 items-stretch gap-y-5 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-5 lg:grid-cols-4 lg:gap-y-0">
+          <div className="grid auto-rows-fr grid-cols-1 items-stretch gap-y-5 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-5 lg:grid-cols-4 lg:gap-y-0 px-5 md:px-10">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.id} data={plan} />
             ))}

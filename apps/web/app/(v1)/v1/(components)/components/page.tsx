@@ -12,7 +12,13 @@ const page = () => {
         <div className='border border-brand-gray-darker'>
           <div className='px-3 md:px-7 py-10 md:py-20 container'>
             <p className='text-brand-gray-light text-sm py-2'>PRODUCT/COMPONENTS</p>
-            <h1 className='text-5xl'>All Components</h1>
+            <div className='flex flex-col gap-5 max-w-2xl'>
+              <h1 className='text-6xl'>Welcome to Monolab's Components</h1>
+              <p className='text-xl max-w-xl text-brand-gray-light/90'>All your components in one place - select, copy, paste and build design system </p>
+              <div>
+                <input type="text" className='border border-brand-gray-darker rounded-md px-4 py-2 w-full' placeholder='Search components'/>
+              </div>
+            </div>
           </div>
         </div>
         <div className='py-10 container'>

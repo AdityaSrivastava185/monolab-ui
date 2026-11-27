@@ -1,165 +1,146 @@
-import Header from '@/components/Header/Header'
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import Header from "@/components/Header/Header"
+import { Link, ArrowRight } from "lucide-react"
+import React from "react"
+import ComponentCard from "@/components/(utility)/utility/ComponentCard"
+import Image from "next/image"
 
 const page = () => {
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <Header />
-      <div>
-        <div className='border border-brand-gray-darker'>
-          <div className='px-3 md:px-7 py-10 md:py-20 container'>
-            <p className='text-brand-gray-light text-sm py-2'>PRODUCT/COMPONENTS</p>
-            <div className='flex flex-col gap-5 max-w-2xl'>
-              <h1 className='text-6xl'>Welcome to Monolab's Components</h1>
-              <p className='text-xl max-w-xl text-brand-gray-light/90'>All your components in one place - select, copy, paste and build design system </p>
-              <div>
-                <input type="text" className='border border-brand-gray-darker rounded-md px-4 py-2 w-full' placeholder='Search components'/>
-              </div>
+
+      {/* Hero Section */}
+      <div className="border border-brand-gray-darker">
+        <div className="container px-3 py-10 md:px-7 md:py-20">
+          <p className="py-2 text-sm text-brand-gray-light">
+            PRODUCT/COMPONENTS
+          </p>
+
+          <div className="flex max-w-2xl flex-col gap-5">
+            <h1 className="text-6xl">
+              Welcome to Monolab's Components
+            </h1>
+
+            <p className="max-w-xl text-xl text-brand-gray-light/90">
+              All your components in one place - select, copy, paste and build
+              design system
+            </p>
+
+            <div>
+              <input
+                type="text"
+                className="w-full rounded-md border border-brand-gray-darker px-4 py-2"
+                placeholder="Search components"
+              />
             </div>
           </div>
         </div>
-        <div className='py-10 container'>
-          <div className=''>
-            <p className='bg-brand-gray-darker/70 px-2 py-1 w-fit rounded-md'>RECENTLY RELEASED COMPONENTS</p>
+      </div>
+
+      {/* Recently Released */}
+      <div className="container py-10">
+        <p className="w-fit rounded-md bg-brand-gray-darker/70 px-2 py-1">
+          RECENTLY RELEASED COMPONENTS
+        </p>
+      </div>
+
+      {/* Components Grid */}
+      <div className="container">
+        <div className="grid grid-cols-1 border border-brand-gray-darker md:grid-cols-2 xl:grid-cols-3">
+
+          {/* Featured Card - Spans 2 Columns */}
+          <div className="h-auto border-b border-r border-brand-gray-darker p-4 md:p-10 xl:col-span-2 xl:h-[640px]">
+            <article className="grid h-full grid-cols-1 border border-brand-gray-darker md:grid-cols-2">
+
+              {/* Content */}
+              <div className="flex flex-col justify-between bg-brand-gray-dark/80">
+                <div className="flex flex-col items-start gap-3 p-6 md:p-8">
+                  <span className="w-fit rounded-md bg-brand-gray-darker/70 px-3 py-1 text-xs">
+                    PRODUCT
+                  </span>
+
+                  <h2 className="text-4xl">
+                    Le Chonk brings the brains. Studio puts it to work.
+                  </h2>
+
+                  <p className="text-2xl text-brand-gray-light">
+                    Build and deploy enterprise agents, workflows and apps
+                    faster, with control over your models, data and
+                    infrastructure.
+                  </p>
+                </div>
+
+                {/* Footer */}
+                <div className="grid grid-cols-2 border-t border-brand-gray-darker text-xs text-brand-gray-light">
+                  <div className="border-r border-brand-gray-darker p-3">
+                    <p className="text-xl">November 5, 2026</p>
+                  </div>
+
+                  <Link
+                    href="#"
+                    className="flex items-center justify-between p-3"
+                  >
+                    View Component
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative min-h-[280px] md:min-h-0">
+                <Image
+                  src="/images/hero-poster.avif"
+                  fill
+                  alt="Featured component"
+                  className="object-cover"
+                />
+              </div>
+            </article>
           </div>
-        </div>
-        <div className='container'>
-          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border border-brand-gray-darker'>
-            <div className='border-brand-gray-darker md:col-span-2 flex flex-col'>
-              <div className='flex flex-1 border-b border-brand-gray-darker'>
-                <div className='flex w-1/2 flex-col justify-center gap-4'>
-                  <div className='flex flex-col items-start h-full w-full gap-3  px-8 pt-8'>
-                    <p className='w-fit bg-brand-gray-darker/70 group-hover:bg-primary px-3 py-2 rounded-xl text-sm'>PRODUCT</p>
-                    <p className='text-3xl'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing.
-                    </p>
-                    <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam at, eius quod libero a assumenda? Expedita, excepturi?</p>
-                  </div>
-                  <div className='flex flex-row items-center border border-brand-gray-darker'>
-                    <div className='flex-1 px-4 py-3'>
-                      <p>November 10, 2026</p>
-                    </div>
-                    <div className='flex-1 border-r border-brand-gray-darker px-4 py-3'>
-                      <Link href={''}>View Component</Link>
-                    </div>
-                    <div className='px-4 py-3'>
-                      <ArrowRight size={20} />
-                    </div>
-                  </div>
-                </div>
-                <div className='relative w-1/2'>
-                  <Image src='/images/hero-poster.avif' fill alt='component image' className='object-cover' />
-                </div>
-              </div>
-            </div>
-            <div className='group border-brand-gray-darker flex flex-col p-7'>
-              <div className='border border-brand-gray-darker'>
-                <div className='relative h-56 '>
-                  <Image src='/images/hero-poster.avif' fill alt='component image' className='object-cover' />
-                </div>
-                <div className='flex flex-1 flex-col justify-center gap-4 p-8'>
-                  <p className='w-fit bg-brand-gray-darker/70 group-hover:bg-primary px-3 py-2 rounded-xl text-sm'>RESEARCH</p>
-                  <p className='text-3xl'>
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                  <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, excepturi?</p>
-                </div>
-                <div className='flex flex-row items-center'>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <p>October 29, 2026</p>
-                  </div>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <Link href={''}>View Component</Link>
-                  </div>
-                  <div className='px-4 py-3 border border-brand-gray-darker'>
-                    <ArrowRight size={24} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='group border-brand-gray-darker flex flex-col p-7'>
-              <div className='border border-brand-gray-darker'>
-                <div className='relative h-56 '>
-                  <Image src='/images/hero-poster.avif' fill alt='component image' className='object-cover' />
-                </div>
-                <div className='flex flex-1 flex-col justify-center gap-4 p-8'>
-                  <p className='w-fit bg-brand-gray-darker/70 group-hover:bg-primary px-3 py-2 rounded-xl text-sm'>RESEARCH</p>
-                  <p className='text-3xl'>
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                  <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, excepturi?</p>
-                </div>
-                <div className='flex flex-row items-center'>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <p>October 29, 2026</p>
-                  </div>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <Link href={''}>View Component</Link>
-                  </div>
-                  <div className='px-4 py-3 border border-brand-gray-darker'>
-                    <ArrowRight size={24} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='group border-brand-gray-darker flex flex-col p-7'>
-              <div className='border border-brand-gray-darker'>
-                <div className='relative h-56 '>
-                  <Image src='/images/hero-poster.avif' fill alt='component image' className='object-cover' />
-                </div>
-                <div className='flex flex-1 flex-col justify-center gap-4 p-8'>
-                  <p className='w-fit bg-brand-gray-darker/70 group-hover:bg-primary px-3 py-2 rounded-xl text-sm'>RESEARCH</p>
-                  <p className='text-3xl'>
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                  <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, excepturi?</p>
-                </div>
-                <div className='flex flex-row items-center'>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <p>October 29, 2026</p>
-                  </div>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <Link href={''}>View Component</Link>
-                  </div>
-                  <div className='px-4 py-3 border border-brand-gray-darker'>
-                    <ArrowRight size={24} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='group border-brand-gray-darker flex flex-col p-7'>
-              <div className='border border-brand-gray-darker'>
-                <div className='relative h-56 '>
-                  <Image src='/images/hero-poster.avif' fill alt='component image' className='object-cover' />
-                </div>
-                <div className='flex flex-1 flex-col justify-center gap-4 p-8'>
-                  <p className='w-fit bg-brand-gray-darker/70 group-hover:bg-primary px-3 py-2 rounded-xl text-sm'>RESEARCH</p>
-                  <p className='text-3xl'>
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                  <p className='text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, excepturi?</p>
-                </div>
-                <div className='flex flex-row items-center'>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <p>October 29, 2026</p>
-                  </div>
-                  <div className='flex-1 border border-brand-gray-darker px-4 py-3'>
-                    <Link href={''}>View Component</Link>
-                  </div>
-                  <div className='px-4 py-3 border border-brand-gray-darker'>
-                    <ArrowRight size={24} />
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          {/* Regular Card 1 */}
+          <div className="border-b border-r border-brand-gray-darker p-4 md:p-10">
+            <ComponentCard
+              category="RESEARCH"
+              title="Le Chonk: Built for Coders, Trusted by Defenders."
+              description="We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity."
+              date="October 29, 2026"
+            />
           </div>
+
+          {/* Regular Card 2 */}
+          <div className="border-b border-r border-brand-gray-darker p-4 md:p-10">
+            <ComponentCard
+              category="COMPANY"
+              title="Mistral Advances AI for Engineering with NVIDIA"
+              description="Mistral is collaborating with NVIDIA to develop a new generation of AI-native engineering workflows powered by NVIDIA accelerated computing."
+              date="October 21, 2026"
+            />
+          </div>
+
+          {/* Regular Card 3 */}
+          <div className="border-b border-r border-brand-gray-darker p-4 md:p-10">
+            <ComponentCard
+              category="RESEARCH"
+              title="Voxtral 3"
+              description="Build agents that can listen, reason, speak, and act, with Voxtral 3."
+              date="October 20, 2026"
+            />
+          </div>
+
+          {/* Regular Card 4 */}
+          <div className="border-b border-r border-brand-gray-darker p-4 md:p-10">
+            <ComponentCard
+              category="RESEARCH"
+              title="Introducing Timestral"
+              description="State-of-the-art probabilistic forecasts with just 209M parameters, outperforming larger models on CPU."
+              date="October 15, 2026"
+            />
+          </div>
+
         </div>
       </div>
     </div>
   )
 }
-
-export default page
+export default page;

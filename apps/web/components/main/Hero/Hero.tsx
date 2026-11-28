@@ -36,7 +36,7 @@ const Hero = () => {
               Start building for free
             </Button>
 
-            <HeroImage src="/images/image-1.png" />
+            <HeroImage src="/images/orange-bg.png" />
           </div>
         </PatternContainer>
       </section>

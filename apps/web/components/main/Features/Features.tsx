@@ -8,7 +8,7 @@ const useCases = [
     title: "Skip the setup tax.",
     description:
       "No installs, no config, no providers. Find what you need, copy it, and paste it straight into your project — a single file that just works.",
-    image: "/images/image-1.png",
+    image: "/images/focus-grid-mosaic-2563eb-1920x1080-19.png",
     imageAlt: "Copying a component into a project",
     // tags: ["ZERO DEPENDENCIES", "COPY-PASTE", "NEXT.JS READY", "TAILWIND CSS"],
   },
@@ -16,7 +16,7 @@ const useCases = [
     title: "Own every line you ship.",
     description:
       "The code stops being ours the moment you copy it. No version lock, no upstream breaking changes, no abstraction you can't open and change.",
-    image: "/images/image-2.png",
+    image: "/images/orange-bg.png",
     imageAlt: "Full code ownership",
     // tags: ["FULL OWNERSHIP", "NO LOCK-IN", "READABLE SOURCE"],
   },
@@ -24,7 +24,7 @@ const useCases = [
     title: "Stop rebuilding the basics.",
     description:
       "Buttons, dialogs, forms, and feedback states are solved problems. Spend your time on product decisions, not on rewriting primitives for the hundredth time.",
-    image: "/images/image-1.png",
+    image: "/images/focus-grid-mosaic-ffc800-1920x1080-42437.png",
     imageAlt: "Reusing solved problems",
     // tags: ["SAVE HOURS", "REUSABLE PRIMITIVES", "CONSISTENT API"],
   },
@@ -32,7 +32,7 @@ const useCases = [
     title: "Go from prototype to production.",
     description:
       "Every component is typed, styled, and built for real workloads — so the screen you sketch on Friday is the screen you ship on Monday.",
-    image: "/images/image-1.png",
+    image: "/images/focus-grid-mosaic-c8e1fb-1920x1080-65896.png",
     imageAlt: "From prototype to production",
     // tags: ["TYPESCRIPT", "PRODUCTION READY", "PREDICTABLE APIS"],
   },
